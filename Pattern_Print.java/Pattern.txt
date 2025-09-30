@@ -1,0 +1,878 @@
+     * 
+    * *
+   *   *
+  *     *
+ *       *
+  *     *
+   *   *
+    * * 
+     *
+
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void Printcolom(int col, int max, int row, int maxcol){
+        if(col > max){
+            return;
+        }
+        if(col == 1 || col == max){
+            System.out.print("* ");
+        }else{
+            System.out.print("  ");
+        }
+        
+        Printcolom(col+1, max, row, col);
+    }
+    static void printSpace(int col, int max){
+        if(col > max){
+            return;
+        }
+        System.out.print(" ");
+        printSpace(col+1, max);
+    }
+
+    static void Printrows(int row, int maxrow){
+        if( row > 2*maxrow){
+            return;
+        }
+        int space = (row > maxrow) ? row - maxrow+1 : maxrow - row + 1;
+        int colom = (row > maxrow) ? 2*maxrow - row : row;
+        printSpace(1, space);
+        Printcolom(1, colom,row, maxrow);
+        System.out.println();
+        Printrows(row+1, maxrow);
+        
+    }
+   
+   
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int rows = sc.nextInt();
+        // int col = sc.nextInt();
+        Printrows(1, rows);
+
+
+    //     int num = 4;
+    //     for(int i = num; i >= 1; i--){
+    //         for(int j = 1; j <= i; j++){
+    //             System.out.print("*");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+    }
+    
+}
+
+
+     * 
+    * *
+   * * *
+  * * * *
+ * * * * *
+  * * * * 
+   * * *
+    * *
+     *
+
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void Printcolom(int col, int max, int row, int maxcol){
+        if(col > max){
+            return;
+        }
+        System.out.print("* ");
+        // if(col == 1 || col == max){
+        //     System.out.print("* ");
+        // }else{
+        //     System.out.print("  ");
+        // }
+        
+        Printcolom(col+1, max, row, col);
+    }
+    static void printSpace(int col, int max){
+        if(col > max){
+            return;
+        }
+        System.out.print(" ");
+        printSpace(col+1, max);
+    }
+
+    static void Printrows(int row, int maxrow){
+        if( row > 2*maxrow){
+            return;
+        }
+        int space = (row > maxrow) ? row - maxrow+1 : maxrow - row + 1;
+        int colom = (row > maxrow) ? 2*maxrow - row : row;
+        printSpace(1, space);
+        Printcolom(1, colom,row, maxrow);
+        System.out.println();
+        Printrows(row+1, maxrow);
+        
+    }
+   
+   
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int rows = sc.nextInt();
+        // int col = sc.nextInt();
+        Printrows(1, rows);
+
+
+    //     int num = 4;
+    //     for(int i = num; i >= 1; i--){
+    //         for(int j = 1; j <= i; j++){
+    //             System.out.print("*");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+    }
+    
+}
+
+     1 
+    1 1
+   1 2 1 
+  1 2 3 1
+ 1 2 3 4 1
+  1 2 3 1
+   1 2 1
+    1 1
+     1
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void Printcolom(int col, int max, int row, int maxcol){
+        if(col > max){
+            return;
+        }
+        // System.out.print("* ");
+        if(col == 1 || col == max){
+            System.out.print("1 ");
+        }else{
+           
+            System.out.print(col+" ");
+        }
+        
+        Printcolom(col+1, max, row, col);
+    }
+    static void printSpace(int col, int max){
+        if(col > max){
+            return;
+        }
+        System.out.print(" ");
+        printSpace(col+1, max);
+    }
+
+    static void Printrows(int row, int maxrow){
+        if( row > 2*maxrow){
+            return;
+        }
+        int space = (row > maxrow) ? row - maxrow+1 : maxrow - row + 1;
+        int colom = (row > maxrow) ? 2*maxrow - row : row;
+        printSpace(1, space);
+        Printcolom(1, colom,row, maxrow);
+        System.out.println();
+        Printrows(row+1, maxrow);
+        
+    }
+   
+   
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int rows = sc.nextInt();
+        // int col = sc.nextInt();
+        Printrows(1, rows);
+
+
+    //     int num = 4;
+    //     for(int i = num; i >= 1; i--){
+    //         for(int j = 1; j <= i; j++){
+    //             System.out.print("*");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+    }
+    
+}
+
+     1 
+    1 2
+   1 2 3
+  1 2 3 4
+ 1 2 3 4 5
+  1 2 3 4
+   1 2 3
+    1 2
+     1
+
+     import java.util.*;
+
+public class TriingleUlta {
+
+    static void Printcolom(int col, int max, int row, int maxcol){
+        if(col > max){
+            return;
+        }
+        // System.out.print("* ");
+        if(col == 1 || col == max){
+            System.out.print(col+" ");
+        }else{
+           
+            System.out.print(col+" ");
+        }
+        
+        Printcolom(col+1, max, row, col);
+    }
+    static void printSpace(int col, int max){
+        if(col > max){
+            return;
+        }
+        System.out.print(" ");
+        printSpace(col+1, max);
+    }
+
+    static void Printrows(int row, int maxrow){
+        if( row > 2*maxrow){
+            return;
+        }
+        int space = (row > maxrow) ? row - maxrow+1 : maxrow - row + 1;
+        int colom = (row > maxrow) ? 2*maxrow - row : row;
+        printSpace(1, space);
+        Printcolom(1, colom,row, maxrow);
+        System.out.println();
+        Printrows(row+1, maxrow);
+        
+    }
+   
+   
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        int rows = 5;
+        // int col = sc.nextInt();
+        Printrows(1, rows);
+
+
+    //     int num = 4;
+    //     for(int i = num; i >= 1; i--){
+    //         for(int j = 1; j <= i; j++){
+    //             System.out.print("*");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+    }
+    
+}
+
+
+*        *
+**      **
+* *    * *
+*  *  *  *
+*   **   *
+*  *  *  *
+* *    * *
+**      **
+*        *
+
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void printStar(int min, int max){
+        if(min > max) return;
+        if(min == 1|| min == max)
+        System.out.print("*");
+        else{
+            System.out.print(" ");
+        }
+        printStar(min+1, max);
+    }
+    static void printStar2(int min, int max){
+        if(min > max) return;
+       if(min == 1|| min == max)
+        System.out.print("*");
+        else{
+            System.out.print(" ");
+        }
+        printStar2(min+1, max);
+    }
+   
+   static void printrows(int min, int max){
+    if(min > 2*max) return;
+    int printStar = (min > max) ? 2*max-min : min;
+    int space = (min > max) ? min-max : max - min;
+    
+    printStar(1, printStar);
+    printSpace(1, space);
+    printStar2(1, printStar);
+    System.out.println();
+    printrows(min+1, max);
+   }
+   static void printSpace(int min, int max){
+        if(min > max) return;
+        System.out.print("  ");
+        printSpace(min+1, max);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int rows = 5;
+        // int col = sc.nextInt();
+        int num = 5;
+        
+        printrows(1, num);
+
+
+        
+        // for(int i = 1; i <= 2*num; i++){
+        //     int star1 = (i > num) ?  2*num-i+1: i;
+        //     for(int j = 1; j <= star1; j++){
+        //         if(j == 1 || j==star1 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+        //     }
+        //     //
+        //     int space = (i > num) ? i - num : num-i+1;
+        //     for(int j = 1; j< space; j++){
+        //         System.out.print("    ");
+        //     }
+            
+        //     int star2 = (i > num)?  2*num-i+1: i;
+        //     for(int j = 1; j <= star2; j++){
+        //         if(j == 1 || j==star2 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+                
+        //     }
+        //     System.out.println();
+        // }
+    }
+
+}
+    
+
+*          *
+**        **
+*2*      *2*
+*23*    *23*
+*234*  *234*
+*2345**2345*
+*234*  *234*
+*23*    *23*
+*2*      *2*
+**        **
+*          *
+
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void printStar(int min, int max){
+        if(min > max) return;
+        if(min == 1|| min == max)
+        System.out.print("*");
+        else{
+            System.out.print(min+"");
+        }
+        printStar(min+1, max);
+    }
+    static void printStar2(int min, int max){
+        if(min > max) return;
+       if(min == 1|| min == max)
+        System.out.print("*");
+       else{
+            System.out.print(min+"");
+        }
+        printStar2(min+1, max);
+    }
+   
+   static void printrows(int min, int max){
+    if(min > 2*max) return;
+    int printStar = (min > max) ? 2*max-min : min;
+    int space = (min > max) ? min-max : max - min;
+    
+    printStar(1, printStar);
+    printSpace(1, space);
+    printStar2(1, printStar);
+    System.out.println();
+    printrows(min+1, max);
+   }
+   static void printSpace(int min, int max){
+        if(min > max) return;
+        System.out.print("  ");
+        printSpace(min+1, max);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int rows = 5;
+        // int col = sc.nextInt();
+        int num = 6;
+        
+        printrows(1, num);
+
+
+        
+        // for(int i = 1; i <= 2*num; i++){
+        //     int star1 = (i > num) ?  2*num-i+1: i;
+        //     for(int j = 1; j <= star1; j++){
+        //         if(j == 1 || j==star1 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+        //     }
+        //     //
+        //     int space = (i > num) ? i - num : num-i+1;
+        //     for(int j = 1; j< space; j++){
+        //         System.out.print("    ");
+        //     }
+            
+        //     int star2 = (i > num)?  2*num-i+1: i;
+        //     for(int j = 1; j <= star2; j++){
+        //         if(j == 1 || j==star2 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+                
+        //     }
+        //     System.out.println();
+        // }
+    }
+
+}
+    
+*          *
+**        **
+*1*      *1*
+*12*    *12*
+*121*  *121*
+*1212**1212*
+*121*  *121*
+*12*    *12*
+*1*      *1*
+**        **
+*          *
+
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void printStar(int min, int max){
+        if(min > max) return;
+        if(min == 1|| min == max)
+        System.out.print("*");
+        else{
+
+            if(min%2 == 0)
+        System.out.print("1");
+       else{
+            System.out.print("2");
+        }
+        }
+        printStar(min+1, max);
+    }
+    static void printStar2(int min, int max){
+        if(min > max) return;
+       if(min == 1|| min == max)
+        System.out.print("*");
+       else{
+
+            if(min%2 == 0)
+        System.out.print("1");
+       else{
+            System.out.print("2");
+        }
+        }
+        printStar2(min+1, max);
+    }
+   
+   static void printrows(int min, int max){
+    if(min > 2*max) return;
+    int printStar = (min > max) ? 2*max-min : min;
+    int space = (min > max) ? min-max : max - min;
+    
+    printStar(1, printStar);
+    printSpace(1, space);
+    printStar2(1, printStar);
+    System.out.println();
+    printrows(min+1, max);
+   }
+   static void printSpace(int min, int max){
+        if(min > max) return;
+        System.out.print("  ");
+        printSpace(min+1, max);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int rows = 5;
+        // int col = sc.nextInt();
+        int num = 6;
+        
+        printrows(1, num);
+
+
+        
+        // for(int i = 1; i <= 2*num; i++){
+        //     int star1 = (i > num) ?  2*num-i+1: i;
+        //     for(int j = 1; j <= star1; j++){
+        //         if(j == 1 || j==star1 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+        //     }
+        //     //
+        //     int space = (i > num) ? i - num : num-i+1;
+        //     for(int j = 1; j< space; j++){
+        //         System.out.print("    ");
+        //     }
+            
+        //     int star2 = (i > num)?  2*num-i+1: i;
+        //     for(int j = 1; j <= star2; j++){
+        //         if(j == 1 || j==star2 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+                
+        //     }
+        //     System.out.println();
+        // }
+    }
+
+}
+    
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void printStar(int min, int max){
+        if(min > max) return;
+        // if(min == 1|| min == max)
+        // System.out.print("*");
+        // else{
+        // }
+        System.out.print("*");
+        printStar(min+1, max);
+    }
+    static void printStar2(int min, int max){
+        if(min > max) return;
+    //    if(min == 1|| min == max)
+    //     System.out.print("*");
+    //    else{
+        
+    //     }
+        System.out.print("*");
+        printStar2(min+1, max);
+    }
+   
+   static void printrows(int min, int max){
+    if(min > 2*max) return;
+    int printStar = (min > max) ? min-max : max-min+1;
+    int space = (min > max) ? 2*max-min :  min-1;
+    
+    printStar(1, printStar);
+    printSpace(1, space);
+    printStar2(1, printStar);
+    System.out.println();
+    printrows(min+1, max);
+   }
+   static void printSpace(int min, int max){
+        if(min > max) return;
+        System.out.print("  ");
+        printSpace(min+1, max);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int rows = 5;
+        // int col = sc.nextInt();
+        int num = 6;
+        
+        printrows(1, num);
+
+
+        
+        // for(int i = 1; i <= 2*num; i++){
+        //     int star1 = (i > num) ?  2*num-i+1: i;
+        //     for(int j = 1; j <= star1; j++){
+        //         if(j == 1 || j==star1 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+        //     }
+        //     //
+        //     int space = (i > num) ? i - num : num-i+1;
+        //     for(int j = 1; j< space; j++){
+        //         System.out.print("    ");
+        //     }
+            
+        //     int star2 = (i > num)?  2*num-i+1: i;
+        //     for(int j = 1; j <= star2; j++){
+        //         if(j == 1 || j==star2 ){
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+                
+        //     }
+        //     System.out.println();
+        // }
+    }
+
+}
+    
+************
+*   *  *   *
+*  *    *  *
+* *      * *
+**        **
+*          *
+*          *
+**        **
+* *      * *
+*  *    *  *
+*   *  *   *
+************
+
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void printStar(int min, int max, int promin, int promax){
+        if(min > max) return;
+        if(min == 1|| min == max || promin == 1 || promin == 2*promax)
+        System.out.print("*");
+        else{
+            System.out.print(" ");
+        }
+        // System.out.print("*");
+        printStar(min+1, max,promin,promax);
+    }
+    static void printStar2(int min, int max, int promin, int promax){
+        if(min > max) return;
+       if(min == 1|| min == max || promin == 1 || promin == 2*promax)
+        System.out.print("*");
+       else{
+        System.out.print(" ");
+        }
+        // System.out.print("*");
+        printStar2(min+1, max,promin,promax);
+    }
+   
+   static void printrows(int min, int max){
+    if(min > 2*max) return;
+    int printStar = (min > max) ? min-max : max-min+1;
+    int space = (min > max) ? 2*max-min :  min-1;
+    
+    printStar(1, printStar, min, max);
+    printSpace(1, space);
+    printStar2(1, printStar, min, max);
+    System.out.println();
+    printrows(min+1, max);
+   }
+   static void printSpace(int min, int max){
+        if(min > max) return;
+        System.out.print("  ");
+        printSpace(min+1, max);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int rows = 5;
+        // int col = sc.nextInt();
+        int num = 6;
+        
+        printrows(1, num);
+
+
+    }
+}
+
+     * 
+    * *
+   *   *
+  *     *
+ *       *
+*         *
+ *       *
+  *     *
+   *   *
+    * *
+     *
+import java.util.*;
+
+public class TriingleUlta {
+
+    static void printStar(int min, int max, int promin, int promax){
+        if(min > max) return;
+        // if(min == 1|| min == max || promin == 1 || promin == 2*promax)
+        // System.out.print("*");
+        // else{
+        //     System.out.print(" ");
+        // }
+        System.out.print(" ");
+        printStar(min+1, max,promin,promax);
+    }
+    // static void printStar2(int min, int max, int promin, int promax){
+    //     if(min > max) return;
+    //    if(min == 1|| min == max || promin == 1 || promin == 2*promax)
+    //     System.out.print("*");
+    //    else{
+    //     System.out.print(" ");
+    //     }
+    //     // System.out.print("*");
+    //     printStar2(min+1, max,promin,promax);
+    // }
+   
+   static void printrows(int min, int max){
+    if(min > 2*max) return;
+    int printStar = (min > max) ? min-max : max-min;
+    int space = (min > max) ? 2*max-min :  min;
+    
+    printStar(1, printStar, min, max);
+    printSpace(1, space);
+    // printStar2(1, printStar, min, max);
+    System.out.println();
+    printrows(min+1, max);
+   }
+   static void printSpace(int min, int max){
+        if(min > max) return;
+        if(min == 1 || min == max){
+            System.out.print("* ");
+        }
+        else{
+            System.out.print("  ");
+        }
+        
+        printSpace(min+1, max);
+    }
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the number");
+        // int rows = 5;
+        // int col = sc.nextInt();
+        int num = 6;
+        
+        printrows(1, num);
+
+
+    }
+
+} 
+
+
+ * * * * * 
+  *     * 
+   *   * 
+    * * 
+* * * * * * 
+    * *
+   *   *
+  *     *
+ *       *
+* * * * * *
+
+public class Damroo {
+
+    static void forStar(int min, int max, int promin, int promax){
+        if(min > max) return;
+        if(min == max || min == 1|| promin == 1 || 2*promax == promin || min == max/2){
+            System.out.print("* ");
+        }else{
+            System.out.print("  ");
+        }
+        forStar(min+1, max, promin, promax);
+    }
+
+    static void pattern(int min, int max){
+        if(min > 2*max) return;
+        int space = (min > max) ? 2*max - min: min-1+1;
+        int star = (min > max) ? min - max+1 : max - min+1;
+        forSpace(1, space, min, max);
+        forStar(1, star, min, max);
+        System.out.println();
+        pattern(min+1, max);
+        
+    }
+    static void forSpace(int min, int max, int promin, int promax){
+        if(min > max) return;
+        if(promin == promax){
+            System.out.print("* ");
+        }else
+        System.out.print(" ");
+        forSpace(min+1, max, promin, promax);
+    }
+
+    public static void main(String[] args) {
+        int num = 5;
+        // pattern(1, num);
+
+        for(int i = 1; i <= 2*num; i++){
+            int space = (i > num) ? 2*num-i : i-1+1;
+            int star = (i > num) ? i - num+1: num-i+1;
+            for(int j = 1; j<= space; j++){
+               if(i == num){
+                    System.out.print("* ");
+                }else{
+                    System.out.print(" ");
+                }
+                
+            }
+            for(int j = 1; j <= star; j++){
+            if(i == 1 || i == 2*num || j == 1 || j == star){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
+           }
+           System.out.println();
+        }
+        
+        
+        
+    }
+    
+}

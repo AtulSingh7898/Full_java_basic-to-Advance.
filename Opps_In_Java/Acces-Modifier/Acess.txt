@@ -1,0 +1,175 @@
+//22 Sep 2025. (OOPS)
+//1
+public class PublicExample {
+    String message;
+
+    public PublicExample() {
+        message = "This is a java DSA class";
+    }
+    public void display() {
+        System.out.println("Message is: " + message);
+    }
+    public static void main(String[] args) {
+        PublicExample p1 = new PublicExample();
+        p1.display();
+    }
+}
+
+
+//2.
+public class PublicExample {
+    public String message;
+
+    
+    public void display() {
+        System.out.println("Message is: " + message);
+    }
+    public static void main(String[] args) {
+        PublicExample p1 = new PublicExample();
+        p1.message = "This is a java DSA class";
+        p1.display();
+    }
+}
+
+
+//4.
+class PublicExample {
+    public String message;
+
+    public PublicExample() {
+        message = "This is a java DSA class";
+    }
+    public void display() {
+        System.out.println("Message is: " + message);
+    }
+}
+
+public class innerPublicExample{
+    public static void main(String[] args) {
+        PublicExample p1 = new PublicExample();
+        p1.display();
+    }
+}
+
+
+//5.
+//call another file withing the same package
+public class innerPublicExample{
+    public static void main(String[] args) {
+        PublicExample p1 = new PublicExample();
+        p1.display();
+    }
+}
+
+//6.
+public class Laptop {
+    public String brand;
+    public double price;
+
+    public Laptop(String brand, double price) {
+        this.brand = brand;
+        this.price = price;
+    }
+    public void display() {
+        System.out.println("Laptop Brand is: " + brand);
+        System.out.println("Laptop price is: " + price);
+    }
+}
+
+//7.
+public class InnerLaptop{
+    public static void main(String[] args) {
+        Laptop laptop1 = new Laptop("HP Pavilion", 58000.00);
+        laptop1.display();
+    }
+}
+
+//8.
+class Laptop {
+    public String brand;
+    public double price;
+
+    public Laptop() {
+        brand = "HP pavilion";
+        price = 58000.00;
+    }
+    public void display() {
+        System.out.println("Laptop Brand is: " + brand);
+        System.out.println("Laptop price is: " + price);
+    }
+}
+
+public class InnerLaptop{
+    public static void main(String[] args) {
+        Laptop laptop1 = new Laptop();
+        laptop1.display();
+    }
+}
+
+//9.
+//private acces modifier
+class Person{
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    private void seceretMethod() {
+        System.out.println("This is a private seceret method");
+    }
+    public void callSeceret() {
+        seceretMethod();
+    }
+    public void display() {
+        System.out.println("MY name is: " + name);
+        System.out.println("My age is: " + age);
+    }
+    public static void main(String[] args) {
+        Person p = new Person("Singh", 21);
+        p.name = "Atul";
+        p.age = 21;
+        p.display();
+        p.seceretMethod();
+        p.callSeceret();
+    }
+}
+
+
+//10.
+//private acces modifier
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    private void seceretMethod() {
+        System.out.println("This is a private seceret method");
+    }
+
+    public void callSeceret() {
+        seceretMethod();
+    }
+
+    public void display() {
+        System.out.println("MY name is: " + name);
+        System.out.println("My age is: " + age);
+    }
+}
+
+public class InnerPerson {
+    public static void main(String[] args) {
+        Person p = new Person("Praveen", 21);
+        //p.name = "Atul";
+        //p.age = 21;
+        p.display();
+        //p.seceretMethod();
+        p.callSeceret();
+    }
+
+}

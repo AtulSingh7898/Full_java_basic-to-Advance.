@@ -1,0 +1,571 @@
+
+{data mamber
+mamber fuction
+constructor}
+
+//hellow world without static in java
+public class Main{ data mamber
+ 
+
+    public int add(int a, int b){ mamber fuction
+        
+        // System.out.println("Hellow world"); constructor
+        return a+b;
+    }
+    public static void main(String args[]){ // its right with String[] its not wright without string
+        Main obj = new Main();              //Main Mathod
+        int result= obj.add(10,20);
+        System.out.println(result);
+    }
+}
+
+
+
+
+//instance class in java 
+ class Main{
+    public int length;
+    public int width;
+
+    public int area(){
+        return length*width;
+    }
+
+
+   
+    public static void main(String args[]){
+       Main obj = new Main();
+       obj.length = 59;
+       obj.width = 56;
+       int object =obj.area();
+       System.out.println(object);
+        
+    }
+}
+
+
+
+
+//one class mutliple object 
+ class Main{
+    public int length;
+    public int width;
+
+    public int area(){
+        return length*width;
+    }
+
+
+    public static void main(String args[]){
+      Main obj = new Main();
+      obj.length = 59;
+      obj.width = 56;
+      int object =obj.area();
+      System.out.println(object);
+
+      Main obj2 = new Main();
+        obj2.length = 59;
+        obj2.width = 53;
+        int object2 =obj2.area();
+      System.out.println(object2);
+
+      Main obj3 = new Main();
+        obj3.length = 23;
+        obj3.width = 56;
+        int object3 =obj3.area();
+      System.out.println(object3);
+
+      Main obj4 = new Main();
+        obj4.length = 59;
+        obj4.width = 56;
+        int object4 =obj4.area();
+      System.out.println(object4);
+
+        
+  }
+}
+
+
+
+
+//mathod Overloading
+
+ class Main{
+    public int add(int a, int b){ // member fuction 
+        return a+b;
+    }
+    public int add(int a, int b,  int c){
+        return a+b+c;
+    }
+    public double add(int a, double b){
+        return a+b;
+    }
+    public double add(double a, int b){
+        return a+b;
+    }
+    public static int main(int a, int b){
+        return a*b;
+    }
+
+
+    public static void main(String args[]){
+        Main obj = new Main(); //(constructor)
+        int result1 = obj.add(10, 20);
+        int result2 = obj.add(10, 20, 30);
+        double result3 = obj.add(10, 20.0);
+        double result4 = obj.add(10.0, 20);
+        //int result5 = obj.main(10, 20);
+
+        System.out.println("The area is "+result1);
+        System.out.println("The area is "+result2);
+        System.out.println("The area is "+result3);
+        System.out.println("The area is "+result4);
+        System.out.println("The area is "+result5);
+
+        
+    }
+}
+
+
+
+
+
+//constructor
+class Main{
+
+   public int length;
+   public int width; //constructor
+
+    public int area(){ //member fuction
+        return length*width;
+    }
+    
+
+    public static void main(String[] args) {   // i >cunstructore use for intialization of the value
+      Main obj = new Main();                   // ii> constructore has name of the class
+      obj.length = 25;                         // iii> constructore do not have return type
+      obj.width = 25;                          // iv > constructor do not need to be call
+      int result = obj.area();                 // v > get automatically calculate when object is create
+      System.out.println(result);
+
+      
+
+
+        
+        // System.out.println(result);
+    }
+}
+
+
+
+// Constructore
+class Main{
+
+   
+  int number;
+  String str;
+  Integer i;
+  boolean b;
+  Boolean b1;
+  
+  // i >cunstructore use for intialization of the value
+  // ii> constructore has name of the class
+  // iv > constructor do not need to be call
+  // v > get automatically calculate when object is create
+
+    public static void main(String[] args) {  
+      Main obj = new Main();                   
+      System.out.println(" the value of interger "+obj.number);
+      System.out.println(" the value of String "+obj.str);
+      System.out.println(" the value of integer "+obj.i);
+      System.out.println(" the value of boolean "+obj.b);
+      System.out.println(" the value of Boolean "+obj.b1);
+    }
+}
+
+
+
+// Paramiterized Constructore
+class Main{
+
+   
+  int x;  // instance variable
+  Main(int x1){
+    x = x1;
+    System.out.println("The non-paramterize constructore is called");
+    System.out.println("The value of x is : "+x);
+  }
+  public static void main(String[] args) {
+    Main  obj = new Main(100);
+  }
+}
+
+
+//Paramiterized Constructore use private
+class Main{
+
+   
+  int x;  //use private
+  Main(int x1){
+    this.x = x1;
+    System.out.println("The noparamterize constructore is called");
+    System.out.println("The value of x is : "+x);
+  }
+  public static void main(String[] args) {
+    Main  obj = new Main(100);
+  }
+}
+
+
+
+
+//Paramiterized Constructore
+
+class Main{
+  int length;
+  int width;
+
+  Main(int width, int length){
+    this.width = width;
+    this.length = length;
+  }
+   public  void area(){
+    System.out.println("The are is : "+length*width);
+   }
+
+   public static void main(String[] args) {
+    Main obj =  new Main(45, 23);
+    obj.area();
+   }
+}
+
+
+
+// Constructore overloading
+
+class Main{
+  
+  int length;
+  int width;
+  int height;
+
+  Main(int width, int length){ // parameter
+    this.width = width;
+    this.length = length;
+  }
+  
+  Main(int width, int length ,int height){ // parameter
+    this.width = width;
+    this.length = length;
+    this.height = height;
+  }
+   public  void area(){
+    System.out.println("The are is : "+length*width);
+    System.out.println("The are is : "+length*width*height);
+
+   }
+
+   public static void main(String[] args) {
+    Main obj =  new Main(45, 23);
+    Main obj2 =  new Main(45, 23,5);
+    Main obj3 =  new Main(45, 23);
+    obj.area();
+    obj2.area();
+    obj3.area();
+   }
+}
+
+
+
+// Copy Construtor 
+
+class Main{
+  int id;
+  String name;
+
+  Main(int id , String name){ // constructor
+    this.id = id;
+    this.name = name;
+
+  }
+  
+  Main(Main original){ // parameter
+    this.id= original.id;
+    this.name = original.name;
+  }
+   
+
+   public void display(){
+    System.out.println("Id Is : "+ id+ " name is "+name);
+   }
+
+   public static void main(String[] args) {
+    Main obj =  new Main(1, "atul");
+    Main obj1 =  new Main(obj);
+    
+    obj.display();
+    obj1.display();
+    
+   }
+}
+
+
+
+// Static block 
+
+class Main{
+  
+  static{
+    System.out.println("this is Static block, excute first and s time");
+  }
+  
+  Main(){
+  System.out.println("constructore Got Called");
+  }
+  public static void main(String[] args) {
+  Main obj = new Main();
+  Main obj2 = new Main();
+
+  }
+}
+
+
+// Book Class
+public class book{
+
+  String title;
+  String Author;
+  double price;
+
+  book(){
+    title = "Unknown book";
+    Author = "Unknown Author";
+    price = 0.0;
+  }
+
+  book(String title, String Author, double price){
+    this.title = title;
+    this.Author = Author;
+    this.price = price;
+  }
+
+  void display(){
+    System.out.println("The Book Tilte is: "+ title);
+    System.out.println("The Author is: "+ Author);
+    System.out.println("The price is: "+ price);
+  }
+
+  public static void main(String[] args) {
+    book obj = new book();
+    obj.display();
+    System.out.println();
+
+    book obj2 = new book("The tiger forest", "Arvind Adgi",210.67);
+    obj2.display();
+  }
+  
+}
+
+
+
+// class student
+public class studnet{
+
+  String student;
+  int rollNumber;
+  char grad;
+
+  studnet(){
+    student = "Name";
+    rollNumber = 0;
+    grad = 'A';
+
+  }
+
+  studnet(String student, int rollNumber){
+    this.student = student;
+    this.rollNumber = rollNumber;
+  }
+
+  studnet(String student, int rollNumber, char grad){
+    this.student = student;
+    this.rollNumber = rollNumber;
+    this.grad = grad;
+  }
+
+  void display(){
+    System.out.println("The Name of Student: "+student);
+    System.out.println("The rollNuber of Student: "+rollNumber);
+    System.out.println("The grad of Student "+grad);
+  }
+
+  public static void main(String[] args) {
+    studnet obj = new studnet();
+    obj.display();
+    studnet obj1 = new studnet("Atul", 12312331);
+    obj1.display();
+
+    studnet obj2 = new studnet("Atul", 12312331, 'A');
+    obj2.display();
+  }
+}
+
+
+// bank Account using copy constructore, paramaeterize constructore as well
+
+public class bankaccount{
+  int balance;
+  int account;
+
+  bankaccount(int balance, int account){
+    this.balance = balance;
+    this.account = account;
+  }
+
+  bankaccount(bankaccount original){
+    this.balance = original.balance;
+    this.account = original.account;
+  }
+
+  void display(){
+    System.out.println("Your Account Balance is: "+balance);
+    System.out.println("Your Accaount Number is: "+account);
+  }
+
+  public static void main(String[] args) {
+    bankaccount originalAccount = new bankaccount(2020202020, 39822234);
+    bankaccount copiedaccount = new bankaccount(originalAccount);
+
+    obj.display();
+    // obj2.display();
+    
+
+    
+  }
+}
+
+
+// calculater
+public class Calculator{
+ 
+  int a;
+  int b;
+  Calculator(int a, int b){
+    this.a = a;
+    this.b = b;
+  }
+
+  int add(){
+    return a+b;
+  }
+  int multiply(){
+    return a*b;
+  }
+  int subtraction(){
+    return a-b;
+  }
+  double divid(){
+    if(b == 0){
+      System.out.println("The number is 0 ");
+      return Double.NaN;
+    }
+    return a/b;
+  }
+  
+
+  public static void main(String[] args) {
+    
+    Calculator Calculate = new Calculator(20, 5);
+    System.out.println(Calculate.add());
+    System.out.println(Calculate.subtraction());
+    System.out.println(Calculate.multiply());
+    System.out.println(Calculate.divid());
+    // Calculate.divid();
+    
+  }
+}
+
+
+// Cunstructore chaining
+public class Person{
+ 
+  String name;
+  int age;
+  String city;
+
+  Person(){
+    this("unknown",0);
+    System.out.println("no argeument constructore 1 got called");
+  }
+  Person(String name, int age){
+     this("unknown",0, "unknown");
+    System.out.println("no argeument constructore 2 got called");
+  }
+   Person(String name, int age,String city){
+    this.name = name;
+    this.age = age;
+    this.city = city;
+    System.out.println("no argeument constructore 3 got called");
+  }
+
+  void display(){
+    System.out.println("Name is: "+name);
+    System.out.println("age is: "+age);
+    System.out.println("city is: "+city);
+
+  }
+  
+
+  public static void main(String[] args) {
+    Person person1 = new Person();
+    person1.display();
+
+    Person person2 = new Person("atul",34);
+    person2.display();
+
+    Person person3 = new Person("Sing",65, "bhind");
+    person3.display();
+  
+    
+  }
+}
+
+// Chaining 
+
+public class  Person{
+        String name;
+        int age;
+        String city;
+    
+        Person(){
+            this("unknown", 0);
+            System.out.println("The number is argument int the first Slot");
+        }
+        Person(String name, int age){
+            this("unKnown",0,"unknown");
+            System.out.println("The number is argument int the second Slot");
+        }
+        Person(String name, int age, String city){
+            this.name = name;
+            this.age = age;
+            this.city = city;
+            System.out.println("The number is argument int the third Slot");
+        }
+
+    void display(){
+            System.out.println("The Name of Person:"+name);
+            System.out.println("The age of Person:"+age);
+            System.out.println("The Place of person:"+city);
+            System.out.println("The number is argument int the Fourth Slot");
+    }
+
+  public static void main(String[] args) {
+            Person newobj = new Person();
+            newobj.display();
+            Person newobj2 = new Person("Atul",21);
+            newobj2.display();
+            Person newobj3 = new Person("Siva",32,"Raipur");
+            newobj3.display();
+  }
+
+}

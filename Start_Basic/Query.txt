@@ -1,0 +1,168 @@
+1//long num = 954200L;
+way use L in long
+
+1//Explicit Typecasting or Narrowing or Manual type casting
+public class Main {
+
+    public static void main(String[] args) {
+        int x=(int)20.8345678;
+        double x1=20;
+        int y=(int)x1;
+        System.out.println(y);
+        System.out.println(x);
+        
+    }
+}
+Why use type casting
+
+while loop
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i <= 10) {
+            System.out.println("Hellow World: ");
+            i++;
+        }
+    }
+}
+
+
+import java.util.Scanner;
+
+public class even {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Number: ");
+        int s = sc.nextInt();
+        System.out.print("Enter the Number: ");
+        int p = sc.nextInt();
+        int odd_sum = 0;
+        int Even_sum = 0;
+        for(int i = s; i <= p; i++){
+            
+            if(i%2 == 0){
+                odd_sum += i;
+            }else{
+                Even_sum += i;
+            }
+        }
+        System.out.println("You Total number is: " +odd_sum);
+        System.out.println("You Total number is: " +Even_sum);
+
+
+        
+    }
+}
+
+
+import java.util.Scanner;
+
+
+
+public class Main{
+	public static void main(String args[]){
+	    Scanner sc = new Scanner(System.in);
+	    double num1 = sc.nextDouble();
+	    double num2 = sc.nextDouble();
+	    double num3 = sc.nextDouble();
+	    
+	    if(num1>num2 && num2>num3){
+	        
+	        System.out.print(num1+"Is Biggest");
+	    }else if(num3>num1 && num3>num2 ){
+	     System.out.print(num3+"Is Biggest") ;  
+	    }else{
+	     System.out.print(num2+"Is Biggest") ;    
+	    }
+	    
+	    
+	}
+	
+}
+
+
+
+
+import java.util.Scanner;
+
+
+
+public class Main{
+	public static void main(String args[]){
+	    Scanner sc = new Scanner(System.in);
+	    double num1 = sc.nextDouble();
+	    double num2 = sc.nextDouble();
+	    double num3 = sc.nextDouble();
+	     double largest = num1;
+	     
+	    if(num2>largest){
+	        largest = num2;
+	       
+	    }
+	    if(num3>largest){
+	     largest = num3;
+	    }
+	     System.out.print(largest+" Is largest number is ") ;    
+	    
+	    
+	    
+	}
+	
+}
+
+
+import java.util.Scanner;
+
+
+
+public class Main{
+	public static void main(String args[]){
+	    Scanner sc = new Scanner(System.in);
+	    int mult3 = 1;
+	    System.out.println("Enter the first Number: ");
+	    int mult = sc.nextInt();
+	    System.out.println("Enter the second Number: ");
+	    int mult2 = sc.nextInt();
+	    for(int i =mult; i <= mult2; i++){
+	        mult *= i;
+	    }
+	    System.out.println(mult);
+	    
+	}
+	
+}
+
+//count number of difits
+
+public class Prime1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Any no. ");
+        int n = sc.nextInt();
+        // int n = 34;
+        int count = 0;
+        // if(i%2 == 0)
+        for(int i = n; i != 0; i /=10){
+            count++;
+            // System.out.println(c);
+        }
+        System.out.println(count);
+    }
+ 
+ Scanner sc = new Scanner(System.in);
+         int n = sc.nextInt();
+         int Reverse = 0;
+
+         for(int i = n; i != 0; i /=10){
+            int Digit = i%10;
+            Reverse = Reverse*10+Digit;
+            
+        }
+        
+        if(n==Reverse){
+                System.out.println(n+" it is a pelindram number");
+           }else{
+            
+            System.out.println(n+" it is not a pelindram number");
+           }
