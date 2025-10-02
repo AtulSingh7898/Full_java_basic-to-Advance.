@@ -4,7 +4,7 @@ public class StringN {
     public static void main(String args[]){
         Scanner atul = new Scanner(System.in);
     
-        System.out.print("Entet any Name: ");
+        System.out.print("Enter any Name: ");
         String input = atul.nextLine();
         
         for(int i = 0; i<=input.length(); i++){
