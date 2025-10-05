@@ -1,5 +1,7 @@
 public class Practic{
     
+
+    
     static int exchangBottle(int n, int x){
         if(x>n) return n;
         int empty = 0;
