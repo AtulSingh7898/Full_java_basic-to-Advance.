@@ -1,5 +1,5 @@
 
-//Private Constructor :Sigelton or Ristricted
+//Private Constructor Sigelton or Ristricted Mathod we are called using class name
 
 class Utility{
 

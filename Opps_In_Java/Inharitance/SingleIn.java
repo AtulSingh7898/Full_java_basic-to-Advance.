@@ -1,4 +1,4 @@
-
+// Using protected it can access in the same package and different package
 class Animal{
 
     protected String name = "Animal";
