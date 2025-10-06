@@ -1,4 +1,7 @@
 // Using protected it can access in the same package and different package
+
+//singleIn consdition using recursion 
+
 class Animal{
 
     protected String name = "Animal";
@@ -6,11 +9,8 @@ class Animal{
     public void makesound(){
         System.out.println("Animal Sound");
     }
-
-    
 }
-
-class Dog extends Animal{
+public class Dog extends Animal{
     public void display(){
         System.out.println("Dog is a : "+name);
         makesound();
@@ -20,7 +20,7 @@ class Dog extends Animal{
         d.display();
 
         Animal a = new Animal();
-        a.makesound();
+        a.name = "Cow";
         System.out.println(a.name);
         // makesound();
     }
