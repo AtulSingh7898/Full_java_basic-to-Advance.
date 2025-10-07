@@ -1,22 +1,18 @@
-// super keyword most improtant as a constructor
+// super keyword most improtant as a constructor Using parant Constructor
 
 class Animal{
-    
     Animal(String type){
-        System.out.println("This a animal type"+ type);
+        System.out.println("The animal is "+ type);
     }
 }
+
 class Cat extends Animal{
     Cat(){
-        super("cat");
-        System.out.println("Cat constructore got called ");
+        super("Cat");
+        System.out.println("The cat constructor is called");
     }
-
     public static void main(String[] args) {
-        Animal a = new Animal("Dog");
+        Animal A = new Animal("Dog");
         Cat c = new Cat();
-
     }
-}
-
-// superkey each time We write First othewise compile time on given error
+} 

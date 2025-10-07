@@ -10,10 +10,9 @@ class BankAccount{
 
 // superkey each time We write First othewise compile time on given error
 
-
 public class SavingAccount extends BankAccount{
     void account(){
-        
+
         System.out.println("the number is over all system: ");
         super.Showbalance();
     }

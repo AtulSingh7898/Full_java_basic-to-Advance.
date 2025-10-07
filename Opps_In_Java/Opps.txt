@@ -1,0 +1,56 @@
+// super keyword most improtant as a constructor Using parant Constructor
+
+class Animal{
+    Animal(String type){
+        System.out.println("The animal is "+ type);
+    }
+}
+
+class Cat extends Animal{
+    Cat(){
+        super("Cat");
+        System.out.println("The cat constructor is called");
+    }
+    public static void main(String[] args) {
+        Animal A = new Animal("Dog");
+        Cat c = new Cat();
+    }
+} 
+
+//Access Superclass fields
+
+class vehical{
+    String Brand = "Marcedeace";
+}
+
+class Car extends vehical{
+    String Brand = "Maruti";
+    void displayBrand(){
+        System.out.println("The car brand is"+ Brand);
+        System.out.print("The New Car is "+super.Brand);
+    }
+    public static void main(String args[]){
+        Car c = new Car();
+        c.displayBrand();
+    }
+}
+
+
+//Use of Super Keyword with Protected Members
+class Bankaccount{
+    protected double balance = 1000;
+    void showbalance(){
+        System.out.println("This is bank balance "+ balance);
+    }
+    
+}
+class SavingAccount extends Bankaccount{
+    void display(){
+        super.showbalance();
+        System.out.println("The bank balance is "+super.balance);
+    }
+    public static void main(String args[]){
+        SavingAccount s = new SavingAccount();
+        s.display();
+    }
+}
