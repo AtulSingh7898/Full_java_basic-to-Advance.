@@ -1,0 +1,155 @@
+//access superclass mathod
+
+class A {
+    void show(){
+        System.out.println("This the super class ");
+    }
+}
+
+class B extends A{
+    void show(){
+        super.show();
+        System.out.println("This is class B ");
+    }
+    public static void main(String[] args) {
+        B b = new B();
+        b.show();
+    }
+}
+
+// Constructore chaining
+
+public class constructorechaning {
+    int num1;
+    int num2;
+
+    constructorechaning(int num1, int num2){
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+
+    int add(){
+        return num1+num2; 
+    }
+
+    int subtraction(){
+        return num1-num2;
+    }
+    int multiplaction(){
+        return num1*num2;
+    }
+
+    double divid(){
+        if(num2 == 0){
+            System.out.println("THe nuebr is");
+            return Double.NaN;
+        }
+        return num1+num2;
+        
+    }
+
+    public static void main(String[] args) {
+        constructorechaning chaining = new constructorechaning(20, 5);
+        
+        int Addition = chaining.add();
+        System.out.println("THe 2 Number of Addition "+Addition);
+        int subtraction = chaining.subtraction();
+        System.out.println("THe 2 Number of subtraction "+subtraction);
+        int multiplaction = chaining.multiplaction();
+        System.out.println("THe 2 Number of multiplaction "+multiplaction);
+        double divid = chaining.divid();
+        System.out.println("THe 2 Number of Divid "+divid);
+    }
+
+}
+
+
+
+// super keyword most improtant as a constructor Using parant Constructor
+
+class Animal{
+    Animal(String type){
+        System.out.println("The animal is "+ type);
+    }
+}
+
+class Cat extends Animal{
+    Cat(){
+        super("Cat");
+        System.out.println("The cat constructor is called");
+    }
+    public static void main(String[] args) {
+        Animal A = new Animal("Dog");
+        Cat c = new Cat();
+    }
+} 
+
+//Access Superclass fields
+
+class vehical{
+    String Brand = "Marcedeace";
+}
+
+class Car extends vehical{
+    String Brand = "Maruti";
+    void displayBrand(){
+        System.out.println("The car brand is"+ Brand);
+        System.out.print("The New Car is "+super.Brand);
+    }
+    public static void main(String args[]){
+        Car c = new Car();
+        c.displayBrand();
+    }
+}
+
+
+//Use of Super Keyword with Protected Members
+class Bankaccount{
+    protected double balance = 1000;
+    void showbalance(){
+        System.out.println("This is bank balance "+ balance);
+    }
+    
+}
+class SavingAccount extends Bankaccount{
+    void display(){
+        super.showbalance();
+        System.out.println("The bank balance is "+super.balance);
+    }
+    public static void main(String args[]){
+        SavingAccount s = new SavingAccount();
+        s.display();
+    }
+}
+
+
+package Protected;
+
+// Protected access modifier
+
+class Animal {
+    protected String name = "Tiger";
+    protected void sound(){
+        System.out.println("Hello");
+    }
+}
+
+class Bird extends Animal{
+    void makeSound(){
+        sound();
+        System.out.println("Bird class access");
+    }
+}
+
+public class ProtectedModifier{
+    public static void main(String[] args) {
+        Animal a = new Animal();
+        System.out.println("the name is "+a.name);
+        a.sound();
+
+        Bird b = new Bird();
+        System.out.println("the tiger access through bird class  "+b.name);
+        b.sound();
+        b.makeSound();
+    }
+}

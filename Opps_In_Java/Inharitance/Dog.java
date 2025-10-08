@@ -20,7 +20,7 @@ class Dog extends Animal {
         d.display();
 
         Animal a=new Animal();
-        a.makeSound();
+        // a.makeSound();
         System.out.println(a.name);
 
     }
