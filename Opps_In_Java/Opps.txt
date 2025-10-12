@@ -1,137 +1,1716 @@
-// Constructore chaining
+//Hello World using Non Static Method
+public class Main {
 
-public class constructorechaning {
-    int num1;
-    int num2;
-
-    constructorechaning(int num1, int num2){
-        this.num1 = num1;
-        this.num2 = num2;
-    }
-
-    int add(){
-        return num1+num2; 
-    }
-
-    int subtraction(){
-        return num1-num2;
-    }
-    int multiplaction(){
-        return num1*num2;
-    }
-
-    double divid(){
-        if(num2 == 0){
-            System.out.println("THe nuebr is");
-            return Double.NaN;
-        }
-        return num1+num2;
-        
+    public void display(){//Method Declaration
+        System.out.println("Hello World");//Method Definition
     }
 
     public static void main(String[] args) {
-        constructorechaning chaining = new constructorechaning(20, 5);
+        Main obj=new Main();
+        obj.display();//Method Calling
         
-        int Addition = chaining.add();
-        System.out.println("THe 2 Number of Addition "+Addition);
-        int subtraction = chaining.subtraction();
-        System.out.println("THe 2 Number of subtraction "+subtraction);
-        int multiplaction = chaining.multiplaction();
-        System.out.println("THe 2 Number of multiplaction "+multiplaction);
-        double divid = chaining.divid();
-        System.out.println("THe 2 Number of Divid "+divid);
+    }
+}
+
+
+//add two Numbers with not static method
+
+public class Main {
+
+    public int add(int a,int b){
+        return a+b;
+    }
+    public static void main(String[] args) {
+        Main obj=new Main();
+        int result=obj.add(10,40);
+        System.out.println("Result is : "+ result);
+
+        
+    }
+}
+
+
+//Area of a Rectangle
+
+public class Main {
+    public int length;
+    public int width;
+
+    public int area(){
+        return length*width;
+    }
+
+    public static void main(String[] args) {
+        Main obj=new Main();
+        obj.length=59;
+        obj.width=56;
+        int area=obj.area();
+        System.out.println("The area is: "+ area);
+
+        
+    }
+
+
+
+    
+}
+
+
+//Area of a Rectangle
+
+public class Main {
+    public  static  int length;
+    public int width;
+
+    public int area(){
+        return length*width;
+    }
+
+    public static void main(String[] args) {
+        Main obj=new Main();
+        length=59;
+        obj.width=56;
+        int area=obj.area();
+        System.out.println("The area is: "+ area);
+
+        
+    }
+    
+}
+
+
+//Area of a Rectangle
+
+class Main {
+    public int length;
+    public int width;
+
+    public int area() {
+        return length * width;
+    }
+
+    public void main(String[] args) {
+        Main obj = new Main();
+        obj.length = 59;
+        obj.width = 56;
+        int area = obj.area();
+        System.out.println("The area is: " + area);
+
+    }
+
+}
+
+
+//Area of a Rectangle
+
+class Main {
+    public int length=90;
+    public int width=67;
+
+    public int area() {
+        return length * width;
+    }
+
+    public static void main(String[] args) {
+        //obj0
+        Main obj = new Main();
+        obj.length = 59;
+        obj.width = 56;
+        int area = obj.area();
+        System.out.println("The area is: " + area);
+
+        //obj1
+        Main obj1 = new Main();
+        obj1.length = 32;
+        obj1.width = 46;
+        int area1 = obj1.area();
+        System.out.println("The area is: " + area1);
+
+        //obj2
+        Main obj2 = new Main();
+        obj2.length = 59;
+        obj2.width = 51;
+        int area2 = obj2.area();
+        System.out.println("The area is: " + area2);
+
+        //obj3
+        Main obj3 = new Main();
+        obj3.length = 67;
+        obj3.width = 23;
+        int area3 = obj3.area();
+        System.out.println("The area is: " + area3);
+
     }
 
 }
 
 
 
-// super keyword most improtant as a constructor Using parant Constructor
+//add two Numbers with not static method (Method Overloading)
 
+public class Main {
+
+    public int add(int a,int b){
+        return a+b;
+    }
+
+    public int add(int a,int b,int c){
+        return a+b+c;
+    }
+
+    public double add(double a,double b){
+        return a+b;
+    }
+
+    public double add(int a,double b){
+        return a+b;
+    }
+
+    public double add(double a,int b){
+        return a+b;
+    }
+
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+        int result=obj.add(10,40);
+        int result1=obj.add(10,40,78);
+        double result2=obj.add(10.8,40.56);
+        double result3=obj.add(10,40.89);
+        double result4=obj.add(10.76,40);
+         
+        System.out.println("Result is : "+ result);
+        System.out.println("Result1 is : "+ result1);
+        System.out.println("Result2 is : "+ result2);
+        System.out.println("Result3 is : "+ result3);
+        System.out.println("Result4 is : "+ result4);
+
+        
+    }
+}
+
+
+
+//add two Numbers with not static method (Method Overloading)
+
+public class Main {
+
+    public int add(int a,int b){
+        return a+b;
+    }
+
+    public int add(int a,int b,int c){
+        return a+b+c;
+    }
+
+    public double add(double a,double b){
+        return a+b;
+    }
+
+    public double add(int a,double b){
+        return a+b;
+    }
+
+    public double add(double a,int b){
+        return a+b;
+    }
+
+    public int main(int a,int b) {
+        return a*b;
+        
+        
+    }
+
+     
+
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+        int result=obj.add(10,40);
+        int result1=obj.add(10,40,78);
+        double result2=obj.add(10.8,40.56);
+        double result3=obj.add(10,40.89);
+        double result4=obj.add(10.76,40);
+        int result5=obj.main(10,40);
+
+         
+        System.out.println("Result is : "+ result);
+        System.out.println("Result1 is : "+ result1);
+        System.out.println("Result2 is : "+ result2);
+        System.out.println("Result3 is : "+ result3);
+        System.out.println("Result4 is : "+ result4);
+        System.out.println("Result4 is : "+ result5);
+
+        
+    }
+}
+
+
+//Default Constructor
+
+public class Main {
+
+    int number;
+    String str;
+    Integer i;
+    boolean b;
+    Boolean b1;
+    public static void main(String[] args) {
+        Main obj=new Main();
+        System.out.println("Default value of Number is :"+ obj.number);
+        System.out.println("Default value of String is :"+ obj.str);
+        System.out.println("Default value of Integer is :"+ obj.i);
+        System.out.println("Default value of boolean is :"+ obj.b);
+        System.out.println("Default value of Boolean is :"+ obj.b1);
+
+    }
+}
+
+
+//non parameterized Constructor
+public class Main {
+
+    int x;
+    int y,z;
+    Main(){
+        x=100;
+        y=7;
+        z=45;
+        System.out.println("No Argument Constructor  is Called");
+        System.out.println(x*y);
+    }
+    public static void main(String[] args) {
+        Main obj=new Main();
+        System.out.println("The Value of x is : "+obj.x);
+    }
+}
+
+//  parameterized Constructor
+public class Main {
+
+    public int x;
+
+    public Main(int x1) {
+        x = x1;
+         
+        System.out.println("No Argument Constructor  is Called");
+        System.out.println("The value of x is : "+ x);
+    }
+     public static void main(String[] args) {
+        Main obj = new Main(100);
+         
+    }
+
+}
+
+ //  parameterized Constructor
+public class Main {
+
+    public int x;
+
+    public Main(int x) {
+        this.x = x;
+         
+        System.out.println("No Argument Constructor  is Called");
+        System.out.println("The value of x is : "+ x);
+    }
+     public static void main(String[] args) {
+        Main obj = new Main(100);
+         
+    }
+
+}
+
+ 
+
+ //  Parameterized Constructor
+
+public class Main {
+
+    int width;
+    int length;
+
+    Main(int width, int length) {
+        this.width = width;
+        this.length = length;
+    }
+
+    public void area() {
+        System.out.println("Area is : " + (length * width));
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main(45, 23);
+        obj.area();
+    }
+
+}
+
+
+//    Constructor Overloading
+
+public class Main {
+
+    int width;
+    int length;
+    int height;
+
+    Main(int width, int length) {
+        this.width = width;
+        this.length = length;
+    }
+
+     
+
+    Main(int width, int length, int height) {
+        this.width = width;
+        this.length = length;
+        this.height = height;
+
+    }
+
+    public void area() {
+        System.out.println("Area is : " + (length * width));
+        System.out.println("Area is : " + (length * width * height));
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main(130, 129);
+        Main obj1 = new Main(10, 10);
+        Main obj2 = new Main(45, 23, 5);
+
+        obj.area();
+        obj1.area();
+        obj2.area();
+    }
+
+}
+
+
+
+//Copy Constructor
+
+public class Main {
+    int id;
+    String name;
+
+    Main(int id,String name){
+        this.id=id;
+        this.name=name;
+
+    }
+    Main(Main original){
+        this.id=original.id;
+        this.name=original.name;
+        
+
+    }
+    public void display(){
+        System.out.println("Id is: "+id+ "Name is: "+name);
+    }
+    public static void main(String[] args) {
+        Main obj1=new Main(1,"Amit");
+        Main obj2=new Main(obj1);
+        obj1.display();
+        obj2.display();
+    }
+
+
+    
+}
+
+
+//static Block
+
+public class Main {
+
+    static{
+        System.out.println("This is Static Block, executed first and only once");
+
+
+    }
+    Main(){
+        System.out.println("Constructor Got called");
+    }
+    public static void main(String[] args) {
+        Main ob1=new Main();
+        Main ob2=new Main();
+
+    }
+}
+
+
+//Fibonacci Sequence
+
+public class Main {
+    public static void main(String[] args) {
+        int n=10;
+        int first=0,second=1;
+        System.out.println("Fibonacci Sequence is : ");
+        for (int i = 1; i <=n; i++) {
+            System.out.print(first+" ");
+            int next=first+second;
+            first=second;
+            second=next;
+
+            
+        }
+    }
+
+    
+}
+
+
+//Book Class
+
+public class Book {
+    String title;
+    String author;
+    double price;
+
+    Book(){
+        title="Unknown Title";
+        author="Unknown Author";
+        price=0.0;
+    }
+    Book(String title,String author,double price){
+        this.title=title;
+        this.author=author;
+        this.price=price;
+
+    }
+    public void display(){
+        System.out.println("Book title is : "+ title);
+        System.out.println("Author name is : "+ author);
+        System.out.println("Price of the book is : "+ price);
+    }
+
+
+    public static void main(String[] args) {
+        Book book1=new Book();
+        System.out.println("Book 1 is Default values: ");
+        book1.display();
+
+        Book book2=new Book("The White Tiger","Arvind Adiga",213.67);
+        System.out.println("Book 2 is  : ");
+        book2.display();
+    }
+
+    
+}
+
+
+//Student class having Constructor Overloading 
+
+public class Student {
+    String name;
+    int rollNo;
+    char grade;
+
+    Student(String name){
+        this.name=name;
+        this.rollNo=-1;
+        this.grade='N';
+    }
+
+    Student(String name,int rollNo){
+        this.name=name;
+        this.rollNo=rollNo;
+        this.grade='N';
+    }
+
+    Student(String name,int rollNo,char grade){
+        this.name=name;
+        this.rollNo=rollNo;
+        this.grade=grade;
+    }
+
+    public void display(){
+        System.out.println("Name: "+ name);
+        System.out.println("Roll No. : "+ rollNo);
+        System.out.println("Grade : "+ grade);
+    }
+
+    public static void main(String[] args) {
+        Student student1=new Student("Amit");
+        student1.display();
+
+        Student student2=new Student("Amit",5);
+        student2.display();
+
+        Student student3=new Student("Amit",7,'A');
+        student3.display();
+        
+
+    }
+
+
+    
+}
+
+
+
+//Bank Account 
+
+public class BankAccount {
+    int accountNumber;
+    double balance;
+
+    //parameterized Constructor
+    BankAccount(int accountNumber,double balance){
+        this.accountNumber=accountNumber;
+        this.balance=balance;
+    }
+
+    //copy Constructor
+    BankAccount(BankAccount original){
+        this.accountNumber=original.accountNumber;
+        this.balance=original.balance;
+        
+
+    }
+
+    public void display(){
+        System.out.println("Account Number is: "+ accountNumber);
+        System.out.println("Baalance is : "+ balance);
+    }
+    public static void main(String[] args) {
+        BankAccount originalAccount=new BankAccount(234234,3456.67);
+        BankAccount copiedAccount=new BankAccount(originalAccount);
+
+        System.out.println("Original Account is : ");
+        originalAccount.display();
+
+        System.out.println("Copied Account is : ");
+        copiedAccount.display();
+
+
+    }
+
+
+
+    
+}
+
+
+public class Calculator {
+    int num1;
+    int num2;
+
+    Calculator(int num1,int num2){
+        this.num1=num1;
+        this.num2=num2;
+    }
+
+    public int add(){
+        return num1+num2;
+    }
+
+    public int substract(){
+        return num1-num2;
+    }
+
+    public int multiply(){
+        return num1*num2;
+    }
+
+    public double divide(){
+        if (num2==0) {
+            System.out.println("You can not divide by 0");
+            return Double.NaN;
+            
+        }
+        return (double)num1/num2;
+    }
+
+    public static void main(String[] args) {
+        Calculator cal=new Calculator(20, 5);
+        System.out.println("Addition is : "+cal.add());
+        System.out.println("Substract is : "+cal.substract());
+        System.out.println("Multiply is : "+cal.multiply());
+        System.out.println("Divide is : "+cal.divide());
+    }
+
+
+    
+}
+
+
+//Constructor Chaining
+
+public class Person {
+    String name;
+    int age;
+    String city;
+
+    Person() {
+        this("Unknown", 0);
+        System.out.println("No argument constructor 1 got called");
+    }
+
+    Person(String name, int age) {
+        this("Unknown", 0, "Unknown");
+        System.out.println("Parameterized constructor 2 got called");
+
+    }
+
+    Person(String name, int age, String city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        System.out.println("Parameterized constructor 3 got called");
+
+    }
+    public void display(){
+        System.out.println("Name is : "+ name);
+        System.out.println("Age is : "+ age);
+        System.out.println("City is : "+ city);
+    }
+    public static void main(String[] args) {
+        Person person1=new Person();
+        person1.display();
+
+        Person person2=new Person("Amit",45);
+        person2.display();
+
+        Person person3=new Person("Anita",56,"Delhi");
+        person3.display();
+
+
+        
+    }
+
+
+
+}
+
+
+//public Access Modifier Example
+
+public class PublicExample {
+    public String message;
+
+    public void display(){
+        System.out.println("Message is : "+ message);
+    }
+
+    public static void main(String[] args) {
+        PublicExample p1=new PublicExample();
+        p1.message="This is Java DSA Class";
+        p1.display();
+    }
+
+    
+}
+
+//public Access Modifier Example
+
+public class PublicExample {
+    public String message;
+
+    public PublicExample(){
+        message="This is Java DSA Class";
+    }
+
+    public void display(){
+        System.out.println("Message is : "+ message);
+    }
+
+    public static void main(String[] args) {
+        PublicExample p1=new PublicExample();
+        p1.display();
+    }
+
+    
+}
+
+
+//public Access Modifier Example :taking main method to another Class
+
+class PublicExample {
+    public String message;
+
+    public void display(){
+        System.out.println("Message is : "+ message);
+    }
+    
+}
+
+public class InnerPublicExample {
+    public static void main(String[] args) {
+        PublicExample p1=new PublicExample();
+        p1.message="This is Java DSA Class";
+        p1.display();
+    }
+
+    
+}
+
+
+//public Access Modifier Example :taking main method to another Class
+
+class PublicExample {
+    public String message;
+
+    public PublicExample(){
+        message="This is Java DSA Class";
+    }
+
+    public void display(){
+        System.out.println("Message is : "+ message);
+    }
+    
+}
+
+public class InnerPublicExample {
+    public static void main(String[] args) {
+        PublicExample p1=new PublicExample();
+        p1.display();
+    }
+
+    
+}
+
+
+//Laptop : public access modifier 
+class Laptop {
+    public String brand;
+    public double price;
+
+    public Laptop(String brand, double price) {
+        this.brand = brand;
+        this.price = price;
+    }
+
+    public void display() {
+        System.out.println("Laptop Brand is : " + brand);
+        System.out.println("Laptop Price is : " + price);
+    }
+
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        Laptop l1=new Laptop("Apple",10000.0);
+        l1.display();
+    }
+
+}
+
+
+//Private Access Modifier : you can call every member within the class 
+
+
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name,int age){
+        this.name=name;
+        this.age=age;
+
+    }
+
+    public void display(){
+        System.out.println("Name is : "+ name);
+        System.out.println("Age is : "+ age);
+    }
+
+    private void secretMethod(){
+        System.out.println("This is a Private Method");
+    }
+
+    public void callSecret(){
+        secretMethod();
+    }
+
+    public static void main(String[] args) {
+        Person p=new Person("Amit", 56);
+        p.name="Atul";
+        p.age=55;
+        p.display();
+        p.secretMethod();
+        p.callSecret();
+
+    }
+
+
+    
+}
+
+//Private Access Modifier : you can call every member within the class but in different class you can not change the value of the members
+
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+
+    }
+
+    public void display() {
+        System.out.println("Name is : " + name);
+        System.out.println("Age is : " + age);
+    }
+
+    private void secretMethod() {
+        System.out.println("This is a Private Method");
+    }
+
+    public void callSecret() {
+        secretMethod();
+         
+    }
+
+}
+
+public class InnerPerson {
+    public static void main(String[] args) {
+        Person p=new Person("Amit", 56);
+       // p.name="Atul";
+        //p.age=55;
+        p.display();
+        //p.secretMethod();
+        p.callSecret();
+
+    }
+
+}
+
+
+//Getter Setter method :Another of initilizing Values
+class BankAccount {
+    private double balance;
+
+    // public BankAccount(double balance) {
+    //     this.balance = balance;
+
+    // }
+
+    public double getBalance() {
+        return balance;
+    }
+    public void setBalance(double balance){
+        this.balance = balance;
+
+    }
+
+    public void diposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+
+        } else {
+            System.out.println("Invalid Deposit");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+
+        } else {
+            System.out.println("Insufficient balance ");
+        }
+    }
+
+}
+
+public class InnerBankAccount {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+
+        account.setBalance(1000);
+        account.diposit(500);
+        System.out.println("After Deposit Ammount is :"+ account.getBalance());
+
+        account.withdraw(100);
+        System.out.println("After Withdraw Ammount is :"+ account.getBalance());
+
+        account.withdraw(3000);
+        System.out.println("After Withdraw Ammount is :"+ account.getBalance());
+
+         
+
+    }
+
+}
+
+
+//Getter Setter method :Another of initilizing Values
+class BankAccount {
+    private double balance;
+
+    public BankAccount(double balance) {
+        this.balance = balance;
+
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void diposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+
+        } else {
+            System.out.println("Invalid Deposit");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+
+        } else {
+            System.out.println("Insufficient balance ");
+        }
+    }
+
+}
+
+public class InnerBankAccount {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(1000);
+
+        account.diposit(500);
+        System.out.println("After Deposit Ammount is :"+ account.getBalance());
+
+        account.withdraw(100);
+        System.out.println("After Withdraw Ammount is :"+ account.getBalance());
+
+        account.withdraw(3000);
+        System.out.println("After Withdraw Ammount is :"+ account.getBalance());
+
+
+
+    }
+
+}
+
+
+//Private Constructor: Singelton or Restricted Instantation
+
+ 
+
+class Utility {
+    private Utility(){
+        System.out.println("This is private Utility Constructor");
+    }
+
+    public static int square(int x){
+        return x*x;
+    }
+    public static void display(){
+        System.out.println("This is hello From utility class");
+         
+    }
+
+    
+}
+public class InnerUtility {
+    public static void main(String[] args) {
+        //Utility util=new Utility();
+        System.out.println("The Square is : "+ Utility.square(4) );
+        Utility.display();
+    }
+
+    
+}
+
+
+//Accessing  a private Method from another class 
+class Secret {
+    private void revealSecret() {
+        System.out.println("This is a Secret Method");
+    }
+
+    public void show() {
+        revealSecret();
+    }
+
+}
+
+public class InnerSecret {
+    public static void main(String[] args) {
+        Secret s = new Secret();
+        // s.revealSecret();
+        s.show();
+    }
+
+}
+
+
+//Single Inheritance
+
+class Animal {
+    protected String name = "Animal";
+
+    public void makeSound() {
+        System.out.println("Animal Sound");
+    }
+
+
+}
+
+class Dog extends Animal {
+    public void display(){
+        System.out.println("Dog name is : "+ name);
+        makeSound();
+    }
+    public static void main(String[] args) {
+        Dog d=new Dog();
+        d.display();
+
+        Animal a=new Animal();
+        a.makeSound();
+        System.out.println(a.name);
+
+    }
+
+    
+}
+
+//Multilevel Inheritance
+
+class GrandParent {
+    protected String familyName = "Ghosh Family";
+    private String car = "Mercedes";
+
+    public void showFamily() {
+        System.out.println("Grand parents Family Member");
+    }
+
+}
+
+class Parent extends GrandParent {
+    public void showParent() {
+        System.out.println("This Family belongs to Parent");
+        //System.out.println("The car is : " + car);//Private members are never inherited
+
+    }
+
+}
+
+class Child extends Parent {
+    public void showChild() {
+        System.out.println("This family Belongs to Child");
+    }
+
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.showFamily();
+        c.showParent();
+        c.showChild();
+    }
+}
+
+
+//Hirerchical Inheritrance
+
+class Vehicle {
+    protected String fuel = "Diesel";
+
+    public void start() {
+        System.out.println("Vehicle Started");
+    }
+
+}
+
+class Car extends Vehicle {
+    public void carMehtod() {
+        System.out.println("Car  Started");
+    }
+
+}
+
+class Bike extends Vehicle {
+    public void bikeMethod() {
+        System.out.println("Bike Started");
+    }
+}
+
+public class HierarchyInheritance{
+    public static void main(String[] args) {
+        Car c=new Car();
+        c.carMehtod();
+        System.out.println(c.fuel);
+        c.start();
+
+        Bike b=new Bike();
+        b.bikeMethod();
+        System.out.println(b.fuel);
+        b.start();
+        
+    }
+
+}
+
+
+
+
+//Use of Super Keyword
 class Animal{
     Animal(String type){
-        System.out.println("The animal is "+ type);
+        System.out.println("This a animal type: "+ type);
     }
 }
 
 class Cat extends Animal{
     Cat(){
         super("Cat");
-        System.out.println("The cat constructor is called");
+        System.out.println("Cat Constructor got Called");
     }
     public static void main(String[] args) {
-        Animal A = new Animal("Dog");
-        Cat c = new Cat();
+        Cat c=new Cat();
     }
-} 
-
-//Access Superclass fields
-
-class vehical{
-    String Brand = "Marcedeace";
 }
 
-class Car extends vehical{
-    String Brand = "Maruti";
-    void displayBrand(){
-        System.out.println("The car brand is"+ Brand);
-        System.out.print("The New Car is "+super.Brand);
+
+//Use of Super Keyword: of parent constructor
+class Animal{
+    Animal(String type){
+        System.out.println("This a animal type: "+ type);
     }
-    public static void main(String args[]){
-        Car c = new Car();
-        c.displayBrand();
+}
+
+class Cat extends Animal{
+    Cat(){
+        super("Cat");
+        System.out.println("Cat Constructor got Called");
+    }
+    public static void main(String[] args) {
+        Animal a=new Animal("Dog");
+        Cat c=new Cat();
+    }
+}
+
+//Use of Super Keyword: of parent constructor
+class Animal{
+    Animal(String type){
+        System.out.println("This a animal type: "+ type);
+    }
+}
+
+class Cat extends Animal{
+    Cat(){
+        
+        System.out.println("Cat Constructor got Called");
+        super("Cat");//this code will give compilation  error because super is always called 
+    }
+    public static void main(String[] args) {
+        Animal a=new Animal("Dog");
+        Cat c=new Cat();
+    }
+}
+
+
+//Access Superclass Method
+class A{
+    void show(){
+        System.out.println("Method in class A got called");
+    }
+}
+class B extends A{
+    
+    void show(){
+        super.show();
+        System.out.println("Mwthod in class b got Called");
+    }
+
+    public static void main(String[] args) {
+        B b=new B();
+        b.show();
+
+         
+    }
+}
+
+//Access Superclass fields
+class Vehicle {
+    String brand = "Mercedes";
+}
+
+public class Car extends Vehicle{
+    String brand="Tesla";
+    void displayBrands(){
+        System.out.println("Child class car brand is: "+brand);
+        System.out.println("Parent class car brand is: "+super.brand);
+
+    }
+    public static void main(String[] args) {
+        Car c=new Car();
+        c.displayBrands();
     }
 }
 
 
 //Use of Super Keyword with Protected Members
-class Bankaccount{
-    protected double balance = 1000;
-    void showbalance(){
-        System.out.println("This is bank balance "+ balance);
+class BankAccount{
+    protected double balance=1000;
+
+    protected void showBalance(){
+        System.out.println("Account balance is : "+ balance);
     }
-    
+
 }
-class SavingAccount extends Bankaccount{
+public class SavingAccount extends BankAccount{
+
     void display(){
-        super.showbalance();
-        System.out.println("The bank balance is "+super.balance);
+        super.showBalance();
+        System.out.println(" Balance via Super "+ super.balance);
     }
-    public static void main(String args[]){
-        SavingAccount s = new SavingAccount();
+    public static void main(String[] args) {
+        SavingAccount s=new SavingAccount();
         s.display();
     }
 }
 
-package Protected;
 
-// Protected access modifier
+//Protected Access Modifier
 
-class Animal {
-    protected String name = "Tiger";
+class Animal{
+    protected String name="Tiger";
     protected void sound(){
-        System.out.println("Hello");
+        System.out.println("Howlll");
+    }
+}
+public class ProtectedModifier {
+    public static void main(String[] args) {
+        Animal a=new Animal();
+        System.out.println("Animal name is : "+ a.name);
+        a.sound();
+    }
+
+    
+}
+
+
+//Protected Access Modifier
+
+class Animal{
+    protected String name="Tiger";
+    protected void sound(){
+        System.out.println("Howlll");
     }
 }
 
 class Bird extends Animal{
     void makeSound(){
         sound();
-        System.out.println("Bird class access");
+        System.out.println("Bird class accessed");
     }
 }
-
-public class ProtectedModifier{
+public class ProtectedModifier {
     public static void main(String[] args) {
-        Animal a = new Animal();
-        System.out.println("the name is "+a.name);
+        Animal a=new Animal();
+        System.out.println("Animal name is : "+ a.name);
         a.sound();
 
-        Bird b = new Bird();
-        System.out.println("the tiger access through bird class  "+b.name);
+        Bird b=new Bird();
+        System.out.println("The tiger name is accessed through bird class: "+ b.name);
         b.sound();
         b.makeSound();
+
+    }
+
+    
+}
+
+
+//Protected Constructor
+
+class Person{
+    protected Person(){
+        System.out.println("Protected Constructor got Called ");
+    }
+}
+
+public class Employee extends Person{
+    public Employee(){
+        super();
+        System.out.println("Employee Constructor got called");
+
+
+    }
+    public static void main(String[] args) {
+        Employee e= new Employee();
     }
 }
 
 
+//Polymorphism: Compile time( Method Overloading )
+public class Calculator {
+    int add(int a, int b){
+        return a+b;
+    }
+    int add(int a, int b,int c){
+        return a+b+c;
+    }
+    double add(double a, double b){
+        return a+b;
+    }
+
+    public static void main(String[] args) {
+        Calculator c= new Calculator();
+        System.out.println("Sum is : "+ c.add(23,45));
+        System.out.println("Sum is : "+ c.add(23,45,56));
+        System.out.println("Sum is : "+ c.add(23.45,45.5324));
+    }
+
+    
+}
+
+//Polymorphism: Runtime time( Method overriding )
+class Animal{
+    void makeSound(){
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal{
+    @Override
+    void makeSound(){
+        System.out.println("Dog Barks");
+    }
+    
+}
+class Cat extends Animal{
+    @Override
+    void makeSound(){
+        System.out.println("Cat Mewos");
+    }
+}
+
+
+public class RunTimePoly {
+    public static void main(String[] args) {
+        Animal a;
+        //reference of parent class
+
+        a=new Dog();//Object of a dog
+        a.makeSound();
+
+        a=new Cat();//Object of a Cat
+        a.makeSound();
+    }
+
+    
+}
+
+
+//Polymorphism: Runtime time( Method overriding )
+class Animal{
+    void makeSound(){
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal{
+    @Override
+    void makeSound(){
+        super.makeSound();
+        System.out.println("Dog Barks");
+    }
+    
+}
+class Cat extends Animal{
+    @Override
+    void makeSound(){
+        super.makeSound();
+        System.out.println("Cat Mewos");
+    }
+}
+
+
+public class RunTimePoly {
+    public static void main(String[] args) {
+        Animal a;
+        //reference of parent class
+
+        a=new Dog();//Object of a dog
+        a.makeSound();
+
+        a=new Cat();//Object of a Cat
+        a.makeSound();
+    }
+
+    
+}
+
+
+//Polymorphism with Array
+class Shape{
+    void draw(){
+        System.out.println("Drawing ");
+    }
+}
+
+class Triangle extends Shape{
+    void draw(){
+        System.out.println("Drawing Triangle ");
+    }
+}
+
+class Square extends Shape{
+    void draw(){
+        System.out.println("Drawing Square ");
+    }
+}
+
+public class RunTimePoly {
+    public static void main(String[] args) {
+        Shape[] shapes=new Shape[2];
+        shapes[0]=new Triangle();
+        shapes[1]=new Square();
+
+        for (Shape s : shapes) {
+            s.draw();
+        }  
+    }
+}
+
+
+//Final Keyword: in variable
+public class Circle {
+    final double PI=3.145345;
+    double radius;
+    Circle(double radius){
+        this.radius=radius;
+        //this.PI=PI;
+    }
+    double area(){
+        return PI*radius*radius;
+    }
+
+    public static void main(String[] args) {
+        Circle c= new Circle(5);
+        System.out.println("Area is :"+ c.area());
+    }
+    
+}
+
+
+//Final Keyword: in method
+class Vehicle {
+    final void start(){
+        System.out.println("Vehicle Started");
+    }
+
+}
+class Car extends Vehicle{
+    // void start(){
+
+    // }
+}
+
+public class InnerVehicle {
+    public static void main(String[] args) {
+        Vehicle v=new Vehicle();
+        v.start();
+    }
+
+    
+}
+
+
+
+//Final Keyword: in Object Reference
+ class Book{
+    String title="Java and DSA";
+    void setTitle(String title){
+        this.title=title;
+    }
+ }
+
+ public class Library {
+    public static void main(String[] args) {
+        final Book book=new Book();
+        book.setTitle("OOPs in Java");
+        System.out.println("Title is : "+ book.title);
+
+        //book=new Book();
+    }
+ 
+    
+ }
+
+
+ //Final Keyword: in class (will not allow to extend)
+final class Book{
+    String title="Java and DSA";
+    void setTitle(String title){
+        this.title=title;
+    }
+ }
+
+ class HorrorBook extends Book{
+    void display(){
+        System.out.println("Here we have horror books");
+    }
+
+ }
+
+ public class Library {
+    public static void main(String[] args) {
+        final Book book=new Book();
+        book.setTitle("OOPs in Java");
+        System.out.println("Title is : "+ book.title);
+
+        //book=new Book();
+    }
+ 
+    
+ }
+
+
+//use of Static Keyword in variable
+
+public class Main {
+
+    int y=78;
+    static String name="Amit";
+    public static void main(String[] args) {
+        Main obj=new Main();
+        int x=67;
+        System.out.println(x);
+        System.out.println(obj.y);
+
+        System.out.println(name);
+        
+    }
+
+}
+
+
+//use of Static Keyword in variable
+//in a class there can be multiple main method
+
+public class Main {
+
+    int y = 78;
+    static String name = "Amit";
+
+    public void main(int y) {
+        this.y = y;
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        int x = 67;
+        System.out.println(x);
+        System.out.println(obj.y);
+
+        System.out.println(name);
+
+    }
+
+}
+
+
+//static keyword in variable
+public class Student {
+    int rollNo;
+    String name;
+    static String college="Army Institute of Technology";
+
+    Student(int rollNo,String name){
+        this.rollNo=rollNo;
+        this.name=name;
+
+    }
+
+    void display(){
+        System.out.println("The roll Number is :"+ rollNo);
+        System.out.println("The Name is :"+ name);
+        System.out.println("The College is :"+ college);
+    }
+
+    public static void main(String[] args) {
+        Student obj=new Student(1,"Amit");
+        Student obj1=new Student(2,"Priyanshu");
+        Student.college="IIT";
+        obj.display();
+        obj1.display();
+
+    }
+
+    
+}
+
+
+//Static Keyword
+
+public class Main {
+
+    int count=0;
+    Main(){
+        count++;
+        System.out.println(count);
+    }
+    public static void main(String[] args) {
+        Main m1=new Main();
+        Main m2=new Main();
+        Main m3=new Main();
+        Main m4=new Main();
+        Main m5=new Main();
+    }
+
+}
+
+
+//Static Keyword
+
+public class Main {
+
+    static int count=0;
+    Main(){
+        count++;
+        System.out.println(count);
+    }
+    public static void main(String[] args) {
+        Main m1=new Main();
+        Main m2=new Main();
+        Main m3=new Main();
+        Main m4=new Main();
+        Main m5=new Main();
+    }
+
+}
+
+
+//Abstract class With Abstract and Concrete Methods
+
+abstract class Animal {
+    // abstract Method
+    abstract void sound();
+
+    // Concrete Method
+    void breathe() {
+        System.out.println("Breathing");
+    }
+
+}
+//the class dog is concrete class,must implements abstract method
+class Dog extends Animal {
+    void sound(){
+        System.out.println("Dog Barks");
+    }
+    
+    
+
+}
+
+public class TestAbstract {
+    public static void main(String[] args) {
+        //Animal a=new Animal();//you can not create object of abstract class
+
+        Dog d= new Dog();
+        d.sound();
+        d.breathe();
+    }
+
+    
+}
