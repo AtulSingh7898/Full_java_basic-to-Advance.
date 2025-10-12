@@ -8,16 +8,18 @@ interface Scaneable{
 }
 
 class PrintScanner implements Printable, Scaneable{
-    void print(){
+    public void print(){
         System.out.println("Printing");
     }
-    void Scane(){
-        System.out.println("Printing");
+    public void Scane(){
+        System.out.println("Scannig");
     }
 }
 
 public class Mutipleinheritance{
-    PrintScanner sc = new PrintScanner();
-    sc.print();
-    sc.Scane();
+    public static void main(String[] args) {
+        PrintScanner sc = new PrintScanner();
+        sc.print();
+        sc.Scane();
+    }
 }

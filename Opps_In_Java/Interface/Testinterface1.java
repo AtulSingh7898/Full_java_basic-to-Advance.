@@ -12,8 +12,15 @@ interface canFly {
 class Drone implements canFly{
     public void fly(){
         System.out.println("Drone is flying at speed: "+MAX_SPEED);
+
     }
 }
 
-public class Testinterface{}
+public class Testinterface1{
+    public static void main(String[] args) {
+        Drone d = new Drone();
+       d.fly();
+      System.out.print(d.MAX_SPEED);
+    }
+}
 

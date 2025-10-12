@@ -4,7 +4,7 @@ package Interface;
 interface Vehicle{
 
     //default mathod (Can be ovderridden)
-    default void start(){ //veriabl is aready public final 
+    default void start(){ //veriabl is already public final 
         System.out.println("Vehical started");
 
     }
@@ -19,6 +19,7 @@ interface Vehicle{
         System.out.println("Cream color");
     }
 }
+
 
 class Car implements Vehicle{
     @Override

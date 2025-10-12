@@ -1436,8 +1436,6 @@ public class RunTimePoly {
         a=new Cat();//Object of a Cat
         a.makeSound();
     }
-
-    
 }
 
 
@@ -1561,7 +1559,6 @@ final class Book{
 
         //book=new Book();
     }
- 
     
  }
 
@@ -1698,9 +1695,6 @@ class Dog extends Animal {
     void sound(){
         System.out.println("Dog Barks");
     }
-    
-    
-
 }
 
 public class TestAbstract {
@@ -1711,8 +1705,6 @@ public class TestAbstract {
         d.sound();
         d.breathe();
     }
-
-    
 }
 
 package Interface;
@@ -1776,6 +1768,8 @@ public class Testinterface2{
       Vehicle.stop();
     }
 }
+
+
 
 package
 java.lang
