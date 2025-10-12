@@ -1714,3 +1714,100 @@ public class TestAbstract {
 
     
 }
+
+package Interface;
+// BY default is writtenl
+// intereface abstract mathode
+
+interface canFly {
+    
+    int MAX_SPEED = 200;
+    //abstract method
+    void fly();
+}
+
+class Drone implements canFly{
+    public void fly(){
+        System.out.println("Drone is flying at speed: "+MAX_SPEED);
+    }
+}
+
+public class Testinterface{
+    public static void main(String[] args) {
+        Drone d = new Drone();
+        d.fly();
+    }
+}
+
+
+//interface with default and static mothds
+package Interface;
+
+interface Vehicle{
+
+    //default mathod (Can be ovderridden)
+    default void start(){ //veriabl is aready public final 
+        System.out.println("Vehical started");
+
+    }
+    //static ,mathod: (belong to the intereface, not object)
+    static void stop(){
+        System.out.println("the vehical stoppeted");
+    }
+
+    // private mathod can we used only inside the interface
+
+    private void interiorColor(){
+        System.out.println("Cream color");
+    }
+}
+
+class Car implements Vehicle{
+    @Override
+    public void start(){
+        System.out.println("Car started.....");
+    }
+}
+
+public class Testinterface2{
+    public static void main(String[] args) {
+      Car c = new Car();
+      c.start();
+      Vehicle.stop();
+    }
+}
+
+package
+java.lang
+java.util
+java.io
+
+pridefind interrface 
+
+1.Marker interfaces (no method inside)
+serilizable
+cloneable
+remote
+
+2 fuctional interface
+predi ated<i> TEST
+function <IR> APPLY
+CONSUMER <T> ACCEPT
+SUPPLIER <T> GET()
+
+3comparable and conparator
+comporable -> natureal odering
+coparator customer overriding
+
+collaction interface (java.util)
+ii> list - overdered collaction
+ii> set - unordered
+iii> map- key value pairs
+iv>Queue - FIFO structor
+v> iterator - 
+
+iv> event list
+actionost 
+mouselistner
+keylistener
+

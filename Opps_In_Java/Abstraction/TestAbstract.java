@@ -1,8 +1,8 @@
 package Abstraction;
 abstract class Animal{
-
+    // abstract mathode
     abstract void sound();
-
+    // concrete mathode
     void Breathe(){
         System.out.println("Breathing");
     }
