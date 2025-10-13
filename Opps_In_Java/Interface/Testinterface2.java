@@ -4,7 +4,7 @@ package Interface;
 interface Vehicle{
 
     //default mathod (Can be ovderridden)
-    default void start(){ //veriabl is already public final 
+    default void start(){ //veriabl is already public final and static 
         System.out.println("Vehical started");
 
     }

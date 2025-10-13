@@ -1627,7 +1627,7 @@ public class Student {
 
     public static void main(String[] args) {
         Student obj=new Student(1,"Amit");
-        Student obj1=new Student(2,"Priyanshu");
+        Student obj1=new Student(2,"Logistic");
         Student.college="IIT";
         obj.display();
         obj1.display();

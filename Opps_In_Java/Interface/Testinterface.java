@@ -1,5 +1,5 @@
 package Interface;
-// BY default is writtenl
+// BY default is written
 // intereface abstract mathode
 
 interface canFly {
