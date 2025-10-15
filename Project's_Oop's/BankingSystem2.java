@@ -1,24 +1,18 @@
-// File: BankingSystem.java
-// Compile: javac BankingSystem.java
-// Run: java BankingSystem
-
-
 import java.util.Scanner;
+import java.io.*;
 
-// Abstract base class: Abstraction + Encapsulation
+// Abstract class (Abstraction + Encapsulation)
 abstract class Account {
     private String accountNumber;
     private String holderName;
-    protected double balance; // Protected so subclasses can access
+    protected double balance;
 
-    // Constructor
     public Account(String accountNumber, String holderName, double initialDeposit) {
         this.accountNumber = accountNumber;
         this.holderName = holderName;
         this.balance = initialDeposit;
     }
 
-    // Getters
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -31,11 +25,9 @@ abstract class Account {
         return balance;
     }
 
-    // Abstract methods: must be implemented by subclasses
     public abstract void deposit(double amount);
     public abstract void withdraw(double amount);
 
-    // Display account info
     public void displayAccountInfo() {
         System.out.println("----------------------------------");
         System.out.println("Account Number: " + accountNumber);
@@ -43,9 +35,13 @@ abstract class Account {
         System.out.println("Current Balance: ₹" + balance);
         System.out.println("----------------------------------");
     }
+
+    public abstract String getType();
+
+    public abstract String toFileFormat();
 }
 
-// Derived class 1: Savings Account
+// Savings Account
 class SavingsAccount extends Account {
     private double interestRate;
 
@@ -54,24 +50,20 @@ class SavingsAccount extends Account {
         this.interestRate = interestRate;
     }
 
+    public double getInterestRate() {
+        return interestRate;
+    }
+
     @Override
     public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
-            System.out.println("Deposited ₹" + amount + " successfully!");
-        } else {
-            System.out.println("Invalid deposit amount.");
-        }
+        if (amount > 0) balance += amount;
+        else System.out.println("Invalid deposit amount.");
     }
 
     @Override
     public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
-            System.out.println("Withdrawn ₹" + amount + " successfully!");
-        } else {
-            System.out.println("Insufficient balance or invalid amount!");
-        }
+        if (amount > 0 && amount <= balance) balance -= amount;
+        else System.out.println("Insufficient balance or invalid amount!");
     }
 
     public void applyInterest() {
@@ -79,9 +71,19 @@ class SavingsAccount extends Account {
         balance += interest;
         System.out.println("Interest ₹" + interest + " applied successfully!");
     }
+
+    @Override
+    public String getType() {
+        return "Savings";
+    }
+
+    @Override
+    public String toFileFormat() {
+        return "Savings," + getAccountNumber() + "," + getHolderName() + "," + balance + "," + interestRate;
+    }
 }
 
-// Derived class 2: Checking Account
+// Checking Account
 class CheckingAccount extends Account {
     private double overdraftLimit;
 
@@ -90,28 +92,34 @@ class CheckingAccount extends Account {
         this.overdraftLimit = overdraftLimit;
     }
 
+    public double getOverdraftLimit() {
+        return overdraftLimit;
+    }
+
     @Override
     public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
-            System.out.println("Deposited ₹" + amount + " successfully!");
-        } else {
-            System.out.println("Invalid deposit amount.");
-        }
+        if (amount > 0) balance += amount;
+        else System.out.println("Invalid deposit amount.");
     }
 
     @Override
     public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance + overdraftLimit) {
-            balance -= amount;
-            System.out.println("Withdrawn ₹" + amount + " successfully!");
-        } else {
-            System.out.println("Withdrawal exceeds overdraft limit or invalid amount!");
-        }
+        if (amount > 0 && amount <= balance + overdraftLimit) balance -= amount;
+        else System.out.println("Withdrawal exceeds overdraft limit or invalid amount!");
+    }
+
+    @Override
+    public String getType() {
+        return "Checking";
+    }
+
+    @Override
+    public String toFileFormat() {
+        return "Checking," + getAccountNumber() + "," + getHolderName() + "," + balance + "," + overdraftLimit;
     }
 }
 
-// Transaction class
+// Transaction Class
 class Transaction {
     private String type;
     private double amount;
@@ -126,15 +134,17 @@ class Transaction {
     }
 }
 
-// Bank system (composition + polymorphism)
-public class BankingSystem {
+// Banking System (Main CLI + File I/O)
+public class BankingSystem2 {
     private static Scanner sc = new Scanner(System.in);
     private static Account[] accounts = new Account[100];
     private static Transaction[][] transactions = new Transaction[100][50];
     private static int accountCount = 0;
     private static int[] transactionCount = new int[100];
+    private static String FILE_PATH = "accounts.txt";
 
     public static void main(String[] args) {
+        loadAccountsFromFile(); // load at start
         int choice;
         do {
             System.out.println("\n====== BANKING SYSTEM MENU ======");
@@ -145,8 +155,9 @@ public class BankingSystem {
             System.out.println("5. Transfer Funds");
             System.out.println("6. View Transaction History");
             System.out.println("7. Apply Interest (Savings Only)");
-            System.out.println("8. Display All Accounts");
-            System.out.println("9. Exit");
+            System.out.println("8. Delete Account");
+            System.out.println("9. Display All Accounts");
+            System.out.println("10. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
             sc.nextLine();
@@ -159,13 +170,15 @@ public class BankingSystem {
                 case 5: transferFunds(); break;
                 case 6: viewTransactions(); break;
                 case 7: applyInterest(); break;
-                case 8: displayAllAccounts(); break;
-                case 9: System.out.println("Thank you for using the banking system!"); break;
+                case 8: deleteAccount(); break;
+                case 9: displayAllAccounts(); break;
+                case 10: saveAccountsToFile(); System.out.println("Thank you for using the banking system!"); break;
                 default: System.out.println("Invalid choice. Try again!");
             }
-        } while (choice != 9);
+        } while (choice != 10);
     }
 
+    // --- Account Management ---
     private static void createAccount() {
         System.out.println("Select Account Type: ");
         System.out.println("1. Savings Account");
@@ -193,8 +206,9 @@ public class BankingSystem {
             return;
         }
 
-        System.out.println("Account created successfully!");
         accountCount++;
+        saveAccountsToFile();
+        System.out.println("Account created successfully and saved!");
     }
 
     private static Account findAccount(String accNo) {
@@ -215,6 +229,24 @@ public class BankingSystem {
         return -1;
     }
 
+    private static void deleteAccount() {
+        System.out.print("Enter Account Number to Delete: ");
+        String accNo = sc.nextLine();
+        int idx = getAccountIndex(accNo);
+
+        if (idx != -1) {
+            for (int i = idx; i < accountCount - 1; i++) {
+                accounts[i] = accounts[i + 1];
+            }
+            accountCount--;
+            saveAccountsToFile();
+            System.out.println("Account deleted successfully and file updated!");
+        } else {
+            System.out.println("Account not found!");
+        }
+    }
+
+    // --- Transaction Operations ---
     private static void depositMoney() {
         System.out.print("Enter Account Number: ");
         String accNo = sc.nextLine();
@@ -225,6 +257,7 @@ public class BankingSystem {
             acc.deposit(amount);
             int idx = getAccountIndex(accNo);
             transactions[idx][transactionCount[idx]++] = new Transaction("Deposit", amount);
+            saveAccountsToFile();
         } else {
             System.out.println("Account not found!");
         }
@@ -240,17 +273,7 @@ public class BankingSystem {
             acc.withdraw(amount);
             int idx = getAccountIndex(accNo);
             transactions[idx][transactionCount[idx]++] = new Transaction("Withdraw", amount);
-        } else {
-            System.out.println("Account not found!");
-        }
-    }
-
-    private static void viewBalance() {
-        System.out.print("Enter Account Number: ");
-        String accNo = sc.nextLine();
-        Account acc = findAccount(accNo);
-        if (acc != null) {
-            acc.displayAccountInfo();
+            saveAccountsToFile();
         } else {
             System.out.println("Account not found!");
         }
@@ -275,6 +298,7 @@ public class BankingSystem {
                 int destIdx = getAccountIndex(destAcc);
                 transactions[srcIdx][transactionCount[srcIdx]++] = new Transaction("Transfer Out", amount);
                 transactions[destIdx][transactionCount[destIdx]++] = new Transaction("Transfer In", amount);
+                saveAccountsToFile();
                 System.out.println("Funds transferred successfully!");
             } else {
                 System.out.println("Insufficient funds!");
@@ -304,8 +328,20 @@ public class BankingSystem {
         Account acc = findAccount(accNo);
         if (acc != null && acc instanceof SavingsAccount) {
             ((SavingsAccount) acc).applyInterest();
+            saveAccountsToFile();
         } else {
             System.out.println("Invalid account or not a savings account!");
+        }
+    }
+
+    private static void viewBalance() {
+        System.out.print("Enter Account Number: ");
+        String accNo = sc.nextLine();
+        Account acc = findAccount(accNo);
+        if (acc != null) {
+            acc.displayAccountInfo();
+        } else {
+            System.out.println("Account not found!");
         }
     }
 
@@ -316,6 +352,42 @@ public class BankingSystem {
         }
         for (int i = 0; i < accountCount; i++) {
             accounts[i].displayAccountInfo();
+        }
+    }
+
+    // --- File Operations ---
+    private static void saveAccountsToFile() {
+        try {
+            PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH));
+            for (int i = 0; i < accountCount; i++) {
+                pw.println(accounts[i].toFileFormat());
+            }
+            pw.close();
+        } catch (IOException e) {
+            System.out.println("Error saving accounts to file!");
+        }
+    }
+
+    private static void loadAccountsFromFile() {
+        try {
+            File file = new File(FILE_PATH);
+            if (!file.exists()) return;
+
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts[0].equals("Savings")) {
+                    accounts[accountCount++] = new SavingsAccount(parts[1], parts[2],
+                            Double.parseDouble(parts[3]), Double.parseDouble(parts[4]));
+                } else if (parts[0].equals("Checking")) {
+                    accounts[accountCount++] = new CheckingAccount(parts[1], parts[2],
+                            Double.parseDouble(parts[3]), Double.parseDouble(parts[4]));
+                }
+            }
+            br.close();
+        } catch (IOException e) {
+            System.out.println("Error loading accounts from file!");
         }
     }
 }

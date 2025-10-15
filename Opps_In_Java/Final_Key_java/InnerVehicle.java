@@ -1,5 +1,3 @@
-
-
 class Vehical{
     final void start(){
         System.out.println("Vehicla started");
