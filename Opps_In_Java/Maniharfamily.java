@@ -3,7 +3,8 @@ interface Mummy{
     void veera();
 }
 interface papa{
-    void atul();
+
+     void atul();
 }
 
 class MummyPapa implements Mummy, papa{

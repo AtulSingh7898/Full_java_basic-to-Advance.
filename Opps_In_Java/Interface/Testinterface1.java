@@ -18,8 +18,8 @@ class Drone implements canFly{
 
 public class Testinterface1{
     public static void main(String[] args) {
-        Drone d = new Drone();
-       d.fly();
+      Drone d = new Drone();
+      d.fly();
       System.out.print(d.MAX_SPEED);
     }
 }

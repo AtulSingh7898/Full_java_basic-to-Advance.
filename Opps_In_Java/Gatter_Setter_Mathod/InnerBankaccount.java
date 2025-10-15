@@ -1,5 +1,6 @@
-//Getter
+//Getter setter mathod
 
+// encapsulation///////////////////////////////////
 class Bankacount{
     private double balance;
     //setter
