@@ -17,7 +17,7 @@ class dog extends Animal{
 
 public class TestAbstract{
     public static void main(String[] args) {
-        // Animal a = new Animal() //you can not create object of abostrct class
+        // Animal a = new Animal() //you can not create object of abostrct class you can access the all data through of child class
         dog d = new dog();
         d.sound();
         d.Breathe();

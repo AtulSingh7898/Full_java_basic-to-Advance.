@@ -1,3 +1,5 @@
+package proje
+
 class BankingSystem{
     private double balance;
     String Holder_name;
@@ -43,7 +45,7 @@ class SavingAccount extends BankingSystem{
         super(balance , Holder_name, accountNumber);
     }
 }
-public class ViewBa
+// public class ViewBa
 
 public static void main(String args[]){
         SavingAccount s = new SavingAccount(12000.44,"singh",343434353);

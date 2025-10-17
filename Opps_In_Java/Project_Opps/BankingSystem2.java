@@ -1,3 +1,5 @@
+package Project_Opps;
+
 import java.util.Scanner;
 import java.io.*;
 
@@ -63,7 +65,7 @@ class SavingsAccount extends Account {
     @Override
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) balance -= amount;
-        else System.out.println("Insufficient balance or invalid amount!"); 
+        else System.out.println("Insufficient balance or invalid amount!");
     }
 
     public void applyInterest() {
