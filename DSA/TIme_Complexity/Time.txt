@@ -1,0 +1,43 @@
+Time complexity
+
+i)wort case (Big-o notation) O()
+ii)Avarage case (0 theta notation) 0()
+iii)best case ( omega notation) 0()
+
+O(1) - constent   
+O(logn) - logarithimic
+O(n) - linear
+O(n.log n)- linearithmic 
+O(n^2),O(n^3)..... quadratic
+O(C^n) - expontial
+O(n!) - factorial
+
+example -> log2 16 = 4 = log2 2 = 10
+
+
+(In-place 
+Out-place)
+
+sout(hellow world) --> timecomplexity is O(1)
+
+for(int i = 1; i <= 100; i++){
+    sout(i)                  --------------------> timecomplexity is O(1) because we now the constent value here 
+}
+
+for(int i = 1; i <= 100; i++){
+        for(int i = 1; i <= 100; i++){
+       sout(i)                  --------------------> timecomplexity is O(1) because we now the constent value here 
+   }
+}
+
+
+for(int i = 1; i <= x; i ++){
+    sout(i); ------------------------> timecomplexity is O(n)
+}
+
+for(int i = 1; i <= x; i ++){
+    for(int i = 1; i <= x; i ++){
+    sout(i); ------------------------> timecomplexity is O(n^2)
+    }
+}
+
