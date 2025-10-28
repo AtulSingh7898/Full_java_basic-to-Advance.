@@ -27,12 +27,12 @@ for(int i = 1; i <= 100; i++){
 for(int i = 1; i <= 100; i++){
         for(int i = 1; i <= 100; i++){
        sout(i)                  --------------------> timecomplexity is O(1) because we now the constent value here 
-   }
+   t}
 }
 
 
 for(int i = 1; i <= x; i ++){
-    sout(i); ------------------------> timecomplexity is O(n)
+    sout(i); ------------------------> timecomplexity is O(n) we dones't know the any value of oparation
 }
 
 for(int i = 1; i <= x; i ++){
@@ -41,3 +41,29 @@ for(int i = 1; i <= x; i ++){
     }
 }
 
+//27 Oct 2025. :-
+//1
+//tc is a time taken by cpu to excute the code
+//sc is  a space taken by varible 
+//in-place aloogithm without using extra space
+//out-place alogrithm use extra space
+
+
+//Time complexity -> Time complexity os a time taken by cpu to excute the code.
+//Worst case => (Big O notation)
+//Average case => (Theta 0 notation)
+//Best case => (omega notation)
+
+//1) O(1) => constant time complexity -> constant value will no change it will fix
+//2) O(logn) => lograthmic time complexity -> number of iteration skip into half or depend on situation
+//3) O(n) => linear time complexity -> variable value chnage according to all text cases
+//4) O(nlogn) => linearthmic time complexity -> number of time varibale and also skip the iteration
+//5) O(n^2) => quadratic time complexity -> two for loop both run O(n) time
+//6) O(n^3) => cubic time complexity -> three for loop both run (n) time
+//7) O(c^n) => exponential time complexity -> c is constant example fibonacci series 2 child always (2^n)
+//8) O(n!) => factorial time complexity -> factorial time complexity input small but output is large
+
+//Space complexity -> space complexity is a space taken by varible also called auxilary space or extra space
+// O(1) -> constant space (in-place algorithm) -> not use any extra space
+// O(n) -> (out-place algorithm) -> uses extra space 
+//Array, String, Stack, Queue, HashMap, HashSet
