@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Practic {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -60,8 +61,8 @@ public class Practic {
         // }
         // System.out.println("The Decimal Number is "+num+" to octal is "+result);
 
-        // Binary to Decimal 
-        // int num = 0110;
+        //Binary to Decimal 
+        // int num = 1101;
         // int CountPower = 0;
         // int result = 0;
         // int temp = num;

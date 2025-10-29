@@ -25,7 +25,7 @@ public class Practi {
         
         for(;;){
             int num = sc.nextInt();
-
+            
             if(num < 0){
                 continue;
             }

@@ -1,4 +1,3 @@
-package proje
 
 class BankingSystem{
     private double balance;
@@ -47,7 +46,8 @@ class SavingAccount extends BankingSystem{
 }
 // public class ViewBa
 
-public static void main(String args[]){
+public class BankingSys{
+    public static void main(String args[]){
         SavingAccount s = new SavingAccount(12000.44,"singh",343434353);
         s.AccountDetail();
         System.out.println("THe totale balance is "+s.getBalance());
@@ -58,3 +58,4 @@ public static void main(String args[]){
         System.out.println("After widthdrow amount is "+s.getBalance());
 
     }
+}

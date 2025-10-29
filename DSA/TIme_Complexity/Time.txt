@@ -1,16 +1,50 @@
 Time complexity
 
-i)wort case (Big-o notation) O()
-ii)Avarage case (0 theta notation) 0()
-iii)best case ( omega notation) 0()
+Time complexity
 
-O(1) - constent   
-O(logn) - logarithimic
-O(n) - linear
-O(n.log n)- linearithmic 
-O(n^2),O(n^3)..... quadratic
-O(C^n) - expontial
-O(n!) - factorial
+i) Best Case Time Complexity (Omega Notation) -> that is represet the best case scanerio
+
+ii) Avarage Case Time Complexity (0 Theta Notation) -> that is represent the Avarage case oparation's
+
+iii) Worst Case Time Complexity (O() Big-O Natation) -> that is the use in worst case of our execute the code 
+
+we are use most of the time worst case time complexity because we are assume the it is take worst of time in the execution of code
+
+Type Worst case of Time Complexity
+
+O(1) — Constant Time Complexity -> it executes a fixed number of steps.
+No matter how large the input size (n) is, the algorithm takes the same amount of time to execute.
+It doesn’t depend on input
+
+O(log n) — Logarithmic Time Complexity ->  The time increases logarithmically as the input size grows.w
+This usually happens in algorithms that divide the problem in half each time, such as binary search.
+
+O(n) — Linear Time Complexity->
+Meaning:
+The time grows directly proportional to the input size.
+If input doubles, the time also roughly doubles.
+
+O(n log n) — Linearithmic Time Complexity
+Meaning:
+Common in divide and conquer algorithms (like Merge Sort, Quick Sort).
+The algorithm divides the data (log n) and does linear work (n) in each step.
+
+O(n²), O(n³), etc. — Polynomial & qudratic Time Complexity ->
+Meaning:
+Occurs when there are nested loops.
+The more nesting, the higher the power of n.
+
+O(cⁿ) — Exponential Time Complexity ->
+Meaning:
+The time doubles (or multiplies by c) with each additional input element.
+This often happens in recursion problems that explore all possibilities (like backtracking).
+
+O(n!) — Factorial Time Complexity->
+Meaning:
+The time grows factorially — for every new input, it considers all possible permutations.
+Very slow, used in problems like travelling salesman, permutation generation, etc.
+
+
 
 example -> log2 16 = 4 = log2 2 = 10
 
@@ -40,6 +74,8 @@ for(int i = 1; i <= x; i ++){
     sout(i); ------------------------> timecomplexity is O(n^2)
     }
 }
+
+
 
 //27 Oct 2025. :-
 //1
