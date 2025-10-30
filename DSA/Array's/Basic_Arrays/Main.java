@@ -69,8 +69,8 @@ public class Main{
         // arr[deletIndex] = 0;
         // System.out.println("The array after Delete element is : ");
 
-        // for (int i = 0; i < arr.length-1; i++){
-        //     System.out.print(arr[i]);
+        // for (int i = 0; i < arr.length; i++){
+        //     System.out.print(arr[i]+" ");
         // }
 
         // System.out.println();
@@ -118,33 +118,33 @@ public class Main{
 
         //Copy element of array
 
-        // int[] arr1 = {11,12,34,53,45};
-        // int [] copyArray =Arrays.copyOf(arr1, arr1.length-2);
-        // System.out.println("original array : "+ Arrays.toString(arr1));
-        // System.out.println("The array of index "+ arr1.length);
-        // System.out.println("Copy array : "+ Arrays.toString(copyArray));
-        // System.out.println("The array of index "+ (arr1.length-2) );
+        int[] arr1 = {11,12,34,53,45};
+        int [] copyArray =Arrays.copyOf(arr1, arr1.length-2);
+        System.out.println("original array : "+ Arrays.toString(arr1));
+        System.out.println("The array of index "+ (arr1.length-2));
+        System.out.println("Copy array : "+ Arrays.toString(copyArray));
+        System.out.println("The array of index "+ (copyArray.length) );
 
         
         //try catch using in arr
-        int [] arre = {12,34,54};
-        try{
-            System.out.println(arre[5]);
-            //arr[5];
-        } catch(Exception e){
-            System.out.println("Error "+e.getMessage());
-        }
+        // int [] arre = {12,34,54};
+        // try{
+        //     System.out.println(arre[5]);
+        //     //arr[5];
+        // } catch(Exception e){
+        //     System.out.println("Error "+e.getMessage());
+        // }
 
         //  bound 
 
-        int[] arr = {10, 20, 30, 40,54};
-        int index = 4;
+        // int[] arr = {10, 20, 30, 40,54};
+        // int index = 4;
 
-        if(index >= 0 && index < arr.length){
-            System.out.println("the arr Index "+index+" is array element "+arr[index]);
-        }else{
-            System.out.println("index "+ index+" out of  bound for lenght "+(arr.length-1));
-        }
+        // if(index >= 0 && index < arr.length){
+        //     System.out.println("the arr Index "+index+" is array element "+arr[index]);
+        // }else{
+        //     System.out.println("index "+ index+" out of  bound for lenght "+(arr.length-1));
+        // }
 
         
     }
