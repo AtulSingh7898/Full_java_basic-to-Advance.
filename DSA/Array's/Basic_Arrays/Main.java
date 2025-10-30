@@ -41,7 +41,7 @@ public class Main{
         // }
         // System.out.println();
 
-        // Intertion in udatte the lenght of 
+        // Intertion in update the lenght of 
 
         // int arr[] = {12,21,24,54,45};
 
@@ -63,7 +63,6 @@ public class Main{
         // int arr[] = {12,21,24,54,45};
 
         // int deletIndex = 2;
-        // // int insertValue = 100;
         // for(int i = deletIndex; i < arr.length-1; i++){
         //     arr[i] = arr[i+1];
         // }
@@ -117,7 +116,7 @@ public class Main{
         // }
         
 
-        //Copt element of array
+        //Copy element of array
 
         // int[] arr1 = {11,12,34,53,45};
         // int [] copyArray =Arrays.copyOf(arr1, arr1.length-2);
@@ -126,23 +125,25 @@ public class Main{
         // System.out.println("Copy array : "+ Arrays.toString(copyArray));
         // System.out.println("The array of index "+ (arr1.length-2) );
 
-        // int [] arr = {12,34,54};
-        // try{
-        //     System.out.println(arr[5]);
-        //     //arr[5];
-        // } catch(Exception e){
-        //     System.out.println("Error "+e.getMessage());
-        // }
+        
+        //try catch using in arr
+        int [] arre = {12,34,54};
+        try{
+            System.out.println(arre[5]);
+            //arr[5];
+        } catch(Exception e){
+            System.out.println("Error "+e.getMessage());
+        }
 
         //  bound 
 
         int[] arr = {10, 20, 30, 40,54};
-        int index = 5;
+        int index = 4;
 
         if(index >= 0 && index < arr.length){
-            System.out.println("the arr element "+index+" is array "+arr[index]);
+            System.out.println("the arr Index "+index+" is array element "+arr[index]);
         }else{
-            System.out.println("index "+ index+" out of  bound for lenght "+arr.length);
+            System.out.println("index "+ index+" out of  bound for lenght "+(arr.length-1));
         }
 
         
