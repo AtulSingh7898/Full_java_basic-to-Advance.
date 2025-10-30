@@ -1,4 +1,4 @@
-package Protected;
+// package Protected;
 
 class Person{
     protected Person(){

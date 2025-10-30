@@ -1,3 +1,4 @@
+package Basic_Question;
 public class MaxMin {
     public static int newarr(int[] arr){
         int min = arr[0];

@@ -1,3 +1,4 @@
+package Basic_Question;
 import java.util.Scanner;
 
 public class StringN {
