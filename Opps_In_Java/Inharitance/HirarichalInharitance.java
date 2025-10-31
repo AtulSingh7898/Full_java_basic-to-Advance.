@@ -1,5 +1,6 @@
 //Hirarichale Inharitance
 
+import zPractic_section.Vehical;
 
 class Vehical{
     protected String Fuel = "Patrol";

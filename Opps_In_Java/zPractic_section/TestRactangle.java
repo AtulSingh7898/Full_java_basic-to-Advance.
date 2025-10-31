@@ -1,3 +1,4 @@
+package zPractic_section;
 // Area of ractangle
 class Rectangle{
     int height;

@@ -72,7 +72,6 @@ public class Main {
         obj.width=56;
         int area=obj.area();
         System.out.println("The area is: "+ area);
-
         
     }
     
@@ -1198,7 +1197,7 @@ class Cat extends Animal{
     Cat(){
         
         System.out.println("Cat Constructor got Called");
-        super("Cat");//this code will give compilation  error because super is always called 
+        super("Cat");//this code will give compilation error because super is always called 
     }
     public static void main(String[] args) {
         Animal a=new Animal("Dog");
@@ -1708,7 +1707,7 @@ public class TestAbstract {
 }
 
 package Interface;
-// BY default is writtenl
+// BY default is written
 // intereface abstract mathode
 
 interface canFly {
@@ -1784,7 +1783,7 @@ cloneable
 remote
 
 2 fuctional interface
-predi ated<i> TEST
+predicated<i> TEST
 function <IR> APPLY
 CONSUMER <T> ACCEPT
 SUPPLIER <T> GET()

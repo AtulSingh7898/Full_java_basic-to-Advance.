@@ -17,6 +17,7 @@ class Drone implements canFly{
 
 public class Testinterface{
     public static void main(String[] args) {
+        //canFly c = new canFly();
         Drone d = new Drone();
         d.fly();
     }

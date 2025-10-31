@@ -1,4 +1,7 @@
+package zPractic_section;
 //access superclass mathod
+
+import B;
 
 class A {
     void show(){

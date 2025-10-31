@@ -1,7 +1,11 @@
+package Statickeyword;
 // proteced access modifier
 
 // Inheritance
- abstract class Animal{
+
+import Cat;
+
+abstract class Animal{
     // protected String name = "Animal name";
     // if write the abstract any before mathod so ensure that is must be implement -
     //-in child class same mathod otherwise it can give the error give the example like that

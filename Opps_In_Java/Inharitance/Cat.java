@@ -1,5 +1,8 @@
 // super keyword most improtant as a constructor Using parant Constructor
 
+import Statickeyword.Animal;
+import Statickeyword.Cat;
+
 class Animal{
     Animal(String type){
         System.out.println("The animal is "+ type);
