@@ -149,13 +149,14 @@ public class Main{
 
         //linear search 
         // int[] arr = {12,34,54,55,56};
-        // boolean found = true;
+        // boolean found = false;
         // int x = 34;
 
         // for(int i = 0; i < arr.length; i++){
         //     if(arr[i] == x){
         //         System.out.println("x is found index number "+i);
-        //         found = false;
+        //         found = true;
+        //            break;
         //     }
         // }
 

@@ -16,7 +16,7 @@ public class Mathod {
         Arrays.parallelSort(largerArrays);
         System.out.println("the large array is: "+largerArrays);
 
-        int[] Arrays.
+        
 
 
     }
