@@ -120,6 +120,11 @@ public class Main2 {
         // //Arrays.equals only chekc the value 
         // System.out.println("the array compare str and str2 is> "+str.equals(str2));
         // System.out.println("the array compare str and str3 is> "+str.equals(str3));        
+
+        // that is sort of long size of array
+        // int[] arr1 = {12,12,23,54,55,34,43,87,98,56,3};
+        // Arrays.parallelSort(arr1);
+        // System.out.println(Arrays.toString(arr1));
         
     }
     

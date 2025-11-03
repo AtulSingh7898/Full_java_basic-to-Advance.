@@ -98,6 +98,17 @@ public class Practic1 {
         // }else{
         //     System.out.println("index "+index+" out of bound for length "+arr.length);
         // }
-        
+
+        int[] arr = {1, 2,3,54};
+        int result = 0;
+        for(int i = 0; i < arr.length; i++){
+            result += arr[i];
+            // result++;
+        }
+
+        // for(int i : arr){
+        //    result += i;
+        // }
+        System.out.println(result);
     }
 }

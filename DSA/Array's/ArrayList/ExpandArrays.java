@@ -1,7 +1,8 @@
-package ArrayList;
+// package ArrayList;
 
 public class ExpandArrays {
     public static void main(String[] args){
+        //Expand arrays using the consider array using add element 
         int[] arr = {10,20,30};
         
         int[] arrNew = new int[arr.length*2];

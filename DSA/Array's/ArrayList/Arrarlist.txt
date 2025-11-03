@@ -71,3 +71,174 @@ public class ExpandArrays {
     }
     
 }
+
+package ArrayList;
+
+import java.util.ArrayList;
+
+public class ArrList {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // add the element int the list 
+        list.add(10);
+        list.add(20);
+        list.add(20);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(20);
+
+        System.out.println("The list is: "+list);
+        System.out.println("the size of arr is "+list.size());
+        System.out.println("The is element 30 is there? "+list.contains(30));
+        System.out.println("The is element 20 is there? "+list.contains(20));
+
+        // add the element int the list with index
+        list.add(2, 40);
+        System.out.println("The list is: "+list);
+        System.out.println("the size of arr is "+list.size());
+        System.out.println("The is element 30 is there? "+list.contains(30));
+        System.out.println("The is element 20 is there? "+list.contains(20));
+        System.out.println("The list is empty? "+list.isEmpty());
+
+        //set the value with replace of list element 
+        list.set(2, 45);
+        System.out.println("The list is: "+list);
+        System.out.println("the size of arr is "+list.size());
+        System.out.println("The is element 30 is there? "+list.contains(30));
+        System.out.println("The is element 20 is there? "+list.contains(20));
+        System.out.println("The list is empty?: "+list.isEmpty());
+
+        // remove the element of list through of index
+        list.remove(2);
+        System.out.println("The list is: "+list);
+        System.out.println("the size of arr is "+list.size());
+        System.out.println("The is element 30 is there? "+list.contains(30));
+        System.out.println("The is element 20 is there? "+list.contains(20));
+        System.out.println("The list is empty?: "+list.isEmpty());
+
+        // clear overall lilst of item's
+
+        list.clear();
+        System.out.println("The list is: "+list);
+        System.out.println("the size of arr is "+list.size());
+        System.out.println("The is element 30 is there? "+list.contains(30));
+        System.out.println("The is element 20 is there? "+list.contains(20));
+        System.out.println("The list is empty?: "+list.isEmpty());
+
+
+
+
+    }
+    
+}
+
+//add two number in arr
+        
+        // int[] arr = {1, 2,3,54};
+        // int result = 0;
+        // for(int i = 0; i < arr.length; i++){
+        //     result += arr[i];
+        //     // result++;
+        // }
+        // System.out.println(result);
+        // result = 0;
+        // for(int i : arr){
+        //    result += i;
+        // }
+        // System.out.println(result);
+
+        // int [] arr = {12,34,54,55,54,99};
+
+        // int minArr = arr[0];
+        // int maxArr = arr[0];
+
+        // for(int i = 0; i < arr.length; i++){
+        //     if(minArr>arr[i]){
+        //         minArr = arr[i];
+        //     }if(maxArr<arr[i]){
+        //         maxArr = arr[i];
+        //     }
+        // }
+
+        // System.out.println("the minimul number "+minArr);
+        // System.out.println("the minimul number "+maxArr);
+
+        // for(int i = arr.length-1; i >= 0; i--){
+        //     System.out.print(arr[i]+" ");
+        // }
+
+        // sorted arr use binary search and two pointer's
+        // reverse the an arr 
+
+
+        int[] arr = {65,34,2,43,6,3,4,1};
+        int lastelement = arr[0];
+        int firstelement = arr[arr.length-1];
+
+        int i = 0, j = arr.length-1;
+        while(i <j){
+            int temp =arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++; 
+            j--;
+        }
+
+
+        // for(int i = 0, j = arr.length-1; i <j;  i++, j--){
+        //     int temp =arr[i];
+        //     arr[i] = arr[j];
+        //     arr[j] = temp;
+        // }
+        System.out.println("The revvese arr  is: "+Arrays.toString(arr));
+        
+        momoIzzationn
+        tebulation
+
+// package ArrayList;
+
+import java.util.Arrays;
+
+public class PassingArrays {
+    public static int arrPass(int[] arr, int start, int result){
+        if(start > arr.length-1){
+            return 1;
+        }
+        if(arr[start]%2 == 0){
+           result = arr[start];
+           System.out.println(result);
+        //    return arr[start];
+        }
+        
+        return arrPass(arr, start+1, result)*result;
+        
+    }
+    public static int[] createArr(int size){
+        int[] arr = new int[size];
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = (i+1);
+        }
+        return arr;
+    }
+
+    public static void main(String[] args){
+        int[] arr = {1,2,3,4};
+        
+        int number = arrPass(arr,0,1);
+
+        int[] arrStreing = createArr(5);
+        for(int num : arrStreing){
+            System.out.print(num+" ");
+        }
+        // System.out.println(Arrays.toString(arrStreing));
+        
+        // for(int i = 0; i < arr.length; i++){
+        //     int n = arrPass(arr,0,1);
+        //     System.out.println(n);
+        // }
+        // System.out.println(Arrays.toString(number));
+        // System.out.println(number);
+    }
+}
