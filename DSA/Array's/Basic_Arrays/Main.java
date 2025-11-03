@@ -161,7 +161,7 @@ public class Main{
         // }
 
         // if(!found){
-        //     System.out.println("fount of the arr ");
+        //     System.out.println("found of the arr ");
         //}
     }
 }

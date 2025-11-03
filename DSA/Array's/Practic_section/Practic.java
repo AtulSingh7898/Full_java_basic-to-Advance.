@@ -76,7 +76,7 @@ public class Practic {
         // System.out.println("The Array of length "+(arr.length));
         // System.out.println("The original Array "+Arrays.toString(arr));
         // System.out.println("The array's the number "+(copyArray.length-2));
-        // System.out.println("The copy arr is "+Arrays.toString(copyArray));
+        // System.out.println("The copy arr is "+Arrays.toString(copyArray) );
 
         // try catch using for get massage trough of extra size bound of arr
         // int[] arr = {12,34,43};
@@ -93,6 +93,23 @@ public class Practic {
         // }else{
         //     System.out.println("index "+ index + " out of bound for length "+arr.length);
         // }
+
+        // int arr[] = {43,42,65,63,56,75};
+        // boolean found = false;
+        // int foundN = 46;
+
+        // for(int i= 0; i < arr.length;i++){
+        //     if(arr[i] == foundN){
+        //         System.out.print("found the number "+arr[i]);
+        //         found = true;
+        //         break;
+        //     }
+        // }
+        // if(!found){
+        //     System.out.println("The Number "+foundN+" is Not found in the array");
+        // }
+
+
     }
     
 }

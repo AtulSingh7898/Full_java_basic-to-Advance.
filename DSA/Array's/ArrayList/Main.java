@@ -24,6 +24,7 @@ public class Main {
         }
 
     // ArrayList<int> list = new ArrayList<>();
+    
     }
     
 }
