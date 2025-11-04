@@ -45,7 +45,7 @@ public class ArrList {
         // System.out.println("The is element 20 is there? "+list.contains(20));
         // System.out.println("The list is empty?: "+list.isEmpty());
 
-        // // clear overall lilst of item's
+        // // clear overall list of item's
 
         // list.clear();
         // System.out.println("The list is: "+list);
@@ -84,10 +84,9 @@ public class ArrList {
         list.add('a');
         list.add(10.9);
 
+
         System.out.println("The list is "+list);
         // list.forEach(System.out::println);
-
-
 
     }
     

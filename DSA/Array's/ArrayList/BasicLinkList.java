@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
-public class question {
+public class BasicLinkList {
     public static void main(String[] args) {
-        //add two number in arr
+        //add number in arr
         
         // int[] arr = {1, 2,3,54};
         // int result = 0;
@@ -40,10 +40,7 @@ public class question {
         // sorted arr use binary search and two pointer's
         // reverse the an arr 
 
-
         int[] arr = {65,34,2,43,6,3,4,1};
-        int lastelement = arr[0];
-        int firstelement = arr[arr.length-1];
 
         int i = 0, j = arr.length-1;
         while(i <j){

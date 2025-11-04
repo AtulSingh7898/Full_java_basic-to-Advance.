@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class Practic5 {
+    public static void main(String args[]){
+        ArrayList<Integer> list = new ArrayList<>();
+        int[] prime = {1,33,24,5,23,64,5,4,5,6,3,6};
+        System.out.println(prime[prime.length-1]);
+
+        for(int j = 0; j < prime.length; j++){
+
+        
+        int num = prime[j];
+        boolean isPrime = true;
+        for(int i = 2; i <= num/2; i++){
+            if(num%i == 0){
+                isPrime = false;
+            }
+        }
+        if(isPrime){
+            list.add(num);
+        }
+        }
+        System.out.println(list);
+        list.clear();
+        System.out.println(list.isEmpty());
+    }
+    
+}
