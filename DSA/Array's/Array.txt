@@ -1,374 +1,900 @@
-import java.util.Arrays;
+//Accesing Elmement in an array
 
-public class Main{
-    public static void main(String args[]){
-        
-        // int[] arr = {15,24,33,42,51}; // arr litral's
-        // System.out.println("The first the of the elememt "+ arr[0]);
-        // System.out.println("The second the of the elememt "+ arr[1]);
-        // System.out.println("The last the of the elememt "+ arr[4]);
-        // System.out.println("The lenght the of Arr "+ arr[arr.length-1]);
-        // System.out.println("The lenght the of Arr "+ arr.length);
-
-        // System.out.println("The Unsorted arr is : " );
-        // //traversal in array 
-        // for(int i = 0; i < arr.length; i++){
-        //     System.out.print(" "+ arr[i]);
-        // }
-        // System.out.println();
-
-        // // for each loop
-        // System.out.println("The using the for each loop ");
-        // for(int num : arr){
-        //     System.out.print(num+" ");
-        // }
-
-        // // Arrays.sort(arr);
-        // Arrays.sort(arr);
-        // System.out.println();
-        
-        // System.out.println("The first the of the elememt "+ arr[0]);
-        // System.out.println("The second the of the elememt "+ arr[1]);
-        // System.out.println("The last the of the elememt "+ arr[4]);
-        // System.out.println("The lenght the of Arr "+ arr[arr.length-1]);
-        // System.out.println("The lenght the of Arr "+ arr.length);
-        // System.out.println();
-
-        // System.out.println("The sorted array is : " );
-        // //traversal in array 
-        // for(int i = 0; i < arr.length; i++){
-        //     System.out.print(" "+ arr[i]);
-        // }
-        // System.out.println();
-
-        // Intertion in udatte the lenght of 
-
-        // int arr[] = {12,21,24,54,45};
-
-        // int insertIndex = 2;
-        // int insertValue = 100;
-        // for(int i = arr.length-1; i > insertIndex; i--){
-        //     arr[i] = arr[i-1];
-        // }
-        // arr[insertIndex] = insertValue;
-        // System.out.println("The array  after insertion is : ");
-
-        // for(int num : arr){
-        //     System.out.print(num+" ");
-        // }
-
-
-        // the number is delete in the arrays
-
-        // int arr[] = {12,21,24,54,45};
-
-        // int deletIndex = 2;
-        // // int insertValue = 100;
-        // for(int i = deletIndex; i < arr.length-1; i++){
-        //     arr[i] = arr[i+1];
-        // }
-        // arr[deletIndex] = 0;
-        // System.out.println("The array after Delete element is : ");
-
-        // for (int i = 0; i < arr.length-1; i++){
-        //     System.out.print(arr[i]);
-        // }
-
-        // System.out.println();
-        // for(int num : arr){
-        //     System.out.print(num+" ");
-        // }
-
-        // array declaration and initalization using new keyword
-        // Object arr = new Object[5];
-        // int[] arr = new int[5];
-        // for(int i = 0; i < arr.length; i++){
-        //     System.out.println(arr[i]+" ");
-        // }
-        // for(int i = 0; i < arr.length; i++){
-        //     arr[i] = 10;
-        // }
-
-        // arr[0] = 10;
-        // arr[1] = 10;
-        // arr[2] = 10;
-        // arr[3] = 10;
-        // arr[4] = 10;
-
-        // for Object
-        // arr[0] = 10;
-        // arr[1] = 10.2;
-        // arr[2] = "Amit";
-        // arr[3] = 1.13;
-        // arr[4] = 10;
-
-        // System.out.println();
-        // for(int i = 0; i < arr.length; i++){
-        //     System.out.print(arr[i]+" ");
-        // }
-
-        // for(int num : arr){
-        //     System.out.print(num+" ");
-        // }
-         
-        // for object
-        // for(Object num : arr){
-        //     System.out.print(num+" ");
-        // }
-        
-
-        //Copy element of array
-
-        // int[] arr1 = {11,12,34,53,45};
-        // int [] copyArray =Arrays.copyOf(arr1, arr1.length-2);
-        // System.out.println("original array : "+ Arrays.toString(arr1));
-        // System.out.println("The array of index "+ arr1.length);
-        // System.out.println("Copy array : "+ Arrays.toString(copyArray));
-        // System.out.println("The array of index "+ (arr1.length-2) );
-
-        // int [] arr = {12,34,54};
-        // try{
-        //     System.out.println(arr[5]);
-        //     //arr[5];
-        // } catch(Exception e){
-        //     System.out.println("Error "+e.getMessage());
-        // }
-
-        //  bound 
-        int[] arr = {10, 20, 30, 40,54};
-        int index = 5;
-
-        if(index >= 0 && index < arr.length){
-            System.out.println("the arr element "+index+" is array "+arr[index]);
-        }else{
-            System.out.println("index "+ index+" out of  bound for lenght "+arr.length);
-        }
-        
-    }
-}
-//31 Oct 2025. (Array):-
-//1
-//method in java
-//1) Arrays.toString(arr) + Arrays.deepToString(2d)
-//2) Arrays.sort(arr) 
-//3) Arrays.binarySearch(arr, key)
-//4) Arrays.copyOf(arr, length)
-//5) Arrays.copyOfRange(arr, startIndex, endingIndex)
-//6) Arrays.fill(arr, value)
-//7) Arrays.equals(arr1, arr2)
-//8) Arrays.deepEquals(arr1, arr2)
-//String constant pool
-//equals -> checking value in non-primiitive data type
-//== -> chekcing referece/address in primitve data type
-
-
-//1.
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int [] numbers = {10, 20, 274, 374, 847, 274,2, 395};
-        System.out.println("array is: " + Arrays.toString(numbers));
+        int[] arr = { 56, 4, 5, 623, 57 };// array literal
 
-        Arrays.sort(numbers);
-        System.out.println("sorted array is: " + Arrays.toString(numbers));
+        System.out.println("First Element is: " + arr[0]);
+        System.out.println("Second Element is: " + arr[1]);
+        System.out.println("Last Element is: " + arr[4]);
+        System.out.println("Last Element is: " + arr[arr.length - 1]);
+        System.out.println("Length of array is: " + arr.length);
 
-        int index = Arrays.binarySearch(numbers, 56);
-        System.out.println("elememt at index : " + index);
+        System.out.println("The Unsorted Array is :");
+        //traversal in an Array
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
 
-        int [] copiedArray = Arrays.copyOf(numbers, 5);
-        System.out.println("copied array is: " + Arrays.toString(copiedArray));
+        }
+        System.out.println();
 
-        int [] rangeCopy = Arrays.copyOfRange(numbers, 1, 6);
-        System.out.println("range copy is: " + Arrays.toString(rangeCopy));
+        //for each loop
+        for (int num : arr) {
+            System.out.print(num+" ");
+            
+        }
 
-        int [] filedArray = new int[5];
-        Arrays.fill(filedArray, -1);
-        System.out.println("filled array is: " + Arrays.toString(filedArray));
+        // System.out.println("Last Element is: "+
+        // arr[arr.length]);//ArrayIndexOutOfBoundsException
+        // System.out.println(arr[7]);//ArrayIndexOutOfBoundsException
 
-        int [] array1 = {1, 2, 3};
-        int [] array2  = {1, 2, 3};
-        int [] array3 = new int[] {1, 2, 3};
+        Arrays.sort(arr);
 
-        boolean equals1 = Arrays.equals(array1, array2);
-        System.out.println("are array1 and array2 eqal is: " + equals1);
-
-        boolean equals2 = Arrays.equals(array1, array3);
-        System.out.println("are array1 and array2 eqal is: " + equals2);
-
-        boolean equals3 = array1 == array2;
-        System.out.println("are array1 and array2 eqal is: " + equals3);
-
-        boolean equals4 = array1 == array3;
-        System.out.println("are array1 and array2 eqal is: " + equals4);
-
-        String str = "praveen";
-        String str1 = "praveen";
-        // String str2 = new String {"praveen"};
+        System.out.println();
+        System.out.println("First Element is: " + arr[0]);
+        System.out.println("Second Element is: " + arr[1]);
+        System.out.println("Last Element is: " + arr[4]);
+        System.out.println("Last Element is: " + arr[arr.length - 1]);
+        System.out.println("Length of array is: " + arr.length);
 
 
+        System.out.println("The Sorted Array is :");
 
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
 
+        }
+
+    }
+
+}
+
+//updation of element in an array
+
+public class Main {
+
+    public static void main(String[] args) {
+        int [] arr={10,20,30,40,50};
+        arr[2]=100;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
     }
 }
 
 
-//2.
-//passing array to method
-
+//Insertion of element in an array ,instead of calling insertion we should say shifting of elements
 
 public class Main {
 
-    public static void printArray(int [] arr) {
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int insertIndex = 2;
+        int insertValue = 100;
+        for (int i = arr.length - 1; i > insertIndex; i--) {
+            arr[i] = arr[i - 1];
+
+        }
+        arr[insertIndex]=insertValue;
+
+        System.out.println("Arrray after insertion is:  ");
+        for (int num : arr) {
+            System.out.print(num+ " ");
+            
+        }
+    }
+}
+
+
+//Deletion of element in an array ,instead of calling deletion we should say shifting of elements
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int deleteIndex = 2;
+
+        for (int i = deleteIndex; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+
+        }
+        arr[arr.length-1] = 0;
+
+        System.out.println("Arrray after Deletion is:  ");
+
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+        System.out.println();
+
         for (int num : arr) {
             System.out.print(num + " ");
+
         }
-    }
-    public static void main(String[] args) {
-        int [] arr = {12, 23, 3, 4, 4, 3};
-        printArray(arr);
     }
 }
 
-//3.
-//returning array from method
+ 
+
+ //array declaration and initilisation using new Keyword
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr=new int[5];
+        //default value of int is 0
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+        arr[0]=10;
+        arr[1]=10;
+        arr[2]=10;
+        arr[3]=10;
+        arr[4]=10; 
+
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+
+    }
+}
+
+//array declaration and initilisation using new Keyword
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr;
+        arr=new int[5];
+        //default value of int is 0
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+        arr[0]=10;
+        arr[1]=10;
+        arr[2]=10;
+        arr[3]=10;
+        arr[4]=10; 
+
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+
+    }
+}
+
+
+//array declaration and initilisation using new Keyword
+
+public class Main {
+
+    public static void main(String[] args) {
+        Object[] arr=new Object[5];
+
+
+        //default value of int is 0
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+        arr[0]=10;
+        arr[1]=true;
+        arr[2]=10.78;
+        arr[3]="Amit";
+        arr[4]=10; 
+
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+            
+        }
+
+        System.out.println();
+
+        for (Object num : arr) {
+            System.out.print(num+" ");
+            
+        }
+
+    }
+}
+
+
+//Copying Element in an array
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        for (int num : arr) {
+            System.out.print(num+" ");
+            
+        }
+        System.out.println();
+
+        int[] copyArr=new int[7];
+
+        for (int i = 0; i < arr.length; i++) {
+            copyArr[i]=arr[i];
+            
+        }
+        copyArr[5]=60;
+        copyArr[6]=70;
+
+        for (int num : copyArr) {
+        System.out.print(num+" ");
+            
+    }
+         
+
+    }
+}
+
+
+//Copying Element in an array
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int [] copyArr=Arrays.copyOf(arr, arr.length);
+
+        System.out.println("Original Array: "+ Arrays.toString(arr));
+        System.out.println("Copied Array: "+ Arrays.toString(copyArr));
+
+    }
+}
+
+//Copying Element in an array
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int [] copyArr=Arrays.copyOf(arr, arr.length-3);
+
+        System.out.println("Original Array: "+ Arrays.toString(arr));
+        System.out.println("Copied Array: "+ Arrays.toString(copyArr));
+
+
+
+         
+
+    }
+}
+
+
+
+//Copying Element in an array
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        int [] copyArr=Arrays.copyOf(arr, arr.length-3);
+
+        System.out.println("Original Array: "+ Arrays.toString(arr));
+        System.out.println("Original Array Length is : "+ arr.length);
+        System.out.println("Copied Array: "+ Arrays.toString(copyArr));
+        System.out.println("Copied Array Length is : "+ copyArr.length);
+
+
+
+         
+
+    }
+}
+
+
+//Handling Array Index out of  Bound
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr={10,20,30};
+        try {
+            System.out.println(arr[5]);
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Error : "+ e.getMessage());
+        }
+    }
+}
+
+
+//Handling Array Index out of Bound
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr={10,20,30};
+        try {
+            System.out.println(arr[5]);
+            
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // TODO: handle exception
+            System.out.println("Error : "+ e.getMessage());
+        }
+    }
+}
+
+
+//Handling Array Index out of Bound
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr={10,20,30,87,76};
+        int index=4;
+        if (index>=0 && index<arr.length) {
+            System.out.println("Element at index: "+ index + " is "+ arr[index]);
+            
+        }else{
+            System.out.println("Error : Index " +index+ " out of bounds for length "+arr.length);
+        }
+    }
+}
+
+
+//Linear Search: Find the target element is there or not
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr={10,20,30,87,76};
+
+        int target=67;
+
+        boolean found=false;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==target) {
+                System.out.println("Target found at index "+ i);
+                found=true;
+                break;
+                
+            }
+            
+        }
+        if (!found) {
+            System.out.println("Target: "+ target+" Not found");
+            
+        }
+    }
+}
+
+
+
+
+//Array Methods in Java
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int []numbers={10,20,45,2,34,56,12,47};
+
+        System.out.println("Length is: "+numbers.length);
+        System.out.println("Original Array is: "+ Arrays.toString(numbers));
+
+        Arrays.sort(numbers);
+        System.out.println("Sorted Array is: "+ Arrays.toString(numbers));
+
+        int index=Arrays.binarySearch(numbers, 56);
+        System.out.println("Index is: "+ index);
+
+        int[] copiedArray=Arrays.copyOf(numbers, 5);
+        System.out.println("Copied Array is : "+ Arrays.toString(copiedArray));
+
+        int[] rangeCopy=Arrays.copyOfRange(numbers, 1, 6);
+        System.out.println("Ranged copied Array: "+ Arrays.toString(rangeCopy));
+
+        int[] filledArray=new int[5];
+        Arrays.fill(filledArray, -1);
+        System.out.println("Filled Array is : "+ Arrays.toString(filledArray));
+
+        int[] largeArray={60,45,6,7,3,5,23,36,24,7,8};
+        Arrays.parallelSort(largeArray);
+        System.out.println("Sorted Array is : "+ Arrays.toString(largeArray));
+
+
+        int[] array1={1,2,3};
+        int[] array2={1,2,3};
+        int[] array3=new int[]{1,2,3};
+
+        //checking by value
+        boolean isEqual1=Arrays.equals(array1, array2);
+        System.out.println("Are array1 and array2 equal ?: "+ isEqual1);
+
+        //checking by value
+        boolean isEqual2=Arrays.equals(array1, array3);
+        System.out.println("Are array1 and array3 equal ?: "+ isEqual2);
+
+        //checking by reference
+        boolean isEqual3=array1==array2;
+        System.out.println("Are array1 and array2 equal ?: "+ isEqual3);
+
+        //checking by reference
+        boolean isEqual4=array1==array3;
+        System.out.println("Are array1 and array3 equal ?: "+ isEqual4);
+
+
+        String str="Amit";
+        str=str.concat(" Ghosh ");
+        System.out.println(str);
+        String str1="amit";
+        String str2=new String("Amit");
+        System.out.println("Checking by reference of same value in String Literal vs String Literal: "+(str==str1));
+        System.out.println("Checking by reference of same value in String Literal vs String by new Keyword: "+(str==str2));
+
+        System.out.println("Checking by value of same value in String Literal vs String Literal: "+str.equals(str1));
+        System.out.println("Checking by value of same value in String Literal vs String by new Keyword: "+str.equals(str2));
+
+
+
+
+
+
+
+    }
+}
+
+
+//Passing Arrays yo method
+
+public class Main {
+
+    public static void printArray(int[] arr){
+        for (int num : arr) {
+            System.out.print(num+" ");
+            
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int [] arr={45,67,23,4,7,8,4,5};
+        printArray(arr);
+
+    }
+}
+
+
+//Returning Array from Method
 
 public class Main {
 
     public static int[] createArray(int size) {
-        int[] arr = new int[size];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = i+1;
+        int [] arr=new int[size];
+        for (int i = 0; i <size; i++) {
+            arr[i]=i+1;
+            
         }
         return arr;
+
     }
+
     public static void main(String[] args) {
-        int [] newArray = createArray(5);
+        int[] newArray=createArray(5);
 
         for (int num : newArray) {
-            System.out.print(num + " ");
+            System.out.print(num+ " ");
+            
         }
+        
     }
 }
 
-//4.
-//psudo dynamic array
-//new array me numberes referce krnge thats why we can change increase the size of the array
-//using Object we can put othere data type liken stirng boolean
+
+//pseudo Dynamic Array
+
 public class Main {
 
     public static void main(String[] args) {
-        int [] numbers = new int[3];
+        int[] numbers = new int[3];
         numbers[0] = 10;
         numbers[1] = 20;
         numbers[2] = 30;
         System.out.println(numbers.length);
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i]+ " ");
+            System.out.print(numbers[i] + " ");
+
         }
 
-        int[] newNumber = new int[numbers.length*2];
-        newNumber[3] = 40;
-        newNumber[4] = 50;
-        newNumber[5] = 60;
+        int[] newNumbers = new int[numbers.length * 2];
+        for (int i = 0; i < numbers.length; i++) {
+            newNumbers[i] = numbers[i];
 
-        numbers = newNumber;
+        }
+        newNumbers[3] = 40;
+        newNumbers[4] = 50;
+        newNumbers[5] = 60;
+
+        numbers = newNumbers;
         System.out.println();
+
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " ");
+
         }
         System.out.println();
         System.out.println(numbers.length);
 
-        for (int i = 0; i < newNumber.length; i++) {
-            System.out.println(newNumber[i] + " ");
-        }
-        System.out.println();
-
-        for (int i = 0; i < 6; i++) {
-            System.out.println(newNumber[i] + " ");
-            //array omdex out of bound
-        }
     }
+}
 
+//3 Nov 2025. (Array):-
+//1
+//Add all the element of an array
+public class Main {
+    public static void main(String[] args) {
+        int [] arr = {10, 5, 6, 8, 20, 13};
+        int n = arr.length;
+        int sum = 0;
+        for(int i=0; i<n; i++) {
+            sum += arr[i];
+        }
+        System.out.println(sum);
+    }
+}
+
+
+//2.
+//Add all the element of an array
+public class Main {
+    public static void main(String[] args) {
+        int [] arr = {10, 5, 6, 8, 20, 13};
+        int n = arr.length;
+        int sum = 0;
+        int count = 0;
+    
+        for(int i=0; i<n; i++) {
+            sum += arr[i];
+            count++;
+        }
+        System.out.println(sum);
+        System.out.println(count);
+    }
+}
+
+
+//3.
+//Add all the element of an array
+public class Main {
+    public static void main(String[] args) {
+        int [] arr = {10, 5, 6, 8, 20, 13};
+        int n = arr.length;
+        int sum = 0;
+        int count = 0;
+    
+        for(int i=0; i<n; i++) {
+            sum += arr[i];
+            count++;
+        }
+        System.out.println(sum);
+
+
+        //sum = 0;
+        // for (int num : arr) {
+        //     sum += num;
+        // }
+        //System.out.println(sum);
+        System.out.println(count);
+    }
+}
+
+
+//4.
+//ArrayList
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+
+        System.out.println(list);
+        System.out.println(list.size());
+
+        list.add(2, 40);
+        System.out.println(list);
+        System.out.println(list.size());
+
+        list.set(2, 45);
+        System.out.println(list);
+        System.out.println(list.size());
+
+
+        list.remove(1);
+        System.out.println(list);
+        System.out.println(list.size());
+
+
+        System.out.println(list.contains(30));
+        System.out.println(list.contains(60));
+
+        for (int num : list) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
+        }
+
+        list.clear();
+        System.out.println(list);
+    }
 }
 
 //5.
+//ArrayList
 
-add to all the element in the arrays
- int[] arr = {1, 2,3,54};
-        int result = 0;
-        for(int i = 0; i < arr.length; i++){
-            result += arr[i];
-            // result++;
+import java.util.ArrayList;
 
+public class Main {
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(20);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(20);
+
+        System.out.println(list);
+        System.out.println(list.size());
+
+        //add
+        list.add(2, 40);
+        System.out.println(list);
+        System.out.println(list.size());
+
+        //set (update)
+        list.set(2, 45);
+        System.out.println(list);
+        System.out.println(list.size());
+
+        //first occurance and last occurance
+        int firstOccu = list.indexOf(20);
+        System.out.println(firstOccu);
+        int lastOccu = list.lastIndexOf(20);
+        System.out.println(lastOccu);
+
+
+        //remove
+        list.remove(1);
+        System.out.println(list);
+        System.out.println(list.size());
+
+        //contains
+        System.out.println(list.contains(30));
+        System.out.println(list.contains(60));
+
+        //for each loop
+        for (int num : list) {
+            System.out.print(num + " ");
         }
-        System.out.println(result);\
+
+        //for of loop
+        System.out.println();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
+        }
+
+        //clear
+        list.clear();
+        System.out.println(list);
+
+        //isEmpty
+        System.out.println(list.isEmpty());
+    }
+}
+
+//6.
+//Print using Iterator
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("pineapple");
+        list.add("orange");
+        list.add("banana");
+        list.add("cherry");
+
+        System.out.print("fruits are: ");
+        Iterator<String> iterator = list.iterator();
+        //hasNext check next value exist or not if yes then print and go to next
+        while(iterator.hasNext()) {
+            System.out.print(iterator.next() + ", ");
+        }
+    }
     
+}
+
+//7.
+//Print using lamda Expression
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("pineapple");
+        list.add("orange");
+        list.add("banana");
+        list.add("cherry");
+
+        System.out.print("fruits are: ");
+        list.forEach(fruit -> System.out.println(fruit));
+    }
+    
+}
+
+//8.
+//Print using method reference 
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("pineapple");
+        list.add("orange");
+        list.add("banana");
+        list.add("cherry");
+
+        System.out.print("fruits are: ");
+        list.forEach(System.out::println);
+    }
+    
+}
+
+//9.
+//Print using method reference 
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Object> list = new ArrayList<>();
+        list.add("apple");
+        list.add(7);
+        list.add(true);
+        list.add(8.9);
+        list.add("cherry");
+
+        System.out.print("list elements are: ");
+        list.forEach(System.out::println);
+    }
+    
+}
+
+//10.
+//Find max and min element in an array;
+//TC -> O(nlogn)
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {5, 6, 8, 10, 12, 13, 52, 1};
+        int n = arr.length;
+        Arrays.sort(arr);
+        int min = arr[0];
+        int max = arr[0];
+        for(int i=0; i<n;  i++) {
+            min = arr[0];
+            max = arr[n-1];
+        }
+        System.out.println("min value is: " + min);
+        System.out.println("max value is: " + max);
+       
+
+    }
+}
+
+//11.
+//Find max and min element in an array;
+//TC -> O(n)
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] arr = {5, 6, 8, 10, 12, 13, 52, 1};
+        int n = arr.length;
+        int max = arr[0];
+        int min = arr[0];
+        for (int num : arr) {
+            if(num > max) {
+                max = num;
+            }
+            if(num < min) {
+                min = num;
+            }
+        }
+        System.out.println("The maximum number is: " + max);
+        System.out.println("The minimum number is: " + min);
+    }
+}
+
+//12.
+//Reverse an array using two pointer
+//Tc -> O(n)
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int [] arr = {4, 5, 6, 203, 483, 55, 34};
+        for (int i = 0,  j=arr.length-1; i < j; i++, j--) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        System.out.print("The reserved array is: " + Arrays.toString(arr));
+        
+        
+    }
+}
+
+//sorted -> two pointer or binary search
+//large -> parallel
+
+//13.
+//Reverse an array using two pointer
 
 import java.util.Arrays;
 
-public class question {
+public class Main {
+
     public static void main(String[] args) {
-        //add two number in arr
-        
-        // int[] arr = {1, 2,3,54};
-        // int result = 0;
-        // for(int i = 0; i < arr.length; i++){
-        //     result += arr[i];
-        //     // result++;
-        // }
-        // System.out.println(result);
-        // result = 0;
-        // for(int i : arr){
-        //    result += i;
-        // }
-        // System.out.println(result);
-
-        // int [] arr = {12,34,54,55,54,99};
-
-        // int minArr = arr[0];
-        // int maxArr = arr[0];
-
-        // for(int i = 0; i < arr.length; i++){
-        //     if(minArr>arr[i]){
-        //         minArr = arr[i];
-        //     }if(maxArr<arr[i]){
-        //         maxArr = arr[i];
-        //     }
-        // }
-
-        // System.out.println("the minimul number "+minArr);
-        // System.out.println("the minimul number "+maxArr);
-
-        // for(int i = arr.length-1; i >= 0; i--){
-        //     System.out.print(arr[i]+" ");
-        // }
-
-        // sorted arr use binary search and two pointer's
-        // reverse the an arr 
-
-
-        int[] arr = {65,34,2,43,6,3,4,1};
-        int lastelement = arr[0];
-        int firstelement = arr[arr.length-1];
-
-        int i = 0, j = arr.length-1;
-        while(i <j){
-            int temp =arr[i];
+        int [] arr = {4, 5, 6, 203, 483, 55, 34};
+        int i = 0,  j=arr.length-1;
+        while(i < j) {
+            int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
-            i++; 
+
+            i++;
             j--;
         }
-
-
-        // for(int i = 0, j = arr.length-1; i <j;  i++, j--){
-        //     int temp =arr[i];
-        //     arr[i] = arr[j];
-        //     arr[j] = temp;
-        // }
-        System.out.println("The revvese arr  is: "+Arrays.toString(arr));
+        
+        System.out.print("The reserved array is: " + Arrays.toString(arr));
+        
+        
     }
-    
 }
