@@ -6,18 +6,22 @@ import java.util.HashSet;
 public class Practic6 {
     public static void main(String args[]){
 
+        int arr[] = {12,3,3,2,1,8,3,2,9,55,4,5,4,5,4,5,6,6,7,8};
         
         ArrayList<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(5);
-        list.add(7);
-        list.add(8);
-        list.add(6);
-        list.add(2);
-        list.add(9);
+        for(int num : arr){
+            list.add(num);
+        }
+        // list.add(2);
+        // list.add(3);
+        // list.add(4);
+        // list.add(5);
+        // list.add(5);
+        // list.add(7);
+        // list.add(8);
+        // list.add(6);
+        // list.add(2);
+        // list.add(9);
         for (int i = 0; i < list.size(); i++){
             System.out.print(list.get(i)+" ");
         }
@@ -33,6 +37,7 @@ public class Practic6 {
                 duplicate.add(num);
             }
         }
+        System.out.println("unique element "+unique);
         System.out.println("The list is "+duplicate);
         
 
