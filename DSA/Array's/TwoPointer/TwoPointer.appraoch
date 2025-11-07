@@ -1,0 +1,98 @@
+/////////////////////////////////////////////////////-: Two Pointer :-///////////////////////////////////////////////////////////
+
+1. Sorted Input :- using tow pointer approach
+
+How to Recognize the two pointer the approach
+
+i> Sorted Input :- two pointer :- Pair Triplate, Range 
+
+ii> Finding Relationship :- Between Element ,sum Diff, distance
+
+iii> Comparing two Squeance :- Margin Cheking , Subsequence
+
+iv> Window Or Sagment growth / Shrinking is allow sliding windwo with
+
+a > Dutch Nation Flage algorithm
+'search
+
+v> Palindrom Geomatri Checking's:-
+
+vi> linkedlist where slow / fast Traversel Matter'search
+
+a.> Floid cycle algorithm detection
+b.>Here Totois algorithm
+c.>fast and slow
+d.>Raiteld Breakdown :- use lined list 
+
+1. Opposit end (left+right)
+use can sorted array/string
+
+a > tow sum sorted array
+b > check arrays has a pair with give sum / differernce
+c > Trarpping rain water (left max / right max);
+d > void Palindrom
+
+2. same diraction (slow / fast pointer)
+class for lisklist and array
+
+a > detect cycle linkedlist
+b > find middle hand in linkedlist
+c > remove duplicate sorted array
+d > slideing window optimization problem
+
+3. Sliding Window (Dynamic two pointer)
+both pointer move forward
+
+a > longest substring without repeating character
+b > minmum window substring 
+c > max consecutive one with k-flip
+d > smallest sub array with sum >= Target
+
+4. Partition and Rearrangment 
+move two pointer possition array based condition
+
+a > Dutch National Flage algorithm
+b > Move zero to end
+c > sort array of os and ls 
+d > Quick sort Partition Steps
+
+5. Margining two Subsequence
+when array and list are sorted end need two merge
+
+a> merg two sorted array 
+b> marge k sorted list 
+c> Interaction union sorted array 
+
+6. Subsequence and Matching
+comparing two Subsequence with moment rule
+
+a> is subsequence 
+b> largest common prefix using two pointer
+c> comparing string with backspace
+
+7. Geometry Range based
+use two pointer shriking grow  on math property
+
+a> contain with most water
+b> max area histogram - based
+c> minimum differernce pair in sorted array
+
+8. Triplate and Beyond k-sum
+Generalization of two pointer with loop
+
+a> 3 sum 4 sum k sum
+b> triangle Triplate
+c> count Triplate with sum smallest then Range
+
+///////////////Spacial Question////////////////////////
+1.> Monotonic Striking :- Shrinking with condition fails
+2.> String comparing expansion comparing
+3.> Problem like Problem
+4.> Fast slow cycle diraction in array
+i> jump game
+ii> Happy Number 
+
+
+
+
+

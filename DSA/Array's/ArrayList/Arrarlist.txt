@@ -25,7 +25,7 @@ public class ExpandArrays {
         System.out.println();
 
 
-        int [] numbers = new int[3];
+        int []numbers = new int[3];
         numbers[0] = 10;
         numbers[1] = 20;
         numbers[2] = 30;
@@ -94,7 +94,7 @@ public class ArrList {
         System.out.println("The is element 30 is there? "+list.contains(30));
         System.out.println("The is element 20 is there? "+list.contains(20));
 
-        // add the element int the list with index
+        // add the element in the list with index
         list.add(2, 40);
         System.out.println("The list is: "+list);
         System.out.println("the size of arr is "+list.size());
