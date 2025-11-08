@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class question {
     public static void main(String[] args) {
@@ -86,6 +87,12 @@ public class question {
         //     second = next;
         //     next = first+second;
         // }
+
+        Iterator<Integer> iterator = new Iterator();
+
+
+        System.out.println();
+        list.forEach(A->System.out.print(A+" "));
         System.out.println();
         // System.out.println("The list of arr is: "+list);
         // for each
