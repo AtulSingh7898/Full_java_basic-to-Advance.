@@ -20,7 +20,7 @@ public class Practic5{
         fruit.add("Mango");
         fruit.add("orange");
         fruit.add("Avacado");
-        fruit.add("Dragab fruit");
+        fruit.add("Draganhe fruit");
         fruit.add("lichi");
         fruit.add("kivi");
 
@@ -30,9 +30,10 @@ public class Practic5{
         while(iterator.hasNext()){
             System.out.print(iterator.next()+", ");
         }
+        fruit.forEach(s -> System.out.println(s+" first number"));
 
         // using lemda Expression
-        fruit.forEach(fr -> System.out.println(fr));
+        // fruit.forEach(fr -> System.out.println(fr));
 
         // print using mathod referance 
         fruit.forEach(System.out::println);
