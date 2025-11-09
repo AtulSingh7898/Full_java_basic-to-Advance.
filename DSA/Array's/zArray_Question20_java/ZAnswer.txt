@@ -1,0 +1,100 @@
+// 1. Find the Maximum Element in an Array
+//  Input: [1, 2, 3, 4, 5]
+//  Output: 5
+//  Explanation: The maximum element in the array is 5.
+
+public class FindMax {
+
+    static int findMAxNUmber(int[] arr,int st, int max){
+        // int max = arr[0];
+        if(st > arr.length-1) return max;
+        if(max<arr[st]){
+            max = arr[st];
+        }
+
+        return findMAxNUmber(arr, st+1,max);
+    }
+    public static void main(String[] args){
+        int arr[] = {1, 2, 3, 4, 5};
+        int max = arr[0];
+        int maxe = findMAxNUmber(arr,0,0);
+        System.out.println("The mex element is "+maxe);
+        
+        for(int i = 0; i< arr.length; i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+        }
+        System.out.println("The max number is: "+max);
+    }
+}
+
+
+
+2. Find the Minimum Element in an Array
+ Input: [5, 4, 3, 2, 1]
+ Output: 1
+ Explanation: The minimum element in the array is 1.
+
+public class FindMin {
+    public static void main(String []args){
+        int[] arr = {0,5, 4, 3, 2, 1};
+        int min = arr[0];
+        for(int i = 0; i <arr.length; i++){
+            if(arr[i]>min){
+                // System.out.println(" ");
+            }else{
+                min= arr[i];
+            }
+        }
+        System.out.println("The min value is "+ min);
+
+    }
+    
+}
+
+
+3. Calculate the Sum of All Elements in an Array
+ Input: [1, 2, 3, 4, 5]
+ Output: 15
+ Explanation: The sum of the elements is 1 + 2 + 3 + 4 + 5 = 15.
+
+public class SumElement {
+    public static int sumArrayElement1(int[] arr, int st){
+        // time complexity - O(n); that is run nth in the single for loop
+        // space complexity - O(n); that is take the space in mamory stack because recuresion take the memory in stack
+        // full stack n time and empty stack n time n+n = 2n but constant avoid so there for time complexity O(n);
+        
+        if(st > arr.length-1) return 0;
+        return arr[st]+sumArrayElement1(arr, st+1);
+    }
+    
+
+    public static int sumArrayElement(int[] arr){
+        // time complexity - O(n); that is run nth in the single for loop
+        // space complexity - O(1); that is take the space on 1 element of and take 2 alocation 
+        int n = arr.length;
+        int sum = 0;
+        for(int i = 0; i < n; i++){
+            sum += arr[i];
+        }   
+        return sum;
+    }
+    public static void main(String[] args){
+        int arr[] = {1, 2, 3, 4, 5};
+        // time complexity - O(n); that is run nth in the single for loop
+        //
+        // int sum = 0;
+        // for(int num : arr){
+        //     sum += num;
+        // }
+        // System.out.println("The sum of array element is "+sum);
+
+        // int result = sumArrayElement(arr);
+        // System.out.println("The sum of array element is "+ result);
+
+        int result1 = sumArrayElement1(arr,0);
+        System.out.println("The sum of array2 element is "+ result1);
+    }
+    
+}
