@@ -11,7 +11,6 @@ public class FindMax {
         if(max<arr[st]){
             max = arr[st];
         }
-
         return findMAxNUmber(arr, st+1,max);
     }
     public static void main(String[] args){
@@ -95,6 +94,229 @@ public class SumElement {
 
         int result1 = sumArrayElement1(arr,0);
         System.out.println("The sum of array2 element is "+ result1);
+    }
+    
+}
+
+Calculate the Average of All Elements in an Array
+ Input: [1, 2, 3, 4, 5]
+ Output: 3
+ Explanation: The average is (1 + 2 + 3 + 4 + 5) / 5 = 3.
+
+public class AvarageElement {
+    // with recursion code 
+    static int SumOfAvaragElement(int arr[], int st){
+        if(st > arr.length-1) return 0;
+        return arr[st]+SumOfAvaragElement(arr, st+1);
+
+    }
+    // without recursion;
+    static int AllAvaragaElement(int[] arr){
+        int sum = 0;
+        // int avarage = 0;
+        // int count = 0;
+        // for(int i = 0; i < arr.length; i++){
+        //     sum += arr[i];
+        //     // count++;
+        // }
+        // System.out.println(sum);
+        sum = SumOfAvaragElement(arr, 0);
+        return sum/arr.length;
+    }
+    public static void main(String args[]){
+        int[] element = {1,2,3,4,5};
+        int sum = 0;
+        int result = AllAvaragaElement(element);
+        System.out.println("The avarage element in arr of "+ result);
+        
+    }
+    
+}
+
+// Find the Second Largest Element in an Array
+//  Input: [1, 2, 3, 4, 5]
+//  Output: 4
+//  Explanation: The second largest element is 4.
+
+public class SecondLargest {
+
+    static int secondLastElement(int[] arr){
+        int firstMax = 0;
+        int secondMax = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(firstMax<arr[i]){
+                int temp = firstMax;
+                firstMax = arr[i];
+                secondMax = temp;
+            }else if(arr[i]> secondMax && firstMax != arr[i]){
+                secondMax = arr[i];
+            }
+        }
+        return secondMax;
+
+    }
+
+    public static void main(String[] args){
+        int[] arr = {6,1, 2, 3, 4, 5};
+        int result = secondLastElement(arr);
+        System.out.println("The second largest number is "+result);
+    }
+    
+}
+
+
+//  Reverse an Array
+//  Input: [1, 2, 3, 4, 5]
+//  Output: [5, 4, 3, 2, 1]
+//  Explanation: The array reversed is [5, 4, 3, 2, 1].
+
+import java.util.Arrays;
+public class ReverseArray {
+    static int[] recursiveReverseArray(int[] arr, int ft, int Lt){
+        if(ft >= Lt) return arr;
+        int temp = arr[ft];
+        arr[ft] = arr[Lt];
+        arr[Lt] = temp;
+        return recursiveReverseArray(arr,ft+1,Lt-1);
+
+    } 
+    static int[] reverseArray(int []arr){
+        int i = 0;
+        int j = arr.length-1;
+        // while(i < j){
+        //     int temp = arr[i];
+        //     arr[i] = arr[j];
+        //     arr[j] = temp;
+        //     i++;
+        //     j--;
+        // }
+        arr = recursiveReverseArray(arr,i,j);
+        return arr;
+
+    }
+
+    public static void main(String[] args){
+        int[] arr = {1, 2, 3, 4, 5};
+        int n = arr.length-1;
+        int[] result = reverseArray(arr);
+        System.out.println("The Reverse Array is "+Arrays.toString(result));
+    }
+    
+}
+
+// remove Duplicates from an Array
+//  Input: [1, 2, 2, 3, 4, 4, 5]
+//  Output: [1, 2, 3, 4, 5]
+//  Explanation: The array without duplicates is [1, 2, 3, 4, 5].
+
+import java.util.ArrayList;
+public class RemoveDuplicate {
+
+    public static ArrayList<Integer> removeDuplicate(int[] nums){
+        ArrayList<Integer> addUniq = new ArrayList<>();
+        for(int num : nums){
+            if(!addUniq.contains(num)){
+                addUniq.add(num);
+            }
+        }
+        return addUniq;
+        
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 2, 3, 4, 4, 5};
+        // int result[] = removeDuplicate(nums); does not working on the reference method
+        ArrayList<Integer> list = removeDuplicate(nums); 
+        System.out.println("The list is "+ list);
+    }
+}
+
+
+8. find the index of an Element in an Array
+ Input: ([1, 2, 3, 4, 5], 3)
+ Output: 2
+ Explanation: The index of element 3 is 2.
+
+public class FindElement {
+    static int findElement(int[] arr, int st,int find,int index){
+        // int index = 0;
+        if(st >arr.length-1) return index;
+        if(arr[st] == find){
+            index = st;
+        }
+        return findElement(arr, st+1, find,index);
+    }
+
+    public static void main(String args[]){
+        int[] nums = {1, 2, 3, 4, 5};
+        int x = 3;
+        int found = findElement(nums, 0,x,0);
+        System.out.println(x+" is found recursively in index num "+found);
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == x){
+                System.out.print(x+" is found in indice number "+i);
+            }
+        }
+    }
+    
+}
+
+
+9. Check if an Array Contains a Given Element
+ Input: ([1, 2, 3, 4, 5], 3)
+ Output: true
+ Explanation: The array contains the element 3.
+
+public class findContains{
+
+    public static boolean containElement(int[] nums, int x){
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == x){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args){
+        int nums[] = {1,2,3,4,5};
+        int x = 3;
+        boolean y = containElement(nums, x);
+        System.out.println("The element contain's "+y);
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == x){
+                System.out.println(true);
+            }
+        }
+    }
+
+}
+
+
+package zArray_Question20_java;
+
+import java.util.Arrays;
+
+// 10. Merge Two Arrays
+//  Input: ([1, 2, 3], [4, 5, 6])
+//  Output: [1, 2, 3, 4, 5, 6]
+//  Explanation: The merged array is [1, 2, 3, 4, 5, 6].
+
+public class MergArray2 {
+    public static void main(String[] args){
+        int[] nums = {1, 2, 3};
+        int[] nums1 = {4, 5, 6};
+        int[] merge = new int[nums.length*2];
+
+        for(int i = 0; i < nums.length; i++){
+            merge[i] = nums[i];
+        }
+        
+        for(int i = nums.length, j = 0; i < merge.length;i++){
+            merge[i] = nums1[j];
+            j++;
+        }
+
+        System.out.println("After Merging arr is "+Arrays.toString(merge));
     }
     
 }
