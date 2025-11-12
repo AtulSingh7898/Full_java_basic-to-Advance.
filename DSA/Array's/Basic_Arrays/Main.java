@@ -30,8 +30,8 @@ public class Main{
         // System.out.println("The first the of the elememt "+ arr[0]);
         // System.out.println("The second the of the elememt "+ arr[1]);
         // System.out.println("The last the of the elememt "+ arr[4]);
-        // System.out.println("The lenght the of Arr "+ arr[arr.length-1]);
-        // System.out.println("The lenght the of Arr "+ arr.length);
+        // System.out.println("The length the of Arr "+ arr[arr.length-1]);
+        // System.out.println("The length the of Arr "+ arr.length);
         // System.out.println();
 
         // System.out.println("The sorted array is : " );
