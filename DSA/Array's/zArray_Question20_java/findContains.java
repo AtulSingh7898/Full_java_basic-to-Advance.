@@ -1,7 +1,7 @@
-9. Check if an Array Contains a Given Element
- Input: ([1, 2, 3, 4, 5], 3)
- Output: true
- Explanation: The array contains the element 3.
+// 9. Check if an Array Contains a Given Element
+//  Input: ([1, 2, 3, 4, 5], 3)
+//  Output: true
+//  Explanation: The array contains the element 3.
 
 package zArray_Question20_java ;
 public class findContains{
