@@ -2,42 +2,26 @@ package LeetcodeQuestion;
 
 public class mostWater {
     public static int maxArea(int[] height) {
-        int n = height.length;
-        int i = 0; 
-        int j = n;
-        if(n == 1){
-            return 1;
-        }
-        int firstLargest = 0;
-        int secondLast = 0;
-        while(i < j){
-            if(firstLargest<height[i]){
-                secondLast = firstLargest;
-                firstLargest = height[i];
-            }else if(secondLast < height[i] && height[i] != firstLargest){
-                secondLast = height[i];
-            }
-            i++;
-        }
-        int width = (int)Math.min(firstLargest, secondLast);
-        // int LastLargest = 0;
-        i = n-1;
-        j = 0;
-        // while(i>j){
-        //     if(LastLargest<height[i]){
-        //         secondLast = LastLargest;
-        //         LastLargest = height[i];
-        //     }
-        //     i++;
-        // }
-        // System.out.println(firstLargest+" "+LastLargest);
-        int area = width*secondLast;
-        return area;
-        
-    }
+        int left = 0;
+        int right = height.length-1;
+        int maxArea = 0;
+        while(left < right){
+            int width = right-left;
+            int h = Math.min(height[left], height[right]);
+            int area = h*width;
 
+            if(maxArea< area){
+                maxArea = area;
+            }if(height[left] < height[right]){
+                left++;
+            }else{
+                right--;
+            }
+        }
+        return maxArea;
+    }
     public static void main(String[] args){
-        int nums[] = {1,1};
+        int nums[] = {0,8,6,2,5,4,8,3,7};
         int result = maxArea(nums);
         System.out.println(result);
     }
