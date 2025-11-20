@@ -3,7 +3,7 @@
 //  Output: true
 //  Explanation: The array contains the element 3.
 
-package zArray_Question20_java ;
+package zArray_Question40_java ;
 public class findContains{
 
     public static boolean containElement(int[] nums, int x){

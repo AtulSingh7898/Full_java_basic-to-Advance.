@@ -1,4 +1,4 @@
-package LeetcodeQuestion;
+// package LeetcodeQuestion;
 
 public class RemoveDuplicate {
      static int duplcateRemove(int[] nums){

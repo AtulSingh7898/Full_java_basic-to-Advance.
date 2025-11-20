@@ -1,4 +1,4 @@
-package zArray_Question20_java;
+package zArray_Question40_java;
 // second largest number in array
 public class question{
     public static int secondLargest(int[] arr){

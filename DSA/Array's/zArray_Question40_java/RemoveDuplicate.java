@@ -2,7 +2,7 @@
 //  Input: [1, 2, 2, 3, 4, 4, 5]
 //  Output: [1, 2, 3, 4, 5]
 //  Explanation: The array without duplicates is [1, 2, 3, 4, 5].
-package zArray_Question20_java;
+package zArray_Question40_java;
 
 import java.util.ArrayList;
 

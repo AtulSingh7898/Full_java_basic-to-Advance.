@@ -292,7 +292,7 @@ public class findContains{
 }
 
 
-package zArray_Question20_java;
+package zArray_Question40_java;
 
 import java.util.Arrays;
 
@@ -359,7 +359,7 @@ public class MergArray2 {
 //  Explanation: The common elements are 2 and 3.
 
 
-package zArray_Question20_java;
+package zArray_Question40_java;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -393,4 +393,220 @@ public class InteresectionArray {
         }
         System.out.println(Arrays.toString(arr));
     }
+}
+
+package zArray_Question40_java;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+// 12. Find the Union of Two Arrays
+//  Input: ([1, 2, 3], [2, 3, 4])
+//  Output: [1, 2, 3, 4]
+//  Explanation: The union of the arrays is [1, 2, 3, 4]
+
+public class UnionArray {
+    public static void main(String[] args) {
+        int[] num1 = {1, 2, 3};
+        int[] num2 = {2, 3, 4};
+
+        ArrayList<Integer> list = new ArrayList<>();
+        Set<Integer> set  = new HashSet<>();
+        for(int i = 0; i < num1.length; i++){
+            list.add(num1[i]);
+        }
+        for(int i = 0; i < num2.length; i++){
+            list.add(num2[i]);
+        }
+        
+        for(int i : list){
+            set.add(i);
+        }
+        System.out.println(set);
+        // System.out.println(list);
+
+    }
+    
+}
+
+package zArray_Question40_java;
+
+import java.util.Arrays;
+
+// . Rotate an Array by k Positions
+//  Input: ([1, 2, 3, 4, 5], 2)
+//  Output: [4, 5, 1, 2, 3]
+//  Explanation: The array rotated by 2 positions is [4, 5, 1, 2, 3].
+
+public class RotatArray {
+
+    public static void rotatArray(int[] nums, int i, int j){
+        while(i < j){
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j--;
+        }
+    }
+    public static void main(String[] args) {
+        int[] nums = {1,2,3,4,5};
+        int k = 2;
+        k = k%nums.length;
+        rotatArray(nums, 0, nums.length-1);
+        rotatArray(nums, 0, k-1);
+        rotatArray(nums, k, nums.length-1);
+
+        System.out.println(Arrays.toString(nums));
+    }
+    
+}
+
+package zArray_Question40_java;
+
+//  Find the Missing Number in an Array
+//  Input: [1, 2, 4, 5]
+//  Outpu
+
+public class MissingNumber {
+    public static void main(String[] args) {
+        int[] nums = {1,2,4,5};
+        int i = 0;
+        int missN = 0;
+        int j = 1;
+        while(i < nums.length){
+            if(nums[i]+1 != nums[j]){
+                missN = nums[i]+1;
+                
+                break;
+            }
+            j++;
+            i++;
+        
+        }
+        System.out.println(missN);
+    }
+    
+}
+
+
+5. Find the Duplicate Number in an Array
+ Input: [1, 2, 3, 4, 2]
+ Output: 2
+ Explanation: The duplicate number is 2.
+
+package zArray_Question40_java;
+
+public class FindDuplicate {
+    public static void main(String[] main){
+        int num[] = {1, 2, 3, 4, 2};
+        int duplicate = 0;
+        
+
+        for(int i = num.length-1; i >= 0;i--){
+            for(int j = 0; j < i; j++){
+                if(num[i] == num[j]){
+                    duplicate = num[i];
+                    break;
+                }
+            }
+        }
+
+        // int i = 0;
+        // int j = num.length-1;
+        // while(i < j){
+        //     if(num[i] == num[j]){
+        //         duplicate = num[i];
+        //         j--;
+        //     }
+        //     i++;
+            
+        // }
+        System.out.println("The duplicate is "+duplicate);
+    }
+    
+}
+
+package zArray_Question40_java;
+
+import java.util.Arrays;
+
+// 16. Sort an Array Using Bubble Sort
+//  Input: [5, 1, 4, 2, 3]
+//  Output: [1, 2, 3, 4, 5]
+//  Explanation: The array sorted using bubble sort is [1, 2, 3, 4, 5].
+
+public class SortArray {
+    public static void main(String[] args){
+        int[] num = {5, 3, 4, 2, 1};
+
+        for(int i = 0; i < num.length; i++){
+            for(int j = i+1; j< num.length; j++){
+                if(num[i] > num[j]){
+                    int temp = num[i];
+                    num[i] = num[j];
+                    num[j] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(num));
+    }
+}
+
+
+package zArray_Question40_java;
+import java.util.Arrays;
+
+// 16. Sort an Array Using Bubble Sort
+//  Input: [5, 1, 4, 2, 3]
+//  Output: [1, 2, 3, 4, 5]
+//  Explanation: The array sorted using bubble sort is [1, 2, 3, 4, 5].
+
+public class SortArray {
+    public static void main(String[] args){
+        int[] num = {5, 3, 4, 2, 1};
+
+        for(int i = 0; i < num.length; i++){
+            for(int j = i+1; j< num.length; j++){
+                if(num[i] > num[j]){
+                    int temp = num[i];
+                    num[i] = num[j];
+                    num[j] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(num));
+    }
+}
+
+package zArray_Question40_java;
+
+import java.util.Arrays;
+
+// 8. Move All Zeros to the End of an Array
+//  Input: [0, 1, 0, 3, 12]
+//  Output: [1, 3, 12, 0, 0]
+//  Explanation: The array with zeros moved to the end is [1, 3, 12, 0, 0];
+
+public class moveZero {
+    public static void main(String[] args){
+        int num[] = {0, 1, 0, 3, 12};
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while(i < num.length){
+            if(num[i] != 0){
+                int temp = num[j];
+                num[j] = num[i];
+                num[i] = temp;
+                j++;
+                
+            }
+            i++;
+        }
+        System.out.println(Arrays.toString(num));
+
+    }
+    
 }

@@ -1,4 +1,4 @@
-package zArray_Question20_java;
+package zArray_Question40_java;
 
 public class FindMin {
     public static void main(String []args){
