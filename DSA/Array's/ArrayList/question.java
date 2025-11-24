@@ -88,7 +88,7 @@ public class question {
         //     next = first+second;
         // }
 
-        Iterator<Integer> iterator = new Iterator();
+        // Iterator<Integer> iterator = new Iterator();
 
 
         System.out.println();

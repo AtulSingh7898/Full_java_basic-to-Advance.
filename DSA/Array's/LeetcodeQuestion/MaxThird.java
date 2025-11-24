@@ -1,4 +1,4 @@
-package LeetcodeQuestion;
+// package LeetcodeQuestion;
 
 public class MaxThird{
     int maxThird(int[] arr){

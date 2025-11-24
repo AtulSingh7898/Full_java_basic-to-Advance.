@@ -18,9 +18,9 @@ public class longestSequence {
         int i = 0, j = 0;
         int count = 0;
         int k = nums.length-1;
-        while (i < k) {
+        while (i < k && j < k) {
             if (nums[i]+1 == nums[j+1]) {
-                count = j;
+                count = nums[j+1];
                 
             }
             i++;

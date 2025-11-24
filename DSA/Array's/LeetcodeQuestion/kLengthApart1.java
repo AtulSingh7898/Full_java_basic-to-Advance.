@@ -1,4 +1,4 @@
-package LeetcodeQuestion;
+// package LeetcodeQuestion;
 
 public class kLengthApart1 {
     public static boolean kLengthApart(int[] nums, int k) {
