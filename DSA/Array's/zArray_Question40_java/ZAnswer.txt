@@ -607,6 +607,5 @@ public class moveZero {
         }
         System.out.println(Arrays.toString(num));
 
-    }
-    
+    }   
 }

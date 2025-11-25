@@ -1,4 +1,4 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
 
 // 7. Find the Maximum Product of Two Integers in an Array
 //  Input: [1, 2, 3, 4, 5]

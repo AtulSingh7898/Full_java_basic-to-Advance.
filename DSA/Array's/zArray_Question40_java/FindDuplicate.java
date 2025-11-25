@@ -1,4 +1,4 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
 
 public class FindDuplicate {
     public static void main(String[] main){

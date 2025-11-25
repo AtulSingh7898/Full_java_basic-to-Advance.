@@ -1,4 +1,4 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
 // 20. Find the Most Frequent Element in an Array
 //  Input: [1, 3, 2, 3, 4, 3, 5]
 //  Output: 3

@@ -1,4 +1,5 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
+
 // 1. Find the Maximum Element in an Array
 //  Input: [1, 2, 3, 4, 5]
 //  Output: 5

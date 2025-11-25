@@ -1,4 +1,4 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
 
 public class SumElement {
     public static int sumArrayElement1(int[] arr, int st){

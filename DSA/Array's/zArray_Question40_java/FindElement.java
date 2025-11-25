@@ -1,4 +1,4 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
 
 public class FindElement {
     static int findElement(int[] arr, int st,int find,int index){

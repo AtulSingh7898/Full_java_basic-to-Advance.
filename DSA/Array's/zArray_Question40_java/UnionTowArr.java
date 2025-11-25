@@ -1,4 +1,5 @@
-package zArray_Question40_java;
+// package zArray_Question40_java;
+
 // Find the Union of Two Arrays
 //  Input: ([1, 2, 3], [2, 3, 4])
 //  Output: [1, 2, 3, 4]
