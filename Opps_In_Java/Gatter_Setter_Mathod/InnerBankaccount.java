@@ -1,4 +1,4 @@
-//Getter setter mathod
+// Getter setter mathod
 
 // encapsulation///////////////////////////////////
 class Bankacount{

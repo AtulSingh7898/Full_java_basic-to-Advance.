@@ -1802,3 +1802,49 @@ actionost
 mouselistner
 keylistener
 
+
+Thread in java:- 
+A thread is like a separate path of execution inside a program.
+It allows Java to perform multiple operations simultaneously.
+
+Thread vs Runnable
+Thread	Runnable
+Extends Thread class	Implements Runnable
+Can’t extend another class	Allows class to extend something else
+Not best for large applications	Better practice
+
+// inheriat class thread 
+class myThread extends Thread{
+    public void run(){
+        System.out.println("The Thread is Running:....");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        myThread t = new myThread();
+        t.start();
+    }
+}
+
+//thread using interface 
+
+class myThread implements Runnable{
+    public void run(){
+        System.out.println("The thread is running:....");
+    }
+}
+public class Main2 {
+    public static void main(String[] Args){
+        Thread t = new Thread(new myThread());
+        t.start();
+    }
+    
+}
+Threads help when you want to:
+
+Do multiple tasks at once
+(e.g., play music + download a file + update UI)
+
+Improve performance
+
+Handle background tasks without freezing the main program

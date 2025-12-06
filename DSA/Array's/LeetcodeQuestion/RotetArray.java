@@ -15,9 +15,6 @@ public class RotetArray {
             j--;
         }
         
-        // if(nums.length < j){
-        //     k = nums.length-1;
-        // }
         i = 0;
         j = k-1;
         while(i < j){

@@ -11,6 +11,7 @@ public class RemoveDuplicate2{
         // int result = removeDuplicte2(nums);
         for(int i = 0; i < nums.length; i++){
             if(k < 2 && nums[i] != nums[k-2]){
+                k++;
                 nums[k] = nums[i];
             }
         }

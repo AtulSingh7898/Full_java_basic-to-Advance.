@@ -62,16 +62,15 @@ public class Main{
 
         int arr[] = {12,21,24,54,45};
 
-        int deletIndex = 2;
-        for(int i = deletIndex; i < arr.length-1; i++){
-            arr[i] = arr[i+1];
-        }
-        arr[deletIndex] = 0;
-        System.out.println("The array after Delete element is : ");
-
-        for (int i = 0; i < arr.length; i++){
-            System.out.print(arr[i]+" ");
-        }
+        // int deletIndex = 2;
+        // for(int i = deletIndex; i < arr.length-1; i++){
+        //     arr[i] = arr[i+1];
+        // }
+        // arr[arr.length-1] = 0;
+        // System.out.println("The array after Delete element is : ");
+        // for (int i = 0; i < arr.length; i++){
+        //     System.out.print(arr[i]+" ");
+        // }
 
         System.out.println();
         for(int num : arr){

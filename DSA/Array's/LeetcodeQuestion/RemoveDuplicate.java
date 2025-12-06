@@ -1,5 +1,7 @@
 // package LeetcodeQuestion;
 
+import java.util.Arrays;
+
 public class RemoveDuplicate {
      static int duplcateRemove(int[] nums){
         int i = 0;
@@ -12,7 +14,8 @@ public class RemoveDuplicate {
         return i+1;
     }
     public static void main(String args[]){
-        int[] nums = {0,0,1,1,2,2,3,3,4,4,5,5};
+
+        int[] nums = {0,0,1,1,2,2,3,3,4,4,5,5,6,6};
         
         // int result = duplcateRemove(nums);
         // System.out.println(result);
@@ -24,6 +27,7 @@ public class RemoveDuplicate {
                 nums[j] = nums[i];
             }
         }
+        // System.out.println(Arrays.toString(nums));
         System.out.println(j+1);
     }
     
