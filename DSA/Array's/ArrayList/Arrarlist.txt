@@ -192,7 +192,7 @@ public class ArrList {
         //     arr[i] = arr[j];
         //     arr[j] = temp;
         // }
-        System.out.println("The revvese arr  is: "+Arrays.toString(arr));
+        System.out.println("The reverse arr  is: "+Arrays.toString(arr));
         
         momoIzzationn
         tebulation
