@@ -63,7 +63,7 @@ public class Main{
         int arr[] = {12,21,24,54,45};
 
         // int deletIndex = 2;
-        // for(int i = deletIndex; i < arr.length-1; i++){
+        // for(int i = deletIndex; i <=arr.length-1; i++){
         //     arr[i] = arr[i+1];
         // }
         // arr[arr.length-1] = 0;
