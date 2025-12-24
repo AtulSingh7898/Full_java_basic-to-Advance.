@@ -21,7 +21,7 @@ public class mostWater {
         return maxArea;
     }
     public static void main(String[] args){
-        int nums[] = {0,8,6,2,5,4,8,3,7};
+        int nums[] = {0,8,5,2,5,4,8,3,6};
         int result = maxArea(nums);
         System.out.println(result);
     }

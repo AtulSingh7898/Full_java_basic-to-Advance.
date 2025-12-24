@@ -13,6 +13,7 @@ public class SecLarg {
                 second = n;
             }
         }
+        
         if(second == Integer.MIN_VALUE){
             System.out.println(second+" Number is Not second largest number in the arr");
         }else System.out.println(second+" Number is second largest number in the arr");
