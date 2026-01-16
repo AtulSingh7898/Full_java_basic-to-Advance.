@@ -1,7 +1,7 @@
 package BinarySearch;
 // 81. Search in Rotated Sorted Array II
 
-public class SearchInRotateA {
+public class SearchInRotateAII {
     public static boolean search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
@@ -35,7 +35,7 @@ public class SearchInRotateA {
     }
 
     public static void main(String[] args) {
-        int nums[] = {2,5,6,0,0,1,3};
+        int nums[] = {2,5,6,8,0,2,3};
         int target = 2;
         System.out.println(search(nums,target));
     }

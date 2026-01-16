@@ -1,3 +1,4 @@
+package BinarySearch;
 // package BinarySearch.java;
 
 // // techniqu 2nd 
