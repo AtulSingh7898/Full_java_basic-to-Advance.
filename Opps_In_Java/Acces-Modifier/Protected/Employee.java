@@ -1,12 +1,12 @@
 // package Protected;
 
-class Person{
-    protected Person(){
+class person{
+    protected person(){
         System.out.println("Protected consotructor got called ");
     }
 }
 
-public class Employee extends Person {
+public class Employee extends person {
     public Employee(){
         super();
         System.out.println("THe employee got called ");

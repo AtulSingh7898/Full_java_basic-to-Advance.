@@ -118,7 +118,7 @@ public class ArrList {
         System.out.println("The is element 20 is there? "+list.contains(20));
         System.out.println("The list is empty?: "+list.isEmpty());
 
-        // clear overall lilst of item's
+        // clear overall list of item's
 
         list.clear();
         System.out.println("The list is: "+list);
@@ -179,6 +179,7 @@ public class ArrList {
 
         int i = 0, j = arr.length-1;
         while(i <j){
+            
             int temp =arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
