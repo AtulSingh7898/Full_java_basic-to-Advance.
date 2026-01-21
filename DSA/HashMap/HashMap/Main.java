@@ -1,12 +1,9 @@
-// package HashMap;
+package HashMap;
 
 
 import java.util.HashMap;
 import java.util.Map;
 
-// import Mathod.Print;
-
-// import Loop of java.ForLoop java.Counting;
 
 public class Main {
 
@@ -88,7 +85,7 @@ public class Main {
 
         // ITERATION METHODS (READ DATA)
         // keySet() returns all keys.
-        System.out.println("The keySet() is return all Value is "+hashMap.keySet());
+        System.out.println("The keySet() is return all key is "+hashMap.keySet());
 
         // values() returns all value.
         System.out.println("The values() is return all Value is "+hashMap.values());
