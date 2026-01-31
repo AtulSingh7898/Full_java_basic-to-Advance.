@@ -1,4 +1,4 @@
-package DSA.String.Basic;
+package Basic;
 
 public class Main {
     static void reverse(String Atul){
