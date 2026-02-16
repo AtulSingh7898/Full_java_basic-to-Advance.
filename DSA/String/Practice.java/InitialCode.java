@@ -42,13 +42,17 @@ public class InitialCode{
         String reverse = "madam";
         char res[] = reverse.toCharArray();
         int count = 0;
+        for(char st: reverse.toCharArray()){
+            count++;
+        }
         String  resv = "";
         for(int i = reverse.length()-1; i >= 0; i--){
             resv += reverse.charAt(i);
-            count++;
+            // count++;
         }
         System.out.println(resv);
         System.out.println("the string count is: "+count);
+    
 
 
 

@@ -1,3 +1,22 @@
 //////////////////////////////////////String////////////////////////////////////////////////////////
 
-                                sagmentry - frequentialt update
+                                sagmentry - frequentiatly update
+ArrayList
+HashMap
+
+prefix sum 
+sliding window :- substring longest min-max work by condition 
+cadance algorithm-: work with conditions value
+false slow pointer
+binary search 
+HashMap 
+HashSet
+TreeMap 
+String 
+Dequeue:- Double ended queue 
+queue
+Dynamic Programing 
+Top-down 
+bottom-up
+exectly k = atmost(k) - atmost(k-1);
+frequecy metters

@@ -1,0 +1,86 @@
+Quick Sort (Concept + Example + Practice Questions)
+
+ What is Quick Sort?
+
+Quick Sort is a divide and conquer sorting algorithm.
+It works in 3 main steps:
+
+Choose a pivot element.
+
+Partition the array so that:
+
+Elements smaller than pivot → left side
+
+Elements greater than pivot → right side
+
+Recursively apply the same process to left and right subarrays.
+
+⏱ Time Complexity:
+
+Best / Average → O(n log n)
+
+Worst → O(n²) (when pivot is badly chosen)
+
+Space → O(log n) (recursive stack)
+
+🔹 Example (Step by Step)
+Input:
+[10, 7, 8, 9, 1, 5]
+
+
+Let’s choose last element as pivot → 5
+
+Step 1: Partition
+
+Elements smaller than 5 → [1]
+Elements greater than 5 → [10, 7, 8, 9]
+
+Array becomes:
+
+[1, 5, 10, 7, 8, 9]
+
+
+Now apply Quick Sort on:
+
+Left → [1]
+
+Right → [10, 7, 8, 9]
+
+Next pivot → 9
+
+Partition:
+
+Smaller → [7, 8]
+
+Greater → [10]
+
+Final sorted array:
+
+[1, 5, 7, 8, 9, 10]
+
+
+Practice Questions (Interview Level)
+I’ll give you different difficulty levels 
+
+🟢 Easy Level
+
+Sort an array using Quick Sort.
+Modify Quick Sort to sort in descending order.
+Count number of swaps performed in Quick Sort.
+Implement Quick Sort using first element as pivot.
+
+🟡 Medium Level
+
+Find the Kth smallest element using Quick Sort logic (QuickSelect).
+Sort an array of 0s, 1s, and 2s using partition logic.
+Apply Quick Sort to a list of objects (like sorting students by marks).
+What happens if array is already sorted? Explain time complexity.
+
+🔴 Hard Level
+
+Randomized Quick Sort (avoid worst case).
+Implement Quick Sort without recursion (using stack).
+Three-way partitioning (Dutch National Flag variation).
+Solve:
+Given an array, find the number of elements smaller than each element using modified Quick Sort.
+Count inversions using divide and conquer.

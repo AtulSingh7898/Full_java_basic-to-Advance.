@@ -1,0 +1,95 @@
+================================================================================
+                    HASHMAP - PRACTICE QUESTIONS (DSA / Java)
+================================================================================
+
+--- EASY ---
+
+1. Two Sum
+   Given an array of integers and a target, return indices of two numbers that add up to target.
+   Input: nums = [2, 7, 11, 15], target = 9  →  Output: [0, 1]
+
+2. First Non-Repeating Character
+   Find the first character in a string that does not repeat.
+   Input: "leetcode"  →  Output: 'l'
+
+3. Count Frequency of Elements
+   Given an array, count how many times each element appears. Return a HashMap.
+
+4. Check if Two Arrays Have Same Elements (ignoring order)
+   Given two arrays, check if they contain the same elements with same frequencies.
+
+5. Find Missing Number
+   Array of size n contains numbers from 0 to n, one is missing. Find it using a set/map.
+
+6. Valid Anagram
+   Check if two strings are anagrams (same characters, same frequency).
+   Input: "listen", "silent"  →  true
+
+7. Contains Duplicate
+   Given an array of integers, return true if any value appears at least twice.
+
+8. Intersection of Two Arrays
+   Return common elements in two arrays (each element once).
+
+
+--- MEDIUM ---
+
+9. Group Anagrams
+   Group strings that are anagrams of each other.
+   Input: ["eat","tea","tan","ate","nat","bat"]
+   Output: [["eat","tea","ate"], ["tan","nat"], ["bat"]]
+
+10. Longest Substring Without Repeating Characters
+    Find length of longest substring with all unique characters.
+    Input: "abcabcbb"  →  Output: 3 ("abc")
+
+11. Subarray Sum Equals K
+    Count number of subarrays whose sum equals k.
+    Input: nums = [1,1,1], k = 2  →  Output: 2
+
+12. Longest Consecutive Sequence
+    Given unsorted array, find length of longest consecutive elements sequence.
+    Input: [100, 4, 200, 1, 3, 2]  →  Output: 4 (sequence 1,2,3,4)
+
+13. Top K Frequent Elements
+    Given array and k, return k most frequent elements.
+    Input: [1,1,1,2,2,3], k = 2  →  Output: [1, 2]
+
+14. LRU Cache (Least Recently Used)
+    Design a cache with get(key) and put(key, value), evict least recently used when full.
+
+15. Copy List with Random Pointer
+    Deep copy a linked list where each node has next and random pointer. Use HashMap.
+
+16. 4Sum II
+    Given 4 arrays A, B, C, D, count tuples (i,j,k,l) such that A[i]+B[j]+C[k]+D[l] = 0.
+
+
+--- HARD ---
+
+17. LFU Cache (Least Frequently Used)
+    Cache that evicts least frequently used item. Same frequency → LRU.
+
+18. Count Subarrays with Given XOR
+    Count subarrays with XOR equal to a given value. Use prefix XOR + HashMap.
+
+19. Longest Substring with At Most K Distinct Characters
+    Find longest substring with at most k distinct characters.
+
+20. Substring with Concatenation of All Words
+    Find all starting indices of substrings that are concatenation of every word in list.
+
+
+--- CONCEPTUAL ---
+
+21. How does HashMap handle collisions in Java? (Chaining vs Open Addressing)
+
+22. What is the time complexity of get(), put(), remove() in HashMap? (Average O(1))
+
+23. Difference between HashMap, LinkedHashMap, and TreeMap.
+
+24. When to use HashMap vs HashTable? (HashMap allows null key/value, not synchronized)
+
+25. How does hashCode() and equals() affect HashMap behavior?
+
+================================================================================

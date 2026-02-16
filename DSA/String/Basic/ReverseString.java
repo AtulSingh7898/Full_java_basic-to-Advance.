@@ -1,3 +1,4 @@
+package Basic;
 public class ReverseString {
    static String reverseString(String str){
     String sum = "";
