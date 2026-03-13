@@ -48,6 +48,7 @@ public class Alphabate {
         int num = 5;
         int n = 9; // number of rows (adjust to fit properly)
         pattern(1,num);
+        
         // for(int i = 1; i <= 2*num; i++){
 
         //     int space = (i > num )? 2*num-i+1 : i-1+1;

@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+// time complexity:- O(n^2) 
+
 // tim Short 
 
 public class BubbleS{

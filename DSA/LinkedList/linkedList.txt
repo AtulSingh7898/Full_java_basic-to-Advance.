@@ -1,0 +1,15 @@
+1-> https://leetcode.com/problems/middle-of-the-linked-list/description/
+
+876. Middle of the Linked list
+
+Given the head of a singly linked list, return the middle node of the linked list.
+If there are two middle nodes, return the second middle node.
+
+
+2-> https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/
+
+2095. Delete the Middle Node of a Linked list
+
+You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.
+The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ 
+denotes the largest integer less than or equal to x.For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively

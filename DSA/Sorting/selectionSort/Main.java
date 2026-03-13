@@ -1,5 +1,7 @@
 package Sorting.selectionSort;
 
+// time complexity :- O(n^2);
+
 //  Selection Sort
 public class Main {
 
