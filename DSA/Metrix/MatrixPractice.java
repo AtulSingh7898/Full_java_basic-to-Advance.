@@ -1,0 +1,115 @@
+package Metrix;
+//Operations in a Matrix
+
+import java.util.Scanner;
+
+public class MatrixPractice {
+
+    // Function to take input of matrix
+    public static int[][] inputMatrix(int rows, int cols, Scanner sc) {
+        int[][] matrix = new int[rows][cols]; // Create a 2D array
+
+        System.out.println("Enter elements of the matrix:");
+        for (int i = 0; i < rows; i++) { // Loop for rows
+            for (int j = 0; j < cols; j++) { // Loop for columns
+                matrix[i][j] = sc.nextInt(); // Read value from user
+            }
+        }
+
+        return matrix; // Return the filled matrix
+    }
+
+    // Function to print matrix
+    public static void printMatrix(int[][] matrix) {
+        int rows = matrix.length;         // Number of rows
+        int cols = matrix[0].length;      // Number of columns
+
+        System.out.println("Matrix is:");
+        for (int i = 0; i < rows; i++) {       // Loop through rows
+            for (int j = 0; j < cols; j++) {   // Loop through columns
+                System.out.print(matrix[i][j] + " "); // Print element
+            }
+            System.out.println(); // New line after each row
+        }
+    }
+
+    // Function to calculate sum of all elements
+    public static int sumOfMatrix(int[][] matrix) {
+        int sum = 0; // Variable to store sum
+
+        for (int i = 0; i < matrix.length; i++) {           // For each row
+            for (int j = 0; j < matrix[0].length; j++) {    // For each column
+                sum += matrix[i][j]; // Add each element to sum
+            }
+        }
+
+        return sum; // Return the total sum
+    }
+
+    // Function to find max element in matrix
+    public static int maxInMatrix(int[][] matrix) {
+        int max = matrix[0][0]; // Assume first element is max
+
+        for (int i = 0; i < matrix.length; i++) {           // For each row
+            for (int j = 0; j < matrix[0].length; j++) {    // For each column
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j]; // Update max if bigger found
+                }
+            }
+        }
+
+        return max; // Return max value
+    }
+
+    // Function to search an element in matrix
+    public static void searchInMatrix(int[][] matrix, int key) {
+        boolean found = false;
+
+        for (int i = 0; i < matrix.length; i++) {           // For each row
+            for (int j = 0; j < matrix[0].length; j++) {    // For each column
+                if (matrix[i][j] == key) {
+                    System.out.println("Element " + key + " found at position (" + i + ", " + j + ")");
+                    found = true;
+                    return; // Exit once found
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("Element " + key + " not found in the matrix.");
+        }
+    }
+
+    // Main function
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); // Scanner for input
+
+        // Ask user for matrix size
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+
+        System.out.print("Enter number of columns: ");
+        int cols = sc.nextInt();
+
+        // Input matrix
+        int[][] matrix = inputMatrix(rows, cols, sc);
+
+        // Print matrix
+        printMatrix(matrix);
+
+        // Find sum of matrix
+        int sum = sumOfMatrix(matrix);
+        System.out.println("Sum of all elements = " + sum);
+
+        // Find maximum element in matrix
+        int max = maxInMatrix(matrix);
+        System.out.println("Maximum element = " + max);
+
+        // Search element
+        System.out.print("Enter element to search: ");
+        int key = sc.nextInt();
+        searchInMatrix(matrix, key);
+
+        sc.close(); // Close scanner
+    }
+}

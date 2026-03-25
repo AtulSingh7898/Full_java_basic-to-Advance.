@@ -28,7 +28,6 @@ public class Heap {
         }
 
     }
-
     public void delete() {
         if (size == 0) {
             System.out.println("Heap is Empty");
@@ -41,7 +40,7 @@ public class Heap {
         System.out.println("Deleted Element is : " + deleteValue);
 
     }
-
+    
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[j];
         arr[j] = arr[i];
@@ -60,7 +59,6 @@ public class Heap {
         }
         if (right <= n && arr[largest] < arr[right]) {
             largest = right;
-
         }
         if (largest != i) {
             swap(arr, largest, i);
