@@ -1,0 +1,53 @@
+//Prims Algorithm
+/*
+
+We import the necessary classes, including Arrays and ArrayList, from the java.util package.
+
+We define the PrimAlgorithm class to implement Prim's algorithm for finding the minimum spanning tree.
+
+We define INFINITY as a constant with the maximum possible value of an integer. It represents an infinite distance.
+
+The prim method takes the graph representation as input and performs Prim's algorithm.
+
+We obtain the number of vertices in the graph.
+
+We create arrays key, parent, and visited to store key values, parents of vertices, and visited status.
+
+Step 1: Initialization - We initialize key values as INFINITY, parents as -1 (indicating no parent), and set the key value of the first vertex as 0.
+
+Step 2: Construct the minimum spanning tree - We iterate numVertices - 1 times to construct the minimum spanning tree.
+
+We find the vertex with the minimum key value among the unvisited vertices using the findMinKey method.
+
+We mark the minimum key vertex as visited.
+
+We update key values and parents of adjacent vertices if a shorter path is found.
+
+We iterate through all vertices and check if there is an edge between the current and adjacent vertices, the adjacent vertex is unvisited, and the weight of the edge is smaller than the current key value.
+
+If the above condition is true, we update the parent and key values of the adjacent vertex.
+
+After the loop finishes, the minimum spanning tree is constructed, and the arrays key and parent store the necessary information.
+
+The findMinKey method finds the vertex with the minimum key value among the unvisited vertices.
+
+We initialize minKey with INFINITY and minVertex as -1.
+
+We iterate through all vertices and check if the vertex is unvisited and its key value is smaller than the current minimum key value.
+
+We update minKey and minVertex if the above condition is true.
+
+We return minVertex, which is the vertex with the minimum key value.
+
+The printMST method prints the minimum spanning tree.
+
+We iterate through all vertices (starting from 1 as the first vertex has no parent) and print the edge and weight between each vertex and its parent.
+
+In the main method, we define the graph as a 2D array of weights between vertices.
+
+We create an instance of the PrimAlgorithm class.
+
+We call the prim method to perform Prim's algorithm and find the minimum spanning tree.
+
+
+*/

@@ -9,7 +9,7 @@ public class main {
             {1,2}
         };
 
-        // the length of row
+        // the length of row 
         int row =  metrix.length;
 
         // the length of col
