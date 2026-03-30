@@ -32,7 +32,6 @@ public class BFSByAdjacencyList {
     public void DFS(int startVertex) {
         boolean[] visited = new boolean[numVertices];
         Queue<Integer> queue = new LinkedList<>();
-
         queue.add(startVertex);
         visited[startVertex] = true;
         while (!queue.isEmpty()) {
