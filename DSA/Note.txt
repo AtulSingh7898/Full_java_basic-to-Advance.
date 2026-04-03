@@ -1,0 +1,155 @@
+Full Overview: 
+
+Preparing for coding interviews is easy. 
+
+we need to know these concept
+
+You just need to learn:
+
+> Arrays
+Strings
+Hashmaps
+Two pointers
+Sliding window
+Binary search
+Recursion
+Backtracking
+Dynamic programming
+Memoization
+Tabulation
+Greedy algorithms
+Divide and conquer
+Sorting algorithms
+Merge sort
+Quick sort
+Heap sort
+Linked lists
+Doubly linked lists
+Stacks
+Queues
+Monotonic stacks
+Deques
+Trees
+Binary trees
+Binary search trees
+AVL trees
+Red-black trees
+Segment trees
+Fenwick trees
+Tries
+Graphs
+BFS
+DFS
+Topological sort
+Dijkstra’s
+Bellman-Ford
+Floyd-Warshall
+Kruskal’s
+Prim’s
+Union find
+Disjoint sets
+Heaps
+Priority queues
+Bit manipulation
+XOR tricks
+Prefix sums
+Difference arrays
+Kadane’s algorithm
+KMP
+Z algorithm
+Rabin-Karp
+Manacher’s algorithm
+Matrix traversal
+Interval problems
+Meeting rooms
+> 
+
+SOLID principles
+Single responsibility principle
+Open/closed principle
+Liskov substitution
+Interface segregation
+Dependency inversion
+Design patterns
+Singleton
+Factory
+Abstract factory
+Builder
+Prototype
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+Chain of responsibility
+Command pattern
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template method
+Visitor
+
+UML diagrams
+Class diagrams
+Sequence diagrams
+Designing parking lots
+Designing elevator systems
+Designing chess
+Designing snake and ladders
+Designing a vending machine
+Designing a library management system
+Designing a hotel booking system
+Designing a ride sharing app
+Designing an ATM
+Designing a food delivery system
+
+CAP theorem
+Consistent hashing
+Load balancing
+Caching strategies
+LRU cache
+LFU cache
+Write-through vs write-back
+CDN
+SQL vs NoSQL
+Sharding
+Horizontal vs vertical scaling
+Replication
+Leader election
+Rate limiting
+Token bucket
+Leaky bucket
+Message queues
+Kafka
+RabbitMQ
+Pub-sub model
+Event-driven architecture
+Microservices vs monolith
+Service discovery
+API gateway
+Circuit breaker pattern
+Saga pattern
+CQRS
+Event sourcing
+
+Designing URL shortener7
+Designing Twitter
+Designing WhatsApp
+Designing Netflix
+Designing Google Drive
+Designing a search engine
+Designing a notification system
+Designing a payment system
+Designing a distributed cache
+Designing a live streaming platform
+
+How to not freeze when the interviewer stares at you
+How to think out loud when your brain goes blank
+How to recover after writing completely wrong code
+How to explain your O(n²) solution without crying
+How to not second-guess yourself 30 seconds before the optimal solution

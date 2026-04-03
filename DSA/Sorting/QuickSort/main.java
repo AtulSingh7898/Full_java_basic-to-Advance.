@@ -38,9 +38,11 @@ public class main {
             quickSort(nums, pi+1, end);
         }
     }
+    
     public static void display(int[] nums){
         System.out.println(Arrays.toString(nums));
     }
+    
     public static void main(String[] args) {
         
         int nums[] = {1,2,5,2,6,8,3};

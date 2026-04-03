@@ -78,7 +78,5 @@ class Solution {
         }
 
         return dfs(node.left, remainingSum) || dfs(node.right, remainingSum);
-
-
     }
 }

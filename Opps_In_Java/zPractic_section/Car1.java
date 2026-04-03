@@ -1,7 +1,7 @@
 package zPractic_section;
 // Access superclass Feild
 
-import Vehical;
+// import Vehical;
 
 class Vehical{
     String Brand = "Mercedese";

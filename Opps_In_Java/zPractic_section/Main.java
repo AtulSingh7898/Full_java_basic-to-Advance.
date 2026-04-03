@@ -1,6 +1,6 @@
 package zPractic_section;
 
-// copy constructor constructor
+// copy constructor
 
 public class Main {
     int id;
