@@ -15,7 +15,7 @@ public class main {
 
     public static int partition(int nums[], int start, int end){
         Random random = new Random();
-        int pivoteIndex = random.nextInt(end-start+1);
+        int pivoteIndex = start+random.nextInt(end-start+1);
         swap(nums, pivoteIndex, end); 
 
 
